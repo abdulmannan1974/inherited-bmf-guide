@@ -3,28 +3,26 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Blood🩸Doctor | Inherited Aplastic Anaemia & BMF Syndromes</title>
+    <title>Blood🩸Doctor | ELN 2025 CML Deep Dive</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Sora:wght@300;400;500;600;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Manrope:wght@300;400;500;600;700&display=swap"
       rel="stylesheet"
     />
     <style>
       :root {
-        --ink: #11131a;
-        --slate: #2b2f3a;
-        --muted: #5c6170;
-        --blood: #8b0e1c;
-        --blood-soft: #b73345;
-        --gold: #d7a35d;
-        --teal: #0f766e;
-        --teal-soft: #cde8e4;
-        --rose: #f4d8dd;
-        --ivory: #f7f2ed;
-        --mist: #f3f6f8;
-        --white: #ffffff;
-        --shadow: 0 28px 60px rgba(17, 19, 26, 0.18);
+        --ink: #101018;
+        --night: #1a1b22;
+        --blood: #9b0b1f;
+        --rose: #e25b6c;
+        --ember: #ffb199;
+        --ivory: #fbf7f3;
+        --sand: #f2e7de;
+        --sage: #cfe5dc;
+        --sky: #e8f1f6;
+        --slate: #353847;
+        --shadow: 0 20px 50px rgba(16, 16, 24, 0.18);
         --radius: 22px;
       }
 
@@ -34,13 +32,9 @@
 
       body {
         margin: 0;
-        font-family: "Sora", system-ui, -apple-system, sans-serif;
+        font-family: "Manrope", system-ui, -apple-system, sans-serif;
         color: var(--ink);
-        background: radial-gradient(circle at top, #ffffff 0%, #f6efe8 38%, #efe3d7 100%);
-      }
-
-      html {
-        scroll-behavior: smooth;
+        background: radial-gradient(circle at top, #ffffff 0%, #f7efe8 40%, #efe3d7 100%);
       }
 
       a {
@@ -48,8 +42,7 @@
         text-decoration: none;
       }
 
-      button,
-      input {
+      button {
         font-family: inherit;
       }
 
@@ -61,7 +54,7 @@
 
       .hero {
         position: relative;
-        padding: 42px 6vw 64px;
+        padding: 44px 6vw 72px;
         overflow: hidden;
       }
 
@@ -70,23 +63,23 @@
         content: "";
         position: absolute;
         border-radius: 999px;
-        opacity: 0.85;
+        opacity: 0.8;
         z-index: 0;
       }
 
       .hero::before {
         width: 420px;
         height: 420px;
-        background: radial-gradient(circle, rgba(183, 51, 69, 0.45) 0%, rgba(183, 51, 69, 0) 70%);
-        right: -150px;
-        top: -160px;
+        background: radial-gradient(circle, rgba(226, 91, 108, 0.45) 0%, rgba(226, 91, 108, 0) 70%);
+        right: -140px;
+        top: -180px;
       }
 
       .hero::after {
         width: 360px;
         height: 360px;
-        background: radial-gradient(circle, rgba(15, 118, 110, 0.35) 0%, rgba(15, 118, 110, 0) 70%);
-        left: -140px;
+        background: radial-gradient(circle, rgba(207, 229, 220, 0.6) 0%, rgba(207, 229, 220, 0) 70%);
+        left: -120px;
         bottom: -160px;
       }
 
@@ -100,27 +93,20 @@
       }
 
       .brand {
-        font-size: 1.5rem;
+        font-size: 1.4rem;
         font-weight: 700;
       }
 
-      .nav-meta {
+      .nav-cta {
         display: flex;
-        gap: 16px;
         align-items: center;
+        gap: 12px;
         font-weight: 600;
-        color: rgba(17, 19, 26, 0.7);
-      }
-
-      .pill {
-        padding: 8px 14px;
-        border-radius: 999px;
-        background: var(--ivory);
-        font-size: 0.85rem;
+        color: rgba(16, 16, 24, 0.7);
       }
 
       .hero-grid {
-        margin-top: 50px;
+        margin-top: 56px;
         display: grid;
         grid-template-columns: repeat(2, minmax(0, 1fr));
         gap: 40px;
@@ -131,7 +117,7 @@
 
       .hero-copy h1 {
         font-family: "Fraunces", serif;
-        font-size: clamp(2.6rem, 4vw, 4.2rem);
+        font-size: clamp(2.5rem, 4vw, 4.1rem);
         line-height: 1.05;
         margin: 0 0 16px;
       }
@@ -139,14 +125,26 @@
       .hero-copy p {
         font-size: 1.05rem;
         line-height: 1.7;
-        color: rgba(17, 19, 26, 0.72);
-        margin: 0 0 26px;
+        color: rgba(16, 16, 24, 0.72);
+        margin: 0 0 24px;
+      }
+
+      .eyebrow {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        padding: 8px 14px;
+        border-radius: 999px;
+        background: var(--ivory);
+        font-weight: 600;
+        font-size: 0.85rem;
+        margin-bottom: 12px;
       }
 
       .cta-row {
         display: flex;
         align-items: center;
-        gap: 14px;
+        gap: 16px;
         flex-wrap: wrap;
       }
 
@@ -159,211 +157,226 @@
         font-weight: 600;
         font-size: 1rem;
         cursor: pointer;
-        box-shadow: 0 18px 40px rgba(139, 14, 28, 0.28);
+        box-shadow: 0 18px 40px rgba(155, 11, 31, 0.25);
         transition: transform 0.2s ease, box-shadow 0.2s ease;
       }
 
       .cta-primary:hover {
         transform: translateY(-2px);
-        box-shadow: 0 24px 48px rgba(139, 14, 28, 0.35);
+        box-shadow: 0 22px 44px rgba(155, 11, 31, 0.3);
       }
 
       .cta-secondary {
-        color: rgba(17, 19, 26, 0.65);
         font-weight: 600;
+        color: rgba(16, 16, 24, 0.65);
       }
 
       .hero-panel {
         background: #fff;
         border-radius: var(--radius);
-        padding: 24px;
+        padding: 26px;
         box-shadow: var(--shadow);
         display: grid;
         gap: 18px;
       }
 
-      .panel-title {
-        font-weight: 700;
-        font-size: 1.1rem;
+      .hero-panel img {
+        width: 100%;
+        border-radius: 18px;
+        display: block;
       }
 
-      .stat-grid {
+      .quick-stats {
         display: grid;
         gap: 14px;
       }
 
-      .stat {
+      .stat-row {
         display: flex;
         justify-content: space-between;
-        padding: 12px 14px;
+        align-items: center;
+        padding: 14px 16px;
         border-radius: 14px;
-        background: var(--mist);
-        font-size: 0.95rem;
+        background: var(--sky);
       }
 
-      .stat strong {
-        color: var(--blood);
+      .stat-row strong {
+        font-family: "Fraunces", serif;
+        font-size: 1.2rem;
+      }
+
+      .chips {
+        display: flex;
+        gap: 10px;
+        flex-wrap: wrap;
+      }
+
+      .chip {
+        padding: 8px 12px;
+        border-radius: 999px;
+        background: var(--sand);
+        font-size: 0.85rem;
+        font-weight: 600;
       }
 
       .section {
-        padding: 64px 6vw;
+        padding: 56px 6vw;
       }
 
       .section-title {
-        font-size: 2rem;
         font-family: "Fraunces", serif;
-        margin-bottom: 12px;
+        font-size: clamp(1.9rem, 3vw, 2.6rem);
+        margin: 0 0 16px;
       }
 
       .section-sub {
-        color: rgba(17, 19, 26, 0.68);
-        max-width: 820px;
+        color: rgba(16, 16, 24, 0.7);
         line-height: 1.7;
-        margin-bottom: 28px;
+        max-width: 820px;
+        margin-bottom: 32px;
+      }
+
+      .app {
+        background: var(--ivory);
+        border-radius: 32px;
+        padding: 32px;
+        box-shadow: var(--shadow);
+      }
+
+      .app.is-hidden {
+        display: none;
       }
 
       .control-bar {
         display: flex;
-        gap: 18px;
-        align-items: center;
         flex-wrap: wrap;
-        background: var(--white);
-        border-radius: 16px;
-        padding: 16px 18px;
-        box-shadow: var(--shadow);
+        align-items: center;
+        gap: 14px;
+        margin-bottom: 28px;
       }
 
       .toggle {
-        border: 1px solid rgba(17, 19, 26, 0.2);
-        background: #fff;
+        padding: 10px 18px;
         border-radius: 999px;
-        padding: 10px 16px;
+        border: 1px solid rgba(16, 16, 24, 0.15);
+        background: #fff;
         font-weight: 600;
         cursor: pointer;
       }
 
-      .search {
-        flex: 1;
-        min-width: 220px;
-        border: 1px solid rgba(17, 19, 26, 0.2);
-        border-radius: 999px;
-        padding: 12px 16px;
-        font-size: 0.95rem;
-      }
-
       .map {
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-        gap: 16px;
-        margin-top: 28px;
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+        gap: 18px;
       }
 
       .map-card {
         background: #fff;
         border-radius: 18px;
         padding: 18px;
-        box-shadow: var(--shadow);
+        box-shadow: 0 14px 30px rgba(16, 16, 24, 0.08);
         display: grid;
         gap: 12px;
       }
 
       .map-card button {
+        align-self: start;
+        background: transparent;
         border: none;
-        background: var(--teal);
-        color: #fff;
-        padding: 10px 14px;
-        border-radius: 999px;
+        color: var(--blood);
         font-weight: 600;
         cursor: pointer;
+        padding: 0;
       }
 
       .module {
-        margin-top: 42px;
-        padding: 28px;
-        border-radius: var(--radius);
+        margin-top: 28px;
         background: #fff;
-        box-shadow: var(--shadow);
+        border-radius: 22px;
+        padding: 24px;
+        box-shadow: 0 16px 34px rgba(16, 16, 24, 0.1);
+        display: grid;
+        gap: 18px;
       }
 
       .module-head {
         display: flex;
         justify-content: space-between;
         align-items: center;
-        gap: 16px;
-        flex-wrap: wrap;
-        margin-bottom: 18px;
-      }
-
-      .module-head h3 {
-        margin: 0;
-        font-family: "Fraunces", serif;
-        font-size: 1.6rem;
+        gap: 12px;
       }
 
       .module-tag {
-        background: var(--rose);
-        color: var(--blood);
-        padding: 6px 14px;
+        padding: 6px 12px;
         border-radius: 999px;
+        background: var(--sand);
         font-weight: 600;
-        font-size: 0.85rem;
+        font-size: 0.8rem;
       }
 
       .module-grid {
         display: grid;
         grid-template-columns: repeat(2, minmax(0, 1fr));
-        gap: 20px;
+        gap: 16px;
       }
 
       .card {
-        border-radius: 18px;
-        padding: 18px;
-        background: var(--mist);
-        display: grid;
-        gap: 12px;
-      }
-
-      .card.deep {
-        background: #fff7f2;
-        border: 1px solid rgba(139, 14, 28, 0.12);
-      }
-
-      .card h4 {
-        margin: 0;
-        font-size: 1.1rem;
-      }
-
-      .card p {
-        margin: 0;
-        color: rgba(17, 19, 26, 0.7);
-        line-height: 1.6;
-      }
-
-      .card ul {
-        margin: 0;
-        padding-left: 18px;
-        color: rgba(17, 19, 26, 0.75);
-        line-height: 1.6;
-      }
-
-      .callout {
-        margin-top: 18px;
         border-radius: 16px;
-        padding: 16px 18px;
-        background: var(--teal-soft);
+        padding: 16px;
+        background: var(--sky);
         display: grid;
         gap: 8px;
       }
 
-      .callout.high-yield {
-        background: #fff3e6;
-        border: 1px solid rgba(215, 163, 93, 0.45);
+      .card h4 {
+        margin: 0;
+        font-size: 1rem;
       }
 
-      .callout strong {
-        text-transform: uppercase;
-        font-size: 0.8rem;
-        letter-spacing: 0.08em;
+      .card p,
+      .card ul {
+        margin: 0;
+        color: rgba(16, 16, 24, 0.75);
+        line-height: 1.6;
+      }
+
+      .card ul {
+        padding-left: 18px;
+      }
+
+      .deep {
+        background: #fff5f4;
+      }
+
+      body.simplify .deep {
+        display: none;
+      }
+
+      .check {
+        background: var(--ivory);
+        border-radius: 16px;
+        padding: 16px;
+        display: grid;
+        gap: 10px;
+      }
+
+      .reveal {
+        align-self: start;
+        background: transparent;
+        border: 1px solid rgba(16, 16, 24, 0.2);
+        padding: 8px 14px;
+        border-radius: 999px;
+        cursor: pointer;
+        font-weight: 600;
+      }
+
+      .answer {
+        display: none;
+        color: rgba(16, 16, 24, 0.8);
+      }
+
+      .answer.active {
+        display: block;
       }
 
       .table-wrap {
@@ -373,990 +386,734 @@
       table {
         width: 100%;
         border-collapse: collapse;
-        font-size: 0.92rem;
+        font-size: 0.95rem;
       }
 
       th,
       td {
         text-align: left;
         padding: 10px 12px;
-        border-bottom: 1px solid rgba(17, 19, 26, 0.1);
-        vertical-align: top;
+        border-bottom: 1px solid rgba(16, 16, 24, 0.12);
       }
 
       th {
         color: var(--slate);
         font-weight: 700;
-        background: #f0e9e3;
-      }
-
-      .flow {
-        display: grid;
-        gap: 14px;
-        margin-top: 12px;
-      }
-
-      .flow-step {
-        background: #f3f5f7;
-        border-radius: 14px;
-        padding: 14px 16px;
-        display: flex;
-        align-items: center;
-        gap: 12px;
-      }
-
-      .flow-step span {
-        width: 28px;
-        height: 28px;
-        border-radius: 50%;
-        background: var(--blood);
-        color: #fff;
-        display: inline-flex;
-        align-items: center;
-        justify-content: center;
-        font-weight: 600;
-        font-size: 0.9rem;
-      }
-
-      .diagram {
-        width: 100%;
-        border-radius: 18px;
-        background: #fff;
-        border: 1px solid rgba(17, 19, 26, 0.08);
-        box-shadow: 0 16px 28px rgba(17, 19, 26, 0.08);
-      }
-
-      details {
-        border-radius: 16px;
-        border: 1px solid rgba(17, 19, 26, 0.1);
-        padding: 12px 14px;
-        background: #fff;
-      }
-
-      details summary {
-        cursor: pointer;
-        font-weight: 600;
-      }
-
-      .quiz {
-        margin-top: 18px;
-        background: #f8f0f1;
-        border-radius: 16px;
-        padding: 16px;
-        display: grid;
-        gap: 10px;
-      }
-
-      .quiz button {
-        border: none;
-        background: var(--blood-soft);
-        color: #fff;
-        padding: 8px 14px;
-        border-radius: 999px;
-        cursor: pointer;
-        font-weight: 600;
-        width: fit-content;
-      }
-
-      .answer {
-        display: none;
-        color: rgba(17, 19, 26, 0.7);
-      }
-
-      .answer.active {
-        display: block;
       }
 
       .cta-band {
-        margin-top: 48px;
-        padding: 26px 28px;
-        border-radius: var(--radius);
-        background: linear-gradient(120deg, #8b0e1c, #5f0b14);
+        background: var(--night);
         color: #fff;
+        border-radius: 26px;
+        padding: 30px;
         display: flex;
-        flex-wrap: wrap;
         justify-content: space-between;
         align-items: center;
-        gap: 16px;
+        gap: 20px;
+        margin-top: 32px;
       }
 
       .cta-band p {
-        margin: 6px 0 0;
-        color: rgba(255, 255, 255, 0.85);
-      }
-
-      .cta-band button {
-        background: #fff;
-        color: var(--blood);
-        border: none;
-        padding: 12px 18px;
-        border-radius: 999px;
-        font-weight: 700;
-        cursor: pointer;
-      }
-
-      .disclaimer {
-        margin-top: 26px;
-        color: rgba(17, 19, 26, 0.6);
-        font-size: 0.9rem;
+        margin: 0;
+        color: rgba(255, 255, 255, 0.7);
       }
 
       .footer {
-        padding: 28px 6vw 42px;
-        background: #13151d;
-        color: rgba(255, 255, 255, 0.78);
+        padding: 24px 6vw 40px;
         display: flex;
-        justify-content: space-between;
         flex-wrap: wrap;
+        justify-content: space-between;
         gap: 12px;
+        color: rgba(16, 16, 24, 0.7);
+        font-size: 0.95rem;
       }
 
-      .simplify .deep,
-      .simplify details,
-      .simplify .table-wrap {
-        display: none;
+      .disclaimer {
+        font-size: 0.85rem;
+        color: rgba(16, 16, 24, 0.6);
+        margin-top: 12px;
       }
 
-      @media (max-width: 980px) {
-        .hero-grid {
-          grid-template-columns: 1fr;
-        }
-
+      @media (max-width: 1100px) {
+        .hero-grid,
         .module-grid {
           grid-template-columns: 1fr;
         }
-      }
 
-      @media (max-width: 720px) {
-        .hero {
-          padding: 34px 5vw 54px;
-        }
-
-        .section {
-          padding: 52px 5vw;
-        }
-
-        .nav {
-          flex-direction: column;
-          align-items: flex-start;
+        .map {
+          grid-template-columns: repeat(2, minmax(0, 1fr));
         }
 
         .cta-band {
           flex-direction: column;
           align-items: flex-start;
         }
+
+        .nav-cta {
+          display: none;
+        }
+      }
+
+      @media (max-width: 700px) {
+        .map {
+          grid-template-columns: 1fr;
+        }
+      }
+
+      @media (prefers-reduced-motion: reduce) {
+        * {
+          animation: none !important;
+          transition: none !important;
+        }
       }
     </style>
   </head>
   <body>
     <div class="page">
-      <header class="hero" id="top">
+      <header class="hero">
         <nav class="nav">
           <div class="brand">Blood🩸Doctor</div>
-          <div class="nav-meta">
-            <div class="pill">Dr Abdul Mannan FRCPath FCPS</div>
-            <div class="pill">blooddoctor.co@gmail.com</div>
-          </div>
+          <div class="nav-cta">ELN 2025 CML Deep Dive for Hematology/Oncology</div>
         </nav>
 
         <div class="hero-grid">
           <div class="hero-copy">
-            <div class="pill">Chapter 30 · Hoffbrand Postgraduate Haematology</div>
-            <h1>Inherited Aplastic Anaemia & Bone Marrow Failure Syndromes</h1>
+            <div class="eyebrow">Guided learning artefact · ELN 2025 CML</div>
+            <h1>Master the 2025 ELN CML guidance, end-to-end.</h1>
             <p>
-              A complete, clinically actionable deep dive for haematologists, physicians, and trainees. Build rapid diagnostic intuition,
-              master genetic subtypes, and translate the chapter into bedside decisions.
+              A clinician-focused, step-by-step learning flow that covers diagnosis, risk stratification, response
+              milestones, treatment sequencing, TFR, pregnancy, adverse events, and transplant decisions.
             </p>
             <div class="cta-row">
-              <button class="cta-primary" id="startLearning">Start learning</button>
-              <a class="cta-secondary" href="#module-3">Jump to Fanconi anaemia</a>
+              <button class="cta-primary" id="startLearning">Start the deep dive</button>
+              <span class="cta-secondary">Single click to open the full learning pathway.</span>
+            </div>
+            <div class="chips">
+              <span class="chip">Complete guidance coverage</span>
+              <span class="chip">High-yield tables</span>
+              <span class="chip">Actionable clinical flow</span>
             </div>
           </div>
           <div class="hero-panel">
-            <div class="panel-title">Fast facts from the chapter</div>
-            <div class="stat-grid">
-              <div class="stat"><span>Inherited syndromes in AA</span><strong>~20-30%</strong></div>
-              <div class="stat"><span>FA: BMF by age 40</span><strong>~90%</strong></div>
-              <div class="stat"><span>DC: BM abnormalities by age 30</span><strong>80-90%</strong></div>
-              <div class="stat"><span>DBA incidence</span><strong>~5 per million births</strong></div>
+            <img
+              alt="Clinical learning dashboard"
+              src="https://images.unsplash.com/photo-1559757175-5700dde675bc?auto=format&fit=crop&w=1000&q=80"
+            />
+            <div class="quick-stats">
+              <div class="stat-row">
+                <span>Modules</span>
+                <strong>12</strong>
+              </div>
+              <div class="stat-row">
+                <span>Focus</span>
+                <strong>ELN 2025</strong>
+              </div>
+              <div class="stat-row">
+                <span>Use case</span>
+                <strong>Teaching + practice</strong>
+              </div>
             </div>
           </div>
         </div>
       </header>
 
       <section class="section" id="app">
-        <div class="control-bar">
-          <strong>Learning controls</strong>
-          <button class="toggle" id="simplifyToggle" aria-pressed="false">Simplify view</button>
-          <input class="search" id="searchInput" placeholder="Search by syndrome, gene, or feature" />
-          <span class="cta-secondary">Tip: simplify view hides deep-dive panels.</span>
-        </div>
+        <div class="app is-hidden" id="learningApp">
+          <div class="control-bar">
+            <strong>View controls:</strong>
+            <button class="toggle" id="simplifyToggle" aria-pressed="false">Simplify view</button>
+            <span class="cta-secondary">Hide deep-dive panels if you want a fast recap.</span>
+          </div>
 
-        <div class="section-title">Learning map</div>
-        <div class="section-sub">
-          Navigate the entire chapter in structured modules. Each module contains core guidance, deep dive tables,
-          and high-yield callouts.
-        </div>
+          <div class="section-title">Learning map</div>
+          <div class="section-sub">
+            Follow the ELN 2025 path from diagnosis to long-term management. Each module has core guidance and a deep
+            dive panel for nuance.
+          </div>
 
-        <div class="map">
-          <div class="map-card">
-            <strong>Module 1</strong>
-            <div>Foundations & phenotypes</div>
-            <button data-target="#module-1">Open module</button>
-          </div>
-          <div class="map-card">
-            <strong>Module 2</strong>
-            <div>Diagnostic framework & tests</div>
-            <button data-target="#module-2">Open module</button>
-          </div>
-          <div class="map-card">
-            <strong>Module 3</strong>
-            <div>Fanconi anaemia (FA)</div>
-            <button data-target="#module-3">Open module</button>
-          </div>
-          <div class="map-card">
-            <strong>Module 4</strong>
-            <div>Dyskeratosis congenita (DC)</div>
-            <button data-target="#module-4">Open module</button>
-          </div>
-          <div class="map-card">
-            <strong>Module 5</strong>
-            <div>Shwachman-Diamond syndrome</div>
-            <button data-target="#module-5">Open module</button>
-          </div>
-          <div class="map-card">
-            <strong>Module 6</strong>
-            <div>Diamond-Blackfan anaemia</div>
-            <button data-target="#module-6">Open module</button>
-          </div>
-          <div class="map-card">
-            <strong>Module 7</strong>
-            <div>Congenital dyserythropoietic anaemia</div>
-            <button data-target="#module-7">Open module</button>
-          </div>
-          <div class="map-card">
-            <strong>Module 8</strong>
-            <div>Congenital & cyclic neutropenias</div>
-            <button data-target="#module-8">Open module</button>
-          </div>
-          <div class="map-card">
-            <strong>Module 9</strong>
-            <div>TAR & CAMT thrombocytopenias</div>
-            <button data-target="#module-9">Open module</button>
-          </div>
-          <div class="map-card">
-            <strong>Module 10</strong>
-            <div>New/overlapping BMF syndromes</div>
-            <button data-target="#module-10">Open module</button>
-          </div>
-          <div class="map-card">
-            <strong>Module 11</strong>
-            <div>High-yield consolidation</div>
-            <button data-target="#module-11">Open module</button>
-          </div>
-        </div>
-
-        <section class="module" id="module-1">
-          <div class="module-head">
-            <h3>Module 1: Foundations & phenotypes</h3>
-            <span class="module-tag">Orientation</span>
-          </div>
-          <div class="module-grid">
-            <div class="card">
-              <h4>Why inherited BMF matters</h4>
-              <ul>
-                <li>Inherited syndromes account for roughly 20-30% of patients presenting with aplastic anaemia.</li>
-                <li>Phenotypes vary from single-lineage cytopenias to pan-lineage bone marrow failure.</li>
-                <li>Clinical anomalies are common, but up to one-third of FA patients have no obvious physical signs.</li>
-                <li>Accurate classification drives safer conditioning for HSCT and tailored surveillance for malignancy.</li>
-              </ul>
+          <div class="map">
+            <div class="map-card">
+              <strong>Module 1</strong>
+              <div>What changed in ELN 2025</div>
+              <button data-target="#module-1">Open module</button>
             </div>
-            <div class="card deep">
-              <h4>Inherited BMF syndromes (Table 30.1)</h4>
-              <div class="table-wrap">
-                <table>
-                  <thead>
-                    <tr>
-                      <th>Category</th>
-                      <th>Typical syndromes</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr>
-                      <td>Pancytopenia / global BMF</td>
-                      <td>Fanconi anaemia, dyskeratosis congenita, Shwachman-Diamond syndrome, reticular dysgenesis, Pearson syndrome, familial aplastic anaemia, myelodysplasia, non-haematologic syndromes (Down, Dubowitz)</td>
-                    </tr>
-                    <tr>
-                      <td>Single cytopenia: anaemia</td>
-                      <td>Diamond-Blackfan anaemia, congenital dyserythropoietic anaemia</td>
-                    </tr>
-                    <tr>
-                      <td>Single cytopenia: neutropenia</td>
-                      <td>Severe congenital neutropenia (including Kostmann), cyclic neutropenia</td>
-                    </tr>
-                    <tr>
-                      <td>Single cytopenia: thrombocytopenia</td>
-                      <td>Congenital amegakaryocytic thrombocytopenia, thrombocytopenia with absent radii</td>
-                    </tr>
-                  </tbody>
-                </table>
+            <div class="map-card">
+              <strong>Module 2</strong>
+              <div>Diagnosis and baseline testing</div>
+              <button data-target="#module-2">Open module</button>
+            </div>
+            <div class="map-card">
+              <strong>Module 3</strong>
+              <div>Classification and risk</div>
+              <button data-target="#module-3">Open module</button>
+            </div>
+            <div class="map-card">
+              <strong>Module 4</strong>
+              <div>Monitoring and response definitions</div>
+              <button data-target="#module-4">Open module</button>
+            </div>
+            <div class="map-card">
+              <strong>Module 5</strong>
+              <div>Milestones and response categories</div>
+              <button data-target="#module-5">Open module</button>
+            </div>
+            <div class="map-card">
+              <strong>Module 6</strong>
+              <div>First-line therapy selection</div>
+              <button data-target="#module-6">Open module</button>
+            </div>
+            <div class="map-card">
+              <strong>Module 7</strong>
+              <div>Resistance and mutation-guided therapy</div>
+              <button data-target="#module-7">Open module</button>
+            </div>
+            <div class="map-card">
+              <strong>Module 8</strong>
+              <div>Second-line and beyond</div>
+              <button data-target="#module-8">Open module</button>
+            </div>
+            <div class="map-card">
+              <strong>Module 9</strong>
+              <div>Advanced phase and blast crisis</div>
+              <button data-target="#module-9">Open module</button>
+            </div>
+            <div class="map-card">
+              <strong>Module 10</strong>
+              <div>Allogeneic transplant</div>
+              <button data-target="#module-10">Open module</button>
+            </div>
+            <div class="map-card">
+              <strong>Module 11</strong>
+              <div>Treatment-free remission (TFR)</div>
+              <button data-target="#module-11">Open module</button>
+            </div>
+            <div class="map-card">
+              <strong>Module 12</strong>
+              <div>Pregnancy, parenting, adverse events</div>
+              <button data-target="#module-12">Open module</button>
+            </div>
+          </div>
+
+          <section class="module" id="module-1">
+            <div class="module-head">
+              <h3>Module 1: What changed in ELN 2025</h3>
+              <span class="module-tag">Orientation</span>
+            </div>
+            <div class="module-grid">
+              <div class="card">
+                <h4>Core guidance</h4>
+                <ul>
+                  <li>WHO 2022 reframes CML as a biphasic disease and lowers BP threshold to &gt;=20% blasts.</li>
+                  <li>Milestones now framed as favorable, warning, unfavorable (vs optimal/warning/failure).</li>
+                  <li>More emphasis on dose reduction for toxicity and individualized switching decisions.</li>
+                  <li>TFR data matured, with clearer entry criteria and monitoring schedules.</li>
+                </ul>
+              </div>
+              <div class="card deep">
+                <h4>Clinical nuance</h4>
+                <p>
+                  ELN could not fully endorse either WHO or legacy AP definitions, but recognizes high-risk indicators in CP.
+                  Evidence since 2020 drives a more patient-specific approach to switching, particularly in older patients
+                  where deep molecular response may not justify higher-toxicity TKI.
+                </p>
               </div>
             </div>
-          </div>
-          <div class="callout">
-            <strong>Clinical anchor</strong>
-            <div>Presence of somatic or extra-haematopoietic abnormalities alongside AA strongly suggests constitutional or inherited AA.</div>
-          </div>
-          <div class="card deep" style="margin-top: 18px;">
-            <h4>Common somatic abnormalities in FA (Table 30.2)</h4>
-            <div class="table-wrap">
-              <table>
-                <thead>
-                  <tr>
-                    <th>Abnormality</th>
-                    <th>Approx. frequency (%)</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr><td>Skeletal (radial ray, vertebral, scoliosis, ribs)</td><td>71</td></tr>
-                  <tr><td>Skin pigmentation (cafe-au-lait, hyper/hypopigmentation)</td><td>64</td></tr>
-                  <tr><td>Short stature</td><td>63</td></tr>
-                  <tr><td>Eyes (microphthalmia)</td><td>38</td></tr>
-                  <tr><td>Renal and urinary tract</td><td>34</td></tr>
-                  <tr><td>Male genital anomalies</td><td>20</td></tr>
-                  <tr><td>Mental retardation</td><td>16</td></tr>
-                  <tr><td>GI anomalies (anorectal/duodenal atresia)</td><td>14</td></tr>
-                  <tr><td>Cardiac anomalies</td><td>13</td></tr>
-                  <tr><td>Hearing loss</td><td>9</td></tr>
-                  <tr><td>CNS anomalies (hydrocephalus/septum pellucidum)</td><td>8</td></tr>
-                  <tr><td>No abnormalities</td><td>30</td></tr>
-                </tbody>
-              </table>
-            </div>
-          </div>
-        </section>
+          </section>
 
-        <section class="module" id="module-2">
-          <div class="module-head">
-            <h3>Module 2: Diagnostic framework & tests</h3>
-            <span class="module-tag">Workup</span>
-          </div>
-          <div class="module-grid">
-            <div class="card">
-              <h4>Actionable diagnostic algorithm</h4>
-              <div class="flow">
-                <div class="flow-step"><span>1</span>Identify AA/BMF or single-lineage cytopenia + family history or congenital features.</div>
-                <div class="flow-step"><span>2</span>Baseline labs: CBC with indices, reticulocytes, fetal Hb, erythrocyte ADA, marrow cellularity.</div>
-                <div class="flow-step"><span>3</span>Phenotype-driven screening: DEB/MMC breakage (FA), telomere length (DC), pancreatic function (SDS), marrow morphology (CDA), neutrophil studies (SCN).</div>
-                <div class="flow-step"><span>4</span>Targeted NGS panel (syndrome-specific) + constitutional karyotype.</div>
-                <div class="flow-step"><span>5</span>Confirm diagnosis, counsel family, and plan HSCT conditioning safely.</div>
-              </div>
+          <section class="module" id="module-2">
+            <div class="module-head">
+              <h3>Module 2: Diagnosis and baseline testing</h3>
+              <span class="module-tag">Confirm CML</span>
             </div>
-            <div class="card deep">
-              <h4>Core diagnostic tests (Table 30.13)</h4>
-              <div class="table-wrap">
-                <table>
-                  <thead>
-                    <tr>
-                      <th>Test</th>
-                      <th>Diagnostic value</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr><td>Fetal haemoglobin</td><td>High level suggests generalized BMF.</td></tr>
-                    <tr><td>DEB/MMC-induced chromosomal breakage</td><td>Elevated in FA.</td></tr>
-                    <tr><td>Telomere length</td><td>Short in AA, very short in DC.</td></tr>
-                    <tr><td>Ham test / CD59 analysis</td><td>Abnormal in paroxysmal nocturnal haemoglobinuria.</td></tr>
-                    <tr><td>Mitochondrial DNA analysis</td><td>Deletions seen in Pearson syndrome.</td></tr>
-                    <tr><td>X-chromosome inactivation patterns</td><td>Skewed in carriers of X-linked DC.</td></tr>
-                    <tr><td>Constitutional karyotype</td><td>Suggests inherited AA if abnormal.</td></tr>
-                  </tbody>
-                </table>
+            <div class="module-grid">
+              <div class="card">
+                <h4>Baseline essentials</h4>
+                <ul>
+                  <li>Diagnosis requires detection of BCR::ABL1 (Ph+ t(9;22)).</li>
+                  <li>Marrow morphology + CBA, RT-qPCR on PB or BM.</li>
+                  <li>Identify transcript type to enable precise monitoring.</li>
+                </ul>
               </div>
-              <details>
-                <summary>Show gene panel checklist by syndrome</summary>
-                <div style="margin-top: 12px; display: grid; gap: 10px;">
-                  <div><strong>FA panel:</strong> FANCA to FANCW.</div>
-                  <div><strong>DC/telomere disorders:</strong> DKC1, TERC, TERT, NOP10, NHP2, TINF2, TCAB1/WRAP53, USB1, CTC1, RTEL1, ACD/TPP1, PARN, NAF1, ZCCHC8, NPM1, MDM4, POT1, RPA1, DCLRE1B, TYMS-ENOSF1.</div>
-                  <div><strong>SDS/SDS-like:</strong> SBDS, DNAJC21, EFL1, SRP54.</div>
-                  <div><strong>DBA/DBA-like:</strong> RPS19, RPS7, RPS10, RPS15, RPS17, RPS24, RPS26, RPS27, RPS28, RPS29, RPL5, RPL9, RPL11, RPL15, RPL18, RPL26, RPL27, RPL31, RPL35A, GATA1, TSR2, EPO.</div>
-                  <div><strong>CDA/CDA-like:</strong> CDAN1, CDIN1, SEC23B, KIF23, KLF1.</div>
-                  <div><strong>Congenital/cyclic neutropenia:</strong> ELANE, HAX1, GFI1, G6PC3, VPS45, JAG1.</div>
-                  <div><strong>CAMT/TAR syndromic thrombocytopenia:</strong> MPL, RBM8A, HOXA11, MECOM.</div>
-                  <div><strong>New BMF syndromes:</strong> TPO/THPO, ERCC6L2, MYSM1, DUT, EXOC3L2, TP53, SPI1.</div>
-                  <div><strong>Familial MDS/AML overlap:</strong> RUNX1, CEBPA, GATA2, SAMD9, SAMD9L, TERC, TERT, SRP72, ANKRD26, ETV6, DDX41, RTEL1, PAX5, TP53, ACD, MECOM, HLTF, XPC, DHX34.</div>
+              <div class="card deep">
+                <h4>Recommended baseline workup (ELN)</h4>
+                <div class="table-wrap">
+                  <table>
+                    <thead>
+                      <tr>
+                        <th>Domain</th>
+                        <th>Key items</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>Routine labs + exam</td>
+                        <td>FBC, biochemistry incl lipid profile, HbA1c, hepatitis B serology, ECG, spleen/liver size</td>
+                      </tr>
+                      <tr>
+                        <td>Cytogenetics</td>
+                        <td>CBA for t(9;22) + variants, document ACA at diagnosis</td>
+                      </tr>
+                      <tr>
+                        <td>FISH</td>
+                        <td>Useful for screening, variant/cryptic rearrangements</td>
+                      </tr>
+                      <tr>
+                        <td>RT-qPCR</td>
+                        <td>Standard diagnostic tool, detect transcript type</td>
+                      </tr>
+                      <tr>
+                        <td>NGS panels</td>
+                        <td>Not routine in CP; recommended in BP</td>
+                      </tr>
+                    </tbody>
+                  </table>
                 </div>
-              </details>
+              </div>
             </div>
-          </div>
-          <div class="card deep" style="margin-top: 18px;">
-            <h4>Other investigations in suspected inherited BMF</h4>
-            <div class="table-wrap">
-              <table>
-                <thead>
-                  <tr>
-                    <th>Investigation</th>
-                    <th>Why it matters</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr><td>Skeletal survey</td><td>Identify skeletal anomalies (FA, TAR, SDS).</td></tr>
-                  <tr><td>Abdominal ultrasound</td><td>Assess renal, hepatic or splenic anomalies.</td></tr>
-                  <tr><td>Pulmonary function tests</td><td>Evaluate pulmonary complications (DC).</td></tr>
-                  <tr><td>Echocardiogram</td><td>Screen cardiac defects (FA, DBA).</td></tr>
-                  <tr><td>Exocrine pancreatic function</td><td>Abnormal in SDS and Pearson syndrome.</td></tr>
-                  <tr><td>Neutrophil chemotaxis</td><td>Abnormal in SDS.</td></tr>
-                  <tr><td>Fibroblast cultures</td><td>Abnormalities seen in DC.</td></tr>
-                </tbody>
-              </table>
+            <div class="check">
+              <strong>Quick check</strong>
+              <div>Why is transcript typing essential at diagnosis?</div>
+              <button class="reveal" data-reveal>Show answer</button>
+              <div class="answer">It enables accurate molecular monitoring and response assessment.</div>
             </div>
-          </div>
-        </section>
+          </section>
 
-        <section class="module" id="module-3">
-          <div class="module-head">
-            <h3>Module 3: Fanconi anaemia (FA)</h3>
-            <span class="module-tag">Global BMF</span>
-          </div>
-          <div class="module-grid">
-            <div class="card">
-              <h4>Clinical features</h4>
-              <ul>
-                <li>Autosomal recessive disorder (X-linked rare) with progressive BMF.</li>
-                <li>Somatic anomalies: cafe-au-lait, radial ray defects, skeletal, GU, GI, cardiac, neuro anomalies.</li>
-                <li>Up to one-third have no obvious physical abnormalities.</li>
-                <li>Blood counts often normal at birth; pancytopenia develops insidiously, median age 7 years.</li>
-                <li>Cumulative BMF by age 40 is ~90%.</li>
-                <li>Median survival in IFAR cohort was 24 years (improving with modern care).</li>
-              </ul>
+          <section class="module" id="module-3">
+            <div class="module-head">
+              <h3>Module 3: Classification and risk stratification</h3>
+              <span class="module-tag">Risk framing</span>
             </div>
-            <div class="card deep">
-              <h4>Malignancy risk</h4>
-              <ul>
-                <li>AML common, often FAB M4/M5.</li>
-                <li>Hematologic malignancy incidence ~33% by age 40.</li>
-                <li>Solid tumors ~28% by age 40 (hepatic tumors, SCC of vulva, esophagus, head/neck).</li>
-                <li>Median age: leukemia 13 years, solid tumors 25 years.</li>
-              </ul>
+            <div class="module-grid">
+              <div class="card">
+                <h4>Core guidance</h4>
+                <ul>
+                  <li>ELTS replaces Sokal/Euro/EUTOS for predicting CML-related mortality.</li>
+                  <li>WHO 2022: BP if blasts &gt;=20%; AP category removed, high-risk indicators emphasized.</li>
+                  <li>High-risk ACA are warning signs and influence monitoring and therapy selection.</li>
+                </ul>
+              </div>
+              <div class="card deep">
+                <h4>High-risk indicators (WHO 2022)</h4>
+                <ul>
+                  <li>Blasts 10–19%, PB basophils &gt;=20%.</li>
+                  <li>High ELTS score.</li>
+                  <li>ACA: 3q26.2 rearrangements, -7, i(17q), complex karyotype.</li>
+                  <li>Clusters of small megakaryocytes with fibrosis.</li>
+                </ul>
+              </div>
             </div>
-          </div>
-          <div class="module-grid" style="margin-top: 18px;">
-            <div class="card deep">
-              <h4>FA/BRCA pathway (Figma-style diagram)</h4>
-              <svg class="diagram" viewBox="0 0 820 360" role="img" aria-label="FA-BRCA pathway">
-                <rect x="20" y="30" width="240" height="70" rx="16" fill="#f4d8dd" stroke="#8b0e1c" />
-                <text x="40" y="70" font-size="16" font-weight="600" fill="#2b2f3a">FA Core Complex</text>
-                <text x="40" y="92" font-size="12" fill="#2b2f3a">FANCA/B/C/E/F/G/L/M</text>
+          </section>
 
-                <rect x="300" y="30" width="210" height="70" rx="16" fill="#cde8e4" stroke="#0f766e" />
-                <text x="320" y="70" font-size="16" font-weight="600" fill="#0f766e">I-D2 Complex</text>
-                <text x="320" y="92" font-size="12" fill="#0f766e">FANCI-FANCD2</text>
-
-                <rect x="560" y="30" width="230" height="70" rx="16" fill="#fef1e4" stroke="#d7a35d" />
-                <text x="580" y="70" font-size="16" font-weight="600" fill="#8b0e1c">DNA Repair</text>
-                <text x="580" y="92" font-size="12" fill="#8b0e1c">BRCA1/2, RAD51, SLX4</text>
-
-                <rect x="120" y="160" width="240" height="70" rx="16" fill="#f5f6fb" stroke="#5c6170" />
-                <text x="140" y="200" font-size="15" font-weight="600" fill="#2b2f3a">ATR/ATM Signaling</text>
-                <text x="140" y="222" font-size="12" fill="#5c6170">Replication stress response</text>
-
-                <rect x="420" y="160" width="320" height="70" rx="16" fill="#f5f6fb" stroke="#5c6170" />
-                <text x="440" y="200" font-size="15" font-weight="600" fill="#2b2f3a">Genome Stability Outcomes</text>
-                <text x="440" y="222" font-size="12" fill="#5c6170">Chromosomal breakage, p53 activation, apoptosis</text>
-
-                <line x1="260" y1="65" x2="300" y2="65" stroke="#8b0e1c" stroke-width="2" />
-                <line x1="510" y1="65" x2="560" y2="65" stroke="#8b0e1c" stroke-width="2" />
-                <line x1="240" y1="100" x2="240" y2="160" stroke="#8b0e1c" stroke-width="2" />
-                <line x1="520" y1="100" x2="520" y2="160" stroke="#8b0e1c" stroke-width="2" />
-                <line x1="360" y1="195" x2="420" y2="195" stroke="#5c6170" stroke-width="2" />
-              </svg>
+          <section class="module" id="module-4">
+            <div class="module-head">
+              <h3>Module 4: Monitoring and response definitions</h3>
+              <span class="module-tag">Molecular tracking</span>
             </div>
-            <div class="card">
-              <h4>Diagnostics & genetics</h4>
-              <ul>
-                <li>Chromosomal breakage after DEB/MMC remains a useful screening test.</li>
-                <li>22 complementation groups; FA-A, -C, -G are most common.</li>
-                <li>FA-D1 (BRCA2) and FA-N (PALB2) carry high risk of childhood solid tumors.</li>
-                <li>Somatic mosaicism can lead to improved counts (natural gene therapy).</li>
-              </ul>
-            </div>
-          </div>
-          <details style="margin-top: 18px;">
-            <summary>FA complementation groups (Table 30.4)</summary>
-            <div class="table-wrap" style="margin-top: 12px;">
-              <table>
-                <thead>
-                  <tr>
-                    <th>Group / Gene</th>
-                    <th>Approx %</th>
-                    <th>Chromosome</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr><td>FANCA</td><td>65</td><td>16q24.3</td></tr>
-                  <tr><td>FANCB</td><td>&lt;1</td><td>Xp22.2</td></tr>
-                  <tr><td>FANCC</td><td>12</td><td>9q22.3</td></tr>
-                  <tr><td>FANCD1 (BRCA2)</td><td>&lt;1</td><td>13q13.1</td></tr>
-                  <tr><td>FANCD2</td><td>&lt;1</td><td>3p25.3</td></tr>
-                  <tr><td>FANCE</td><td>4</td><td>6p21.31</td></tr>
-                  <tr><td>FANCF</td><td>4</td><td>1p14.3</td></tr>
-                  <tr><td>FANCG</td><td>2</td><td>9p13.3</td></tr>
-                  <tr><td>FANCI</td><td>&lt;1</td><td>15q26.1</td></tr>
-                  <tr><td>FANCJ (BRIP1)</td><td>&lt;5</td><td>17q23.2</td></tr>
-                  <tr><td>FANCL</td><td>&lt;1</td><td>2p16.1</td></tr>
-                  <tr><td>FANCM</td><td>&lt;1</td><td>14q21.2</td></tr>
-                  <tr><td>FANCN (PALB2)</td><td>&lt;1</td><td>16p12.2</td></tr>
-                  <tr><td>FANCO (RAD51C)</td><td>&lt;1</td><td>17q22</td></tr>
-                  <tr><td>FANCP (SLX4)</td><td>2</td><td>16p13.3</td></tr>
-                  <tr><td>FANCQ (ERCC4)</td><td>&lt;1</td><td>16p13.12</td></tr>
-                  <tr><td>FANCR (RAD51)</td><td>&lt;1</td><td>15q15.1</td></tr>
-                  <tr><td>FANCS (BRCA1)</td><td>&lt;1</td><td>17q21.31</td></tr>
-                  <tr><td>FANCT (UBE2T)</td><td>&lt;1</td><td>1q32.1</td></tr>
-                  <tr><td>FANCU (XRCC2)</td><td>&lt;1</td><td>7q36.1</td></tr>
-                  <tr><td>FANCV (REV7)</td><td>&lt;1</td><td>1p36.22</td></tr>
-                  <tr><td>FANCW (RFWD3)</td><td>&lt;1</td><td>16p23.1</td></tr>
-                </tbody>
-              </table>
-            </div>
-          </details>
-          <div class="callout high-yield">
-            <strong>High yield</strong>
-            <div>FA patients are hypersensitive to cyclophosphamide and radiation. HSCT conditioning must be reduced-intensity to avoid toxicity.</div>
-          </div>
-        </section>
-
-        <section class="module" id="module-4">
-          <div class="module-head">
-            <h3>Module 4: Dyskeratosis congenita (DC)</h3>
-            <span class="module-tag">Telomere disorder</span>
-          </div>
-          <div class="module-grid">
-            <div class="card">
-              <h4>Clinical core</h4>
-              <ul>
-                <li>Mucocutaneous triad: abnormal skin pigmentation, nail dystrophy, mucosal leukoplakia.</li>
-                <li>Multi-system involvement: dental, GI, GU, neuro, pulmonary, skeletal.</li>
-                <li>Skin/nail changes often by age 10; BMF typically before 20.</li>
-                <li>80-90% develop BM abnormalities by age 30.</li>
-              </ul>
-            </div>
-            <div class="card deep">
-              <h4>Diagnostic anchors</h4>
-              <ul>
-                <li>Minimal criteria: at least two major features (skin pigmentation, nail dystrophy, leukoplakia, BMF) plus two other features.</li>
-                <li>Main causes of death: BMF/immunodeficiency (~60-70%), pulmonary complications (~10-15%), malignancy (~10%).</li>
-                <li>X-linked, AD, and AR inheritance patterns.</li>
-              </ul>
-            </div>
-          </div>
-          <div class="module-grid" style="margin-top: 18px;">
-            <div class="card deep">
-              <h4>Telomere biology (Figma-style diagram)</h4>
-              <svg class="diagram" viewBox="0 0 820 360" role="img" aria-label="Telomere biology in DC">
-                <rect x="30" y="30" width="230" height="80" rx="18" fill="#f4d8dd" stroke="#8b0e1c" />
-                <text x="50" y="70" font-size="16" font-weight="600" fill="#2b2f3a">Telomerase Core</text>
-                <text x="50" y="92" font-size="12" fill="#2b2f3a">TERT + TERC + DKC1</text>
-
-                <rect x="300" y="30" width="230" height="80" rx="18" fill="#cde8e4" stroke="#0f766e" />
-                <text x="320" y="70" font-size="16" font-weight="600" fill="#0f766e">Shelterin/Partners</text>
-                <text x="320" y="92" font-size="12" fill="#0f766e">TINF2, POT1, ACD, RTEL1</text>
-
-                <rect x="570" y="30" width="220" height="80" rx="18" fill="#fef1e4" stroke="#d7a35d" />
-                <text x="590" y="70" font-size="16" font-weight="600" fill="#8b0e1c">Telomere Length</text>
-                <text x="590" y="92" font-size="12" fill="#8b0e1c">Very short in DC</text>
-
-                <rect x="170" y="170" width="480" height="90" rx="18" fill="#f5f6fb" stroke="#5c6170" />
-                <text x="200" y="210" font-size="16" font-weight="600" fill="#2b2f3a">Phenotype</text>
-                <text x="200" y="232" font-size="12" fill="#5c6170">BMF, pulmonary fibrosis, mucocutaneous triad, malignancy risk</text>
-
-                <line x1="260" y1="70" x2="300" y2="70" stroke="#8b0e1c" stroke-width="2" />
-                <line x1="530" y1="70" x2="570" y2="70" stroke="#8b0e1c" stroke-width="2" />
-                <line x1="410" y1="110" x2="410" y2="170" stroke="#5c6170" stroke-width="2" />
-              </svg>
-            </div>
-            <div class="card">
-              <h4>Genetic subtypes (Table 30.6)</h4>
-              <p>DC genes cluster into telomerase and shelterin pathways. XLR DKC1 is classic; AD and AR forms involve TERT/TERC and multiple telomere regulators.</p>
-              <details>
-                <summary>Show key DC genes by inheritance</summary>
-                <div style="margin-top: 10px; display: grid; gap: 8px;">
-                  <div><strong>X-linked:</strong> DKC1 (dyskerin).</div>
-                  <div><strong>Autosomal dominant:</strong> TINF2, TERC, TERT, NAF1, ZCCHC8, NPM1, ACD/TPP1, RTEL1, RPA1, MDM4, POT1.</div>
-                  <div><strong>Autosomal recessive:</strong> USB1, TYMS-ENOSF1, RTEL1, PARN, NOP10, TERT, NHP2, WRAP53/TCAB1, CTC1.</div>
+            <div class="module-grid">
+              <div class="card">
+                <h4>Monitoring cadence</h4>
+                <ul>
+                  <li>Blood counts every 2 weeks until CHR.</li>
+                  <li>RT-qPCR at least every 3 months until MMR confirmed.</li>
+                  <li>After stable MMR: every 4–6 months.</li>
+                  <li>More frequent monitoring if levels rise or fluctuate.</li>
+                </ul>
+              </div>
+              <div class="card deep">
+                <h4>Response definitions (International Scale)</h4>
+                <div class="table-wrap">
+                  <table>
+                    <thead>
+                      <tr>
+                        <th>Response</th>
+                        <th>BCR::ABL1IS</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>CCyR equivalent</td>
+                        <td>&lt;= 1%</td>
+                      </tr>
+                      <tr>
+                        <td>MMR</td>
+                        <td>&lt;= 0.1%</td>
+                      </tr>
+                      <tr>
+                        <td>MR4</td>
+                        <td>&lt;= 0.01%</td>
+                      </tr>
+                      <tr>
+                        <td>MR4.5</td>
+                        <td>&lt;= 0.0032%</td>
+                      </tr>
+                      <tr>
+                        <td>MR5</td>
+                        <td>&lt;= 0.001%</td>
+                      </tr>
+                    </tbody>
+                  </table>
                 </div>
-              </details>
+                <p>
+                  Atypical transcripts: use personalized RT-qPCR or RT-ddPCR; CBA is insufficient for routine monitoring but
+                  is useful when RT-qPCR cannot quantify or when resistance/progression is suspected. FISH can help in rare
+                  transcript follow-up.
+                </p>
+              </div>
             </div>
-          </div>
-          <div class="callout">
-            <strong>Treatment essentials</strong>
-            <div>Oxymetholone responds in ~two-thirds (0.25 mg/kg/day up to 2-5 mg/kg/day). Danazol is increasingly first-line. HSCT is curative but high risk due to pulmonary/vascular complications; fludarabine-based non-myeloablative protocols show lower toxicity.</div>
-          </div>
-        </section>
+          </section>
 
-        <section class="module" id="module-5">
-          <div class="module-head">
-            <h3>Module 5: Shwachman-Diamond syndrome (SDS)</h3>
-            <span class="module-tag">Ribosomopathy</span>
-          </div>
-          <div class="module-grid">
-            <div class="card">
-              <h4>Clinical triad</h4>
-              <ul>
-                <li>Exocrine pancreatic insufficiency (100%) with early malabsorption and failure to thrive.</li>
-                <li>Bone marrow failure (100%), often neutropenia.</li>
-                <li>Skeletal abnormalities: metaphyseal dysostosis (~75%).</li>
-              </ul>
+          <section class="module" id="module-5">
+            <div class="module-head">
+              <h3>Module 5: Milestones and response categories</h3>
+              <span class="module-tag">Decision points</span>
             </div>
-            <div class="card deep">
-              <h4>Key features</h4>
-              <ul>
-                <li>Short stature (~70%), protuberant abdomen, ichthyotic rash (~60%).</li>
-                <li>Neutropenia (~60%), pancytopenia (~20%).</li>
-                <li>MDS/AML risk ~25%, AML common (age 1-43 years).</li>
-                <li>Differential: Pearson syndrome (ringed sideroblasts, mitochondrial DNA defects).</li>
-                <li>Non-haematological malignancies have not been observed in SDS.</li>
-              </ul>
+            <div class="module-grid">
+              <div class="card">
+                <h4>ELN 2025 categories</h4>
+                <ul>
+                  <li>Favorable: switch unnecessary.</li>
+                  <li>Warning: consider switch if trend or context supports.</li>
+                  <li>Unfavorable: switch preferred.</li>
+                  <li>Always interpret in context of trends and adherence.</li>
+                </ul>
+              </div>
+              <div class="card deep">
+                <h4>Milestones (BCR::ABL1IS)</h4>
+                <div class="table-wrap">
+                  <table>
+                    <thead>
+                      <tr>
+                        <th>Time</th>
+                        <th>Favorable</th>
+                        <th>Warning</th>
+                        <th>Unfavorable</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>3 months</td>
+                        <td>&lt;= 10%</td>
+                        <td>&gt; 10%</td>
+                        <td>&gt; 10% if confirmed</td>
+                      </tr>
+                      <tr>
+                        <td>6 months</td>
+                        <td>&lt;= 1%</td>
+                        <td>&gt; 1–10%</td>
+                        <td>&gt; 10%</td>
+                      </tr>
+                      <tr>
+                        <td>12 months</td>
+                        <td>&lt;= 0.1%</td>
+                        <td>&gt; 0.1–1%</td>
+                        <td>&gt; 1%</td>
+                      </tr>
+                      <tr>
+                        <td>Any time</td>
+                        <td>&lt;= 0.1%</td>
+                        <td>Loss of MMR</td>
+                        <td>Loss of response, resistant mutations, high-risk ACA</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+                <ul>
+                  <li>Late responders can still do well; avoid switching on a single value.</li>
+                  <li>Unfavorable milestones warrant mutation testing and review of adherence/drug interactions.</li>
+                  <li>EMR failure at 3 months is still unfavorable but confirm with repeat sample and context.</li>
+                </ul>
+              </div>
             </div>
-          </div>
-          <div class="module-grid" style="margin-top: 18px;">
-            <div class="card deep">
-              <h4>Ribosome biogenesis diagram</h4>
-              <svg class="diagram" viewBox="0 0 820 360" role="img" aria-label="Ribosome biogenesis">
-                <rect x="40" y="40" width="260" height="90" rx="18" fill="#f5f6fb" stroke="#5c6170" />
-                <text x="65" y="80" font-size="16" font-weight="600" fill="#2b2f3a">45S rRNA</text>
-                <text x="65" y="102" font-size="12" fill="#5c6170">Processed into 18S, 5.8S, 28S</text>
+            <div class="check">
+              <strong>Quick check</strong>
+              <div>What is the 12-month favorable threshold?</div>
+              <button class="reveal" data-reveal>Show answer</button>
+              <div class="answer">BCR::ABL1IS &lt;= 0.1% (MMR).</div>
+            </div>
+          </section>
 
-                <rect x="360" y="40" width="180" height="90" rx="18" fill="#cde8e4" stroke="#0f766e" />
-                <text x="385" y="80" font-size="16" font-weight="600" fill="#0f766e">40S</text>
-                <text x="385" y="102" font-size="12" fill="#0f766e">RPS genes (DBA)</text>
+          <section class="module" id="module-6">
+            <div class="module-head">
+              <h3>Module 6: First-line therapy selection</h3>
+              <span class="module-tag">Choose the TKI</span>
+            </div>
+            <div class="module-grid">
+              <div class="card">
+                <h4>Core guidance</h4>
+                <ul>
+                  <li>First-line options: imatinib, dasatinib, nilotinib, bosutinib, asciminib (some countries), radotinib (Korea).</li>
+                  <li>2GTKI yield faster/deeper responses vs imatinib, without OS benefit.</li>
+                  <li>Goal (OS vs TFR) and comorbidities should guide choice.</li>
+                </ul>
+              </div>
+              <div class="card deep">
+                <h4>Comorbidity-driven selection</h4>
+                <ul>
+                  <li>Pulmonary disease: avoid dasatinib (pleural effusion/PAH risk).</li>
+                  <li>GI/renal/hepatic issues: consider avoiding bosutinib.</li>
+                  <li>Diabetes or high cardiovascular risk: avoid nilotinib.</li>
+                  <li>High ELTS score: consider more potent TKI upfront.</li>
+                </ul>
+                <p>
+                  Asciminib (ASC4FIRST): higher MMR at weeks 48/96 vs investigator choice; fewer grade ≥3 AEs and fewer
+                  discontinuations; FDA approval for first-line in 2024.
+                </p>
+              </div>
+            </div>
+          </section>
 
-                <rect x="580" y="40" width="180" height="90" rx="18" fill="#f4d8dd" stroke="#8b0e1c" />
-                <text x="605" y="80" font-size="16" font-weight="600" fill="#8b0e1c">60S</text>
-                <text x="605" y="102" font-size="12" fill="#8b0e1c">SBDS, EFL1, DNAJC21</text>
+          <section class="module" id="module-7">
+            <div class="module-head">
+              <h3>Module 7: Resistance and mutation-guided therapy</h3>
+              <span class="module-tag">Precision switch</span>
+            </div>
+            <div class="module-grid">
+              <div class="card">
+                <h4>When to test for mutations</h4>
+                <ul>
+                  <li>Resistance or warning response.</li>
+                  <li>Progression to or presentation in BP.</li>
+                  <li>Relapse after alloSCT if prior mutation known.</li>
+                  <li>Not recommended after loss of MMR post-TFR.</li>
+                </ul>
+                <p>Always assess adherence, drug interactions, and TKI exposure before labeling resistance.</p>
+              </div>
+              <div class="card deep">
+                <h4>Key mutation → active TKI (ELN Table 5)</h4>
+                <div class="table-wrap">
+                  <table>
+                    <thead>
+                      <tr>
+                        <th>Mutation</th>
+                        <th>Active TKI</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>T315I</td>
+                        <td>Ponatinib, asciminib</td>
+                      </tr>
+                      <tr>
+                        <td>Y253H</td>
+                        <td>Dasatinib, bosutinib, ponatinib, asciminib</td>
+                      </tr>
+                      <tr>
+                        <td>E255K/V</td>
+                        <td>Dasatinib, ponatinib, asciminib</td>
+                      </tr>
+                      <tr>
+                        <td>V299L</td>
+                        <td>Nilotinib, ponatinib, asciminib</td>
+                      </tr>
+                      <tr>
+                        <td>F317L/V/I/C, T315A</td>
+                        <td>Nilotinib, bosutinib, ponatinib, asciminib</td>
+                      </tr>
+                      <tr>
+                        <td>F359V/I/C</td>
+                        <td>Dasatinib, ponatinib</td>
+                      </tr>
+                      <tr>
+                        <td>M244V</td>
+                        <td>Nilotinib, dasatinib, bosutinib, ponatinib</td>
+                      </tr>
+                      <tr>
+                        <td>A337V/T, L340Q, A344P, A433D, G463D/S, P465S/Q, V468F, F497L, I502L/N, V506L/M</td>
+                        <td>Any ATP-competitive TKI</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </section>
 
-                <rect x="260" y="200" width="300" height="90" rx="18" fill="#fef1e4" stroke="#d7a35d" />
-                <text x="290" y="240" font-size="16" font-weight="600" fill="#8b0e1c">80S Ribosome</text>
-                <text x="290" y="262" font-size="12" fill="#8b0e1c">Final translation complex</text>
+          <section class="module" id="module-8">
+            <div class="module-head">
+              <h3>Module 8: Second-line and beyond</h3>
+              <span class="module-tag">Sequencing</span>
+            </div>
+            <div class="module-grid">
+              <div class="card">
+                <h4>Second-line guidance</h4>
+                <ul>
+                  <li>30–40% switch from first-line due to intolerance or resistance.</li>
+                  <li>Dose reduction is appropriate if response is good and toxicity is manageable.</li>
+                  <li>Serious AEs require switching rather than dose reduction.</li>
+                </ul>
+              </div>
+              <div class="card deep">
+                <h4>Dose reduction ranges + serious AEs</h4>
+                <ul>
+                  <li>Imatinib: 400 → 100–300 mg daily.</li>
+                  <li>Dasatinib: 100 → 20–50 mg daily.</li>
+                  <li>Nilotinib: 300 mg BID → 150–200 mg BID or once daily.</li>
+                  <li>Switch for recurrent pleural effusion, PAH, VOE/AOE, enterocolitis, serious neurologic issues, immune-mediated myocarditis/hepatitis/nephritis.</li>
+                </ul>
+              </div>
+            </div>
+            <div class="module-grid">
+              <div class="card">
+                <h4>Beyond second-line</h4>
+                <ul>
+                  <li>If resistant to 2GTKI: consider early ponatinib or asciminib.</li>
+                  <li>ASCEMBL: asciminib superior to bosutinib after ≥2 TKIs.</li>
+                  <li>OPTIC: dose-optimized ponatinib with reduced AOE risk.</li>
+                </ul>
+              </div>
+              <div class="card deep">
+                <h4>Third-line context</h4>
+                <p>
+                  OPTIC: 45/30/15 mg ponatinib with mandatory reduction to 15 mg once BCR::ABL1IS &lt; 1%. Higher CCyR rates at
+                  higher starting dose; AOE rates lower than PACE. Asciminib phase I shows durable MMR with manageable AEs.
+                  Olverembatinib (China) active in T315I and multi-TKI resistant CP. Begin donor search at resistance to 2GTKI;
+                  refer for transplant at resistance to ponatinib or asciminib.
+                </p>
+              </div>
+            </div>
+          </section>
 
-                <line x1="300" y1="85" x2="360" y2="85" stroke="#5c6170" stroke-width="2" />
-                <line x1="540" y1="85" x2="580" y2="85" stroke="#5c6170" stroke-width="2" />
-                <line x1="450" y1="130" x2="410" y2="200" stroke="#5c6170" stroke-width="2" />
-                <line x1="670" y1="130" x2="480" y2="200" stroke="#5c6170" stroke-width="2" />
-              </svg>
+          <section class="module" id="module-9">
+            <div class="module-head">
+              <h3>Module 9: Advanced phase and blast crisis</h3>
+              <span class="module-tag">High urgency</span>
             </div>
-            <div class="card">
-              <h4>Genetics & management</h4>
-              <ul>
-                <li>SBDS variants in &gt;90% of cases; DNAJC21, EFL1 (AR) and SRP54 (AD) cause SDS-like disease.</li>
-                <li>Pancreatic enzymes for malabsorption; G-CSF for neutropenia.</li>
-                <li>Oxymetholone can improve anemia/thrombocytopenia.</li>
-                <li>Leukemia often poor prognosis; HSCT with fludarabine conditioning preferred.</li>
-              </ul>
+            <div class="module-grid">
+              <div class="card">
+                <h4>Core guidance</h4>
+                <ul>
+                  <li>Advanced phase is rare in high-income settings but common in delayed diagnosis.</li>
+                  <li>Flow cytometry to define BP phenotype; check CNS involvement for lymphoblastic BP.</li>
+                  <li>BP treatment: intensive chemo + TKI (dasatinib or ponatinib) → alloSCT if eligible.</li>
+                </ul>
+              </div>
+              <div class="card deep">
+                <h4>Clinical nuance</h4>
+                <p>
+                  Presentation in advanced phase may do better than progression on TKI. Non-eligible patients may receive
+                  low-intensity chemo + TKI (clinical trial options emerging).
+                </p>
+              </div>
             </div>
-          </div>
-        </section>
+          </section>
 
-        <section class="module" id="module-6">
-          <div class="module-head">
-            <h3>Module 6: Diamond-Blackfan anaemia (DBA)</h3>
-            <span class="module-tag">Pure red cell aplasia</span>
-          </div>
-          <div class="module-grid">
-            <div class="card">
-              <h4>Diagnostic criteria</h4>
-              <ul>
-                <li>Macrocytic (or normocytic) anemia in early childhood.</li>
-                <li>Reticulocytopenia.</li>
-                <li>Normocellular marrow with erythroblasts &lt;5%.</li>
-                <li>Normal or slightly low WBC; platelets normal or high.</li>
-                <li>Supportive: elevated eADA, macrocytosis, raised fetal Hb.</li>
-              </ul>
+          <section class="module" id="module-10">
+            <div class="module-head">
+              <h3>Module 10: Allogeneic stem cell transplantation</h3>
+              <span class="module-tag">Curative option</span>
             </div>
-            <div class="card deep">
-              <h4>DBA Registry highlights</h4>
-              <ul>
-                <li>Incidence ~5 per million live births; median presentation 8 weeks.</li>
-                <li>93% present in first year; 79% initially steroid responsive.</li>
-                <li>Actuarial survival &gt;40 years: 100% sustained remission, 87% steroid-maintained, 57% transfusion-dependent.</li>
-                <li>Somatic anomalies in 47% (craniofacial, limb/hand, GU, cardiac).</li>
-              </ul>
+            <div class="module-grid">
+              <div class="card">
+                <h4>When to consider alloSCT</h4>
+                <ul>
+                  <li>CP resistant to 3rd/4th generation TKI or intolerant to all available TKI.</li>
+                  <li>Presentation in or progression to BP.</li>
+                  <li>Begin donor search at resistance to first 2GTKI.</li>
+                </ul>
+              </div>
+              <div class="card deep">
+                <h4>Key points</h4>
+                <ul>
+                  <li>Outcomes improved with reduced-intensity conditioning and haploidentical donors.</li>
+                  <li>Best results in CP1; advanced phase outcomes poorer.</li>
+                  <li>Post-alloSCT: q3 monthly molecular monitoring early, then q6 monthly; lifelong follow-up.</li>
+                </ul>
+              </div>
             </div>
-          </div>
-          <details style="margin-top: 18px;">
-            <summary>DBA genetic subtypes (Table 30.8)</summary>
-            <div class="table-wrap" style="margin-top: 12px;">
-              <table>
-                <thead>
-                  <tr>
-                    <th>Subtype / Gene</th>
-                    <th>Approx %</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr><td>RPS19 (AD)</td><td>25</td></tr>
-                  <tr><td>Large deletions (various)</td><td>10-20</td></tr>
-                  <tr><td>RPL5</td><td>7</td></tr>
-                  <tr><td>RPS26</td><td>7</td></tr>
-                  <tr><td>RPL11</td><td>5</td></tr>
-                  <tr><td>RPL35A</td><td>3</td></tr>
-                  <tr><td>RPS10</td><td>3</td></tr>
-                  <tr><td>RPS24</td><td>2-4</td></tr>
-                  <tr><td>RPS17</td><td>1</td></tr>
-                  <tr><td>Other RPS/RPL genes</td><td>&lt;1 each</td></tr>
-                  <tr><td>GATA1 (X-linked)</td><td>&lt;1</td></tr>
-                  <tr><td>TSR2 (X-linked)</td><td>&lt;1</td></tr>
-                  <tr><td>Uncharacterised</td><td>~25</td></tr>
-                </tbody>
-              </table>
-            </div>
-          </details>
-          <div class="callout">
-            <strong>Treatment pathway</strong>
-            <div>Corticosteroids first-line; taper to lowest alternate-day dose. If refractory, transfusion support with early iron chelation (avoid deferiprone). Splenectomy for hypersplenism. HSCT for transfusion-dependent patients with HLA-matched donor.</div>
-          </div>
-        </section>
+          </section>
 
-        <section class="module" id="module-7">
-          <div class="module-head">
-            <h3>Module 7: Congenital dyserythropoietic anaemia (CDA)</h3>
-            <span class="module-tag">Dyserythropoiesis</span>
-          </div>
-          <div class="module-grid">
-            <div class="card">
-              <h4>CDA overview</h4>
-              <ul>
-                <li>Heterogeneous group with anemia and ineffective erythropoiesis.</li>
-                <li>Classical types I, II, III; additional types IV-VII described.</li>
-                <li>Characteristic marrow morphology and EM findings guide diagnosis.</li>
-              </ul>
+          <section class="module" id="module-11">
+            <div class="module-head">
+              <h3>Module 11: Treatment-free remission (TFR)</h3>
+              <span class="module-tag">Stopping safely</span>
             </div>
-            <div class="card deep">
-              <h4>CDA type I (CDAN1/CDIN1)</h4>
-              <ul>
-                <li>Mild-moderate anemia (Hb ~66-116 g/L) with macrocytosis in ~70%.</li>
-                <li>Marrow: megaloblastic precursors, internuclear chromatin bridges, 3-7% binuclearity.</li>
-                <li>EM: spongy “Swiss cheese” heterochromatin.</li>
-              </ul>
+            <div class="module-grid">
+              <div class="card">
+                <h4>Core guidance</h4>
+                <ul>
+                  <li>~40–50% can remain off treatment with careful selection.</li>
+                  <li>Minimum criteria: ≥3 years on TKI and sustained DMR ≥1 year.</li>
+                  <li>Loss of MMR triggers restart; most regain DMR quickly.</li>
+                </ul>
+              </div>
+              <div class="card deep">
+                <h4>ELN TFR requirements (Table 6)</h4>
+                <ul>
+                  <li>Mandatory: CP1 only, motivated patient, rapid IS monitoring.</li>
+                  <li>Minimal: typical e13a2/e14a2 transcripts, TKI &gt;5 years (&gt;4 years for 2GTKI), DMR &gt;2 years.</li>
+                  <li>Optimal: DMR &gt;3 years if MR4 or &gt;2 years if MR4.5.</li>
+                  <li>Monitoring: 6–8 weekly first 6 months, 2-monthly months 6–12, then q3–6 months.</li>
+                </ul>
+              </div>
             </div>
-          </div>
-          <div class="module-grid" style="margin-top: 18px;">
-            <div class="card deep">
-              <h4>CDA type II (HEMPAS, SEC23B)</h4>
-              <ul>
-                <li>Most common subtype; anemia typically Hb 80-110 g/L.</li>
-                <li>Jaundice, hepatomegaly, splenomegaly; ~10% need regular transfusions.</li>
-                <li>BM: &gt;10% binucleate erythroblasts; EM shows peripheral double membranes.</li>
-                <li>Acidified serum lysis (Ham test) usually positive.</li>
-              </ul>
-            </div>
-            <div class="card">
-              <h4>CDA type III (KIF23)</h4>
-              <ul>
-                <li>Rare, autosomal dominant; giant multinucleated erythroblasts.</li>
-                <li>Increased prevalence of lymphoproliferative disorders reported.</li>
-                <li>KIF23 encodes a mitotic kinesin important in cytokinesis.</li>
-              </ul>
-            </div>
-          </div>
-          <details style="margin-top: 18px;">
-            <summary>CDA subtype comparison (Table 30.9)</summary>
-            <div class="table-wrap" style="margin-top: 12px;">
-              <table>
-                <thead>
-                  <tr>
-                    <th>Feature</th>
-                    <th>Type I</th>
-                    <th>Type II</th>
-                    <th>Type III</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr><td>Inheritance</td><td>AR</td><td>AR</td><td>AD</td></tr>
-                  <tr><td>RBC indices</td><td>Macrocytic</td><td>Normocytic</td><td>Macrocytic</td></tr>
-                  <tr><td>Light microscopy</td><td>Megaloblastic, chromatin bridges</td><td>Normoblastic, binuclearity</td><td>Megaloblastic, giant multinucleated</td></tr>
-                  <tr><td>Electron microscopy</td><td>Swiss cheese heterochromatin</td><td>Peripheral double membranes</td><td>Non-specific</td></tr>
-                  <tr><td>Ham test</td><td>Negative</td><td>Usually positive</td><td>Negative</td></tr>
-                  <tr><td>Genes</td><td>CDAN1, CDIN1</td><td>SEC23B</td><td>KIF23</td></tr>
-                </tbody>
-              </table>
-            </div>
-          </details>
-          <div class="callout">
-            <strong>Treatment pearls</strong>
-            <div>Folate for mild anemia. Transfusion and iron chelation if needed. Splenectomy can help CDA II. Interferon-alpha may improve CDA I. HSCT is rare but reported.</div>
-          </div>
-        </section>
+          </section>
 
-        <section class="module" id="module-8">
-          <div class="module-head">
-            <h3>Module 8: Congenital & cyclic neutropenias</h3>
-            <span class="module-tag">Neutropenia</span>
-          </div>
-          <div class="module-grid">
-            <div class="card">
-              <h4>Severe congenital neutropenia (SCN)</h4>
-              <ul>
-                <li>Neutrophils &lt;0.2 x 10^9/L at birth; Hb and platelets usually normal.</li>
-                <li>Marrow maturation arrest at promyelocyte/myelocyte stage.</li>
-                <li>Severe infections; MDS/AML risk ~25% by age 25.</li>
-                <li>G-CSF dramatically improves outcome; HSCT if refractory or leukemia.</li>
-              </ul>
+          <section class="module" id="module-12">
+            <div class="module-head">
+              <h3>Module 12: Parenting, pregnancy, adverse events</h3>
+              <span class="module-tag">Special situations</span>
             </div>
-            <div class="card deep">
-              <h4>Cyclic neutropenia</h4>
-              <ul>
-                <li>Neutrophil nadir every ~21 days.</li>
-                <li>Fever and mouth ulcers around nadir.</li>
-                <li>Usually autosomal dominant; ELANE variants common.</li>
-                <li>ELANE mutations differ in location compared to SCN.</li>
-              </ul>
+            <div class="module-grid">
+              <div class="card">
+                <h4>Parenting guidance</h4>
+                <ul>
+                  <li>Men: no consistent evidence of harm; continue TKI during conception attempts.</li>
+                  <li>Women: avoid TKI during pregnancy; IFN is safe; imatinib/nilotinib may be considered after week 16.</li>
+                  <li>Breastfeeding: avoid TKI; tailor duration to disease control.</li>
+                </ul>
+              </div>
+              <div class="card deep">
+                <h4>Adverse events focus</h4>
+                <p>
+                  Long-term TKI toxicity management is central: baseline co-morbidity assessment, ongoing surveillance, and
+                  proactive adjustment. Notable AE patterns include vascular events (nilotinib/ponatinib), pleural effusion
+                  (dasatinib), diarrhea (bosutinib), and metabolic effects. Use Table 8 and monitoring schedule (Table 9) to
+                  guide screening.
+                </p>
+                <div class="table-wrap">
+                  <table>
+                    <thead>
+                      <tr>
+                        <th>TKI signal</th>
+                        <th>High-yield toxicity</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>Dasatinib</td>
+                        <td>Pleural effusion, PAH</td>
+                      </tr>
+                      <tr>
+                        <td>Nilotinib / Ponatinib</td>
+                        <td>Arterial thrombotic events, hypertension, metabolic effects</td>
+                      </tr>
+                      <tr>
+                        <td>Bosutinib</td>
+                        <td>Early diarrhea, GI intolerance</td>
+                      </tr>
+                      <tr>
+                        <td>Imatinib</td>
+                        <td>Edema, cramps, cytopenias</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
             </div>
-          </div>
-          <details style="margin-top: 18px;">
-            <summary>Genetic subtypes (Table 30.10)</summary>
-            <div class="table-wrap" style="margin-top: 12px;">
-              <table>
-                <thead>
-                  <tr>
-                    <th>Inheritance</th>
-                    <th>Approx %</th>
-                    <th>Gene</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr><td>AD</td><td>50-60</td><td>ELANE</td></tr>
-                  <tr><td>AD</td><td>2</td><td>GFI1</td></tr>
-                  <tr><td>AR</td><td>10-15</td><td>HAX1</td></tr>
-                  <tr><td>AR</td><td>5</td><td>G6PC3</td></tr>
-                  <tr><td>Rare</td><td>Rare</td><td>VPS45</td></tr>
-                  <tr><td>Rare</td><td>Rare</td><td>CSF3R</td></tr>
-                  <tr><td>Rare</td><td>Rare</td><td>JAG1</td></tr>
-                </tbody>
-              </table>
-            </div>
-          </details>
-          <div class="callout high-yield">
-            <strong>High yield</strong>
-            <div>No patient with SCN has developed aplastic anaemia, but risk of MDS/AML is substantial.</div>
-          </div>
-        </section>
+          </section>
 
-        <section class="module" id="module-9">
-          <div class="module-head">
-            <h3>Module 9: TAR & CAMT thrombocytopenias</h3>
-            <span class="module-tag">Thrombocytopenia</span>
+          <div class="cta-band">
+            <div>
+              <h3>Use this as your ELN 2025 teaching scaffold</h3>
+              <p>Jump to any module to teach rounds, update protocols, or onboard trainees.</p>
+            </div>
+            <button class="cta-primary" data-target="#module-1">Restart from Module 1</button>
           </div>
-          <div class="module-grid">
-            <div class="card">
-              <h4>Thrombocytopenia with absent radii (TAR)</h4>
-              <ul>
-                <li>AR disorder: hypomegakaryocytic thrombocytopenia + bilateral radial aplasia.</li>
-                <li>Bleeding at birth; platelet count often &lt;50 x 10^9/L.</li>
-                <li>Leukocytes normal or high (leukaemoid reaction).</li>
-                <li>Improves after infancy; prognosis excellent, no AA or leukemia reported.</li>
-              </ul>
-            </div>
-            <div class="card deep">
-              <h4>Congenital amegakaryocytic thrombocytopenia (CAMT)</h4>
-              <ul>
-                <li>Isolated thrombocytopenia with absent megakaryocytes.</li>
-                <li>AR or X-linked; ~50% develop AA by age 5.</li>
-                <li>MPL variants in a subgroup; HSCT is treatment of choice for severe cases.</li>
-              </ul>
-            </div>
-          </div>
-          <details style="margin-top: 18px;">
-            <summary>Syndromic thrombocytopenia genes (Table 30.11)</summary>
-            <div class="table-wrap" style="margin-top: 12px;">
-              <table>
-                <thead>
-                  <tr>
-                    <th>Subtype</th>
-                    <th>Inheritance</th>
-                    <th>Gene</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr><td>CAMT</td><td>AR</td><td>MPL</td></tr>
-                  <tr><td>TAR</td><td>AR</td><td>RBM8A</td></tr>
-                  <tr><td>Radio-ulnar synostosis</td><td>AD</td><td>HOXA11</td></tr>
-                  <tr><td>Thrombocytopenia with MECOM</td><td>AD</td><td>MECOM</td></tr>
-                </tbody>
-              </table>
-            </div>
-          </details>
-        </section>
 
-        <section class="module" id="module-10">
-          <div class="module-head">
-            <h3>Module 10: New & overlapping BMF syndromes</h3>
-            <span class="module-tag">Genomic era</span>
+          <div class="disclaimer">
+            Educational summary of published guidance. Not medical advice. Follow institutional protocols and local regulatory
+            guidance for patient care.
           </div>
-          <div class="module-grid">
-            <div class="card">
-              <h4>Recently recognized BMF genes (Table 30.12)</h4>
-              <ul>
-                <li>AR: ERCC6L2, TPO/THPO, MYSM1, DUT, EXOC3L2, TP53.</li>
-                <li>AD: SAMD9, SAMD9L, SPI1.</li>
-                <li>Phenotypes overlap BMF, MDS, AML with extra-haematopoietic anomalies.</li>
-              </ul>
-            </div>
-            <div class="card deep">
-              <h4>Familial MDS/AML genes</h4>
-              <p>Common AD genes include RUNX1, CEBPA, TERC, TERT, GATA2, SRP72, ANKRD26, ACD/TPP1, ETV6, DDX41, RTEL1, PAX5, SAMD9, SAMD9L, MECOM, TP53, ERBB3, DHX34.</p>
-              <p>AR genes include MBD4, HLTF, XPC.</p>
-            </div>
-          </div>
-          <div class="callout">
-            <strong>Overlap reminder</strong>
-            <div>GATA2 and SAMD9/SAMD9L variants are common in pediatric MDS with monosomy 7 and can present as isolated cytopenias.</div>
-          </div>
-        </section>
-
-        <section class="module" id="module-11">
-          <div class="module-head">
-            <h3>Module 11: High-yield consolidation</h3>
-            <span class="module-tag">Exam-ready</span>
-          </div>
-          <div class="module-grid">
-            <div class="card">
-              <h4>Rapid-fire contrasts</h4>
-              <ul>
-                <li>FA: DNA repair defect + chromosomal breakage; DEB/MMC positive.</li>
-                <li>DC: telomere biology disorder; very short telomeres.</li>
-                <li>SDS/DBA: ribosome biogenesis defects (ribosomopathies).</li>
-                <li>SCN: promyelocyte arrest, G-CSF responsive, MDS/AML risk.</li>
-                <li>TAR: thrombocytopenia + absent radii; improves after infancy.</li>
-              </ul>
-            </div>
-            <div class="card deep">
-              <h4>High-yield checklist</h4>
-              <ul>
-                <li>Look for congenital anomalies even in “idiopathic” AA.</li>
-                <li>Choose HSCT conditioning based on syndrome (FA/DC are highly sensitive).</li>
-                <li>Use syndrome-targeted panels; avoid assuming single-gene disorders.</li>
-                <li>Monitor malignancy risks long-term (FA, SDS, DBA).</li>
-              </ul>
-            </div>
-          </div>
-          <div class="quiz">
-            <strong>Quick check</strong>
-            <div>Which syndrome is characterized by the mucocutaneous triad of pigmentation, nail dystrophy, and leukoplakia?</div>
-            <button class="reveal" data-reveal>Show answer</button>
-            <div class="answer">Dyskeratosis congenita.</div>
-          </div>
-        </section>
-
-        <div class="cta-band">
-          <div>
-            <h3>Teach, round, and revise with Blood🩸Doctor</h3>
-            <p>Built from Chapter 30 for quick bedside recall and deeper learning.</p>
-          </div>
-          <button data-target="#top">Back to top</button>
-        </div>
-
-        <div class="disclaimer">
-          Educational summary based on Hoffbrand Postgraduate Haematology (Chapter 30). Not medical advice. Follow institutional protocols.
         </div>
       </section>
 
@@ -1367,26 +1124,19 @@
     </div>
 
     <script>
-      const simplifyToggle = document.getElementById("simplifyToggle");
-      const searchInput = document.getElementById("searchInput");
       const startButton = document.getElementById("startLearning");
+      const app = document.getElementById("learningApp");
+      const simplifyToggle = document.getElementById("simplifyToggle");
 
       startButton.addEventListener("click", () => {
-        document.getElementById("app").scrollIntoView({ behavior: "smooth", block: "start" });
+        app.classList.remove("is-hidden");
+        app.scrollIntoView({ behavior: "smooth", block: "start" });
       });
 
       simplifyToggle.addEventListener("click", () => {
         const enabled = document.body.classList.toggle("simplify");
         simplifyToggle.setAttribute("aria-pressed", enabled);
         simplifyToggle.textContent = enabled ? "Show deep dive" : "Simplify view";
-      });
-
-      searchInput.addEventListener("input", () => {
-        const query = searchInput.value.trim().toLowerCase();
-        document.querySelectorAll(".module").forEach((module) => {
-          const match = module.textContent.toLowerCase().includes(query);
-          module.style.display = match ? "" : "none";
-        });
       });
 
       document.querySelectorAll("[data-reveal]").forEach((button) => {
