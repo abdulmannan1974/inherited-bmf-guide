@@ -1,2116 +1,1409 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Inherited Bone Marrow Failure Syndromes | Blood🩸Doctor</title>
-    <meta name="description" content="Comprehensive guide to Inherited Aplastic Anaemia and Bone Marrow Failure Syndromes for Haematologists and Trainees">
-    <meta name="author" content="Dr Abdul Mannan FRCPath FCPS">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-    <!-- Header -->
-    <header class="header">
-        <div class="container">
-            <div class="header-content">
-                <a href="#" class="logo">Blood<span class="blood-drop">🩸</span>Doctor</a>
-                <nav class="nav">
-                    <button class="nav-toggle" aria-label="Toggle navigation">
-                        <span></span><span></span><span></span>
-                    </button>
-                    <ul class="nav-menu">
-                        <li><a href="#overview">Overview</a></li>
-                        <li><a href="#fanconi">Fanconi Anaemia</a></li>
-                        <li><a href="#dc">Dyskeratosis Congenita</a></li>
-                        <li><a href="#sds">SDS</a></li>
-                        <li><a href="#dba">DBA</a></li>
-                        <li><a href="#cda">CDA</a></li>
-                        <li><a href="#neutropenia">Neutropenia</a></li>
-                        <li><a href="#diagnosis">Diagnosis</a></li>
-                    </ul>
-                </nav>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Blood🩸Doctor | Inherited Aplastic Anaemia & BMF Syndromes</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Sora:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        --ink: #11131a;
+        --slate: #2b2f3a;
+        --muted: #5c6170;
+        --blood: #8b0e1c;
+        --blood-soft: #b73345;
+        --gold: #d7a35d;
+        --teal: #0f766e;
+        --teal-soft: #cde8e4;
+        --rose: #f4d8dd;
+        --ivory: #f7f2ed;
+        --mist: #f3f6f8;
+        --white: #ffffff;
+        --shadow: 0 28px 60px rgba(17, 19, 26, 0.18);
+        --radius: 22px;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        font-family: "Sora", system-ui, -apple-system, sans-serif;
+        color: var(--ink);
+        background: radial-gradient(circle at top, #ffffff 0%, #f6efe8 38%, #efe3d7 100%);
+      }
+
+      html {
+        scroll-behavior: smooth;
+      }
+
+      a {
+        color: inherit;
+        text-decoration: none;
+      }
+
+      button,
+      input {
+        font-family: inherit;
+      }
+
+      .page {
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+      }
+
+      .hero {
+        position: relative;
+        padding: 42px 6vw 64px;
+        overflow: hidden;
+      }
+
+      .hero::before,
+      .hero::after {
+        content: "";
+        position: absolute;
+        border-radius: 999px;
+        opacity: 0.85;
+        z-index: 0;
+      }
+
+      .hero::before {
+        width: 420px;
+        height: 420px;
+        background: radial-gradient(circle, rgba(183, 51, 69, 0.45) 0%, rgba(183, 51, 69, 0) 70%);
+        right: -150px;
+        top: -160px;
+      }
+
+      .hero::after {
+        width: 360px;
+        height: 360px;
+        background: radial-gradient(circle, rgba(15, 118, 110, 0.35) 0%, rgba(15, 118, 110, 0) 70%);
+        left: -140px;
+        bottom: -160px;
+      }
+
+      .nav {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        position: relative;
+        z-index: 1;
+        gap: 20px;
+      }
+
+      .brand {
+        font-size: 1.5rem;
+        font-weight: 700;
+      }
+
+      .nav-meta {
+        display: flex;
+        gap: 16px;
+        align-items: center;
+        font-weight: 600;
+        color: rgba(17, 19, 26, 0.7);
+      }
+
+      .pill {
+        padding: 8px 14px;
+        border-radius: 999px;
+        background: var(--ivory);
+        font-size: 0.85rem;
+      }
+
+      .hero-grid {
+        margin-top: 50px;
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 40px;
+        align-items: center;
+        position: relative;
+        z-index: 1;
+      }
+
+      .hero-copy h1 {
+        font-family: "Fraunces", serif;
+        font-size: clamp(2.6rem, 4vw, 4.2rem);
+        line-height: 1.05;
+        margin: 0 0 16px;
+      }
+
+      .hero-copy p {
+        font-size: 1.05rem;
+        line-height: 1.7;
+        color: rgba(17, 19, 26, 0.72);
+        margin: 0 0 26px;
+      }
+
+      .cta-row {
+        display: flex;
+        align-items: center;
+        gap: 14px;
+        flex-wrap: wrap;
+      }
+
+      .cta-primary {
+        background: var(--blood);
+        color: #fff;
+        border: none;
+        padding: 16px 32px;
+        border-radius: 999px;
+        font-weight: 600;
+        font-size: 1rem;
+        cursor: pointer;
+        box-shadow: 0 18px 40px rgba(139, 14, 28, 0.28);
+        transition: transform 0.2s ease, box-shadow 0.2s ease;
+      }
+
+      .cta-primary:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 24px 48px rgba(139, 14, 28, 0.35);
+      }
+
+      .cta-secondary {
+        color: rgba(17, 19, 26, 0.65);
+        font-weight: 600;
+      }
+
+      .hero-panel {
+        background: #fff;
+        border-radius: var(--radius);
+        padding: 24px;
+        box-shadow: var(--shadow);
+        display: grid;
+        gap: 18px;
+      }
+
+      .panel-title {
+        font-weight: 700;
+        font-size: 1.1rem;
+      }
+
+      .stat-grid {
+        display: grid;
+        gap: 14px;
+      }
+
+      .stat {
+        display: flex;
+        justify-content: space-between;
+        padding: 12px 14px;
+        border-radius: 14px;
+        background: var(--mist);
+        font-size: 0.95rem;
+      }
+
+      .stat strong {
+        color: var(--blood);
+      }
+
+      .section {
+        padding: 64px 6vw;
+      }
+
+      .section-title {
+        font-size: 2rem;
+        font-family: "Fraunces", serif;
+        margin-bottom: 12px;
+      }
+
+      .section-sub {
+        color: rgba(17, 19, 26, 0.68);
+        max-width: 820px;
+        line-height: 1.7;
+        margin-bottom: 28px;
+      }
+
+      .control-bar {
+        display: flex;
+        gap: 18px;
+        align-items: center;
+        flex-wrap: wrap;
+        background: var(--white);
+        border-radius: 16px;
+        padding: 16px 18px;
+        box-shadow: var(--shadow);
+      }
+
+      .toggle {
+        border: 1px solid rgba(17, 19, 26, 0.2);
+        background: #fff;
+        border-radius: 999px;
+        padding: 10px 16px;
+        font-weight: 600;
+        cursor: pointer;
+      }
+
+      .search {
+        flex: 1;
+        min-width: 220px;
+        border: 1px solid rgba(17, 19, 26, 0.2);
+        border-radius: 999px;
+        padding: 12px 16px;
+        font-size: 0.95rem;
+      }
+
+      .map {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+        gap: 16px;
+        margin-top: 28px;
+      }
+
+      .map-card {
+        background: #fff;
+        border-radius: 18px;
+        padding: 18px;
+        box-shadow: var(--shadow);
+        display: grid;
+        gap: 12px;
+      }
+
+      .map-card button {
+        border: none;
+        background: var(--teal);
+        color: #fff;
+        padding: 10px 14px;
+        border-radius: 999px;
+        font-weight: 600;
+        cursor: pointer;
+      }
+
+      .module {
+        margin-top: 42px;
+        padding: 28px;
+        border-radius: var(--radius);
+        background: #fff;
+        box-shadow: var(--shadow);
+      }
+
+      .module-head {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 16px;
+        flex-wrap: wrap;
+        margin-bottom: 18px;
+      }
+
+      .module-head h3 {
+        margin: 0;
+        font-family: "Fraunces", serif;
+        font-size: 1.6rem;
+      }
+
+      .module-tag {
+        background: var(--rose);
+        color: var(--blood);
+        padding: 6px 14px;
+        border-radius: 999px;
+        font-weight: 600;
+        font-size: 0.85rem;
+      }
+
+      .module-grid {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 20px;
+      }
+
+      .card {
+        border-radius: 18px;
+        padding: 18px;
+        background: var(--mist);
+        display: grid;
+        gap: 12px;
+      }
+
+      .card.deep {
+        background: #fff7f2;
+        border: 1px solid rgba(139, 14, 28, 0.12);
+      }
+
+      .card h4 {
+        margin: 0;
+        font-size: 1.1rem;
+      }
+
+      .card p {
+        margin: 0;
+        color: rgba(17, 19, 26, 0.7);
+        line-height: 1.6;
+      }
+
+      .card ul {
+        margin: 0;
+        padding-left: 18px;
+        color: rgba(17, 19, 26, 0.75);
+        line-height: 1.6;
+      }
+
+      .callout {
+        margin-top: 18px;
+        border-radius: 16px;
+        padding: 16px 18px;
+        background: var(--teal-soft);
+        display: grid;
+        gap: 8px;
+      }
+
+      .callout.high-yield {
+        background: #fff3e6;
+        border: 1px solid rgba(215, 163, 93, 0.45);
+      }
+
+      .callout strong {
+        text-transform: uppercase;
+        font-size: 0.8rem;
+        letter-spacing: 0.08em;
+      }
+
+      .table-wrap {
+        overflow-x: auto;
+      }
+
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        font-size: 0.92rem;
+      }
+
+      th,
+      td {
+        text-align: left;
+        padding: 10px 12px;
+        border-bottom: 1px solid rgba(17, 19, 26, 0.1);
+        vertical-align: top;
+      }
+
+      th {
+        color: var(--slate);
+        font-weight: 700;
+        background: #f0e9e3;
+      }
+
+      .flow {
+        display: grid;
+        gap: 14px;
+        margin-top: 12px;
+      }
+
+      .flow-step {
+        background: #f3f5f7;
+        border-radius: 14px;
+        padding: 14px 16px;
+        display: flex;
+        align-items: center;
+        gap: 12px;
+      }
+
+      .flow-step span {
+        width: 28px;
+        height: 28px;
+        border-radius: 50%;
+        background: var(--blood);
+        color: #fff;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: 600;
+        font-size: 0.9rem;
+      }
+
+      .diagram {
+        width: 100%;
+        border-radius: 18px;
+        background: #fff;
+        border: 1px solid rgba(17, 19, 26, 0.08);
+        box-shadow: 0 16px 28px rgba(17, 19, 26, 0.08);
+      }
+
+      details {
+        border-radius: 16px;
+        border: 1px solid rgba(17, 19, 26, 0.1);
+        padding: 12px 14px;
+        background: #fff;
+      }
+
+      details summary {
+        cursor: pointer;
+        font-weight: 600;
+      }
+
+      .quiz {
+        margin-top: 18px;
+        background: #f8f0f1;
+        border-radius: 16px;
+        padding: 16px;
+        display: grid;
+        gap: 10px;
+      }
+
+      .quiz button {
+        border: none;
+        background: var(--blood-soft);
+        color: #fff;
+        padding: 8px 14px;
+        border-radius: 999px;
+        cursor: pointer;
+        font-weight: 600;
+        width: fit-content;
+      }
+
+      .answer {
+        display: none;
+        color: rgba(17, 19, 26, 0.7);
+      }
+
+      .answer.active {
+        display: block;
+      }
+
+      .cta-band {
+        margin-top: 48px;
+        padding: 26px 28px;
+        border-radius: var(--radius);
+        background: linear-gradient(120deg, #8b0e1c, #5f0b14);
+        color: #fff;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+        gap: 16px;
+      }
+
+      .cta-band p {
+        margin: 6px 0 0;
+        color: rgba(255, 255, 255, 0.85);
+      }
+
+      .cta-band button {
+        background: #fff;
+        color: var(--blood);
+        border: none;
+        padding: 12px 18px;
+        border-radius: 999px;
+        font-weight: 700;
+        cursor: pointer;
+      }
+
+      .disclaimer {
+        margin-top: 26px;
+        color: rgba(17, 19, 26, 0.6);
+        font-size: 0.9rem;
+      }
+
+      .footer {
+        padding: 28px 6vw 42px;
+        background: #13151d;
+        color: rgba(255, 255, 255, 0.78);
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        gap: 12px;
+      }
+
+      .simplify .deep,
+      .simplify details,
+      .simplify .table-wrap {
+        display: none;
+      }
+
+      @media (max-width: 980px) {
+        .hero-grid {
+          grid-template-columns: 1fr;
+        }
+
+        .module-grid {
+          grid-template-columns: 1fr;
+        }
+      }
+
+      @media (max-width: 720px) {
+        .hero {
+          padding: 34px 5vw 54px;
+        }
+
+        .section {
+          padding: 52px 5vw;
+        }
+
+        .nav {
+          flex-direction: column;
+          align-items: flex-start;
+        }
+
+        .cta-band {
+          flex-direction: column;
+          align-items: flex-start;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="page">
+      <header class="hero" id="top">
+        <nav class="nav">
+          <div class="brand">Blood🩸Doctor</div>
+          <div class="nav-meta">
+            <div class="pill">Dr Abdul Mannan FRCPath FCPS</div>
+            <div class="pill">blooddoctor.co@gmail.com</div>
+          </div>
+        </nav>
+
+        <div class="hero-grid">
+          <div class="hero-copy">
+            <div class="pill">Chapter 30 · Hoffbrand Postgraduate Haematology</div>
+            <h1>Inherited Aplastic Anaemia & Bone Marrow Failure Syndromes</h1>
+            <p>
+              A complete, clinically actionable deep dive for haematologists, physicians, and trainees. Build rapid diagnostic intuition,
+              master genetic subtypes, and translate the chapter into bedside decisions.
+            </p>
+            <div class="cta-row">
+              <button class="cta-primary" id="startLearning">Start learning</button>
+              <a class="cta-secondary" href="#module-3">Jump to Fanconi anaemia</a>
             </div>
+          </div>
+          <div class="hero-panel">
+            <div class="panel-title">Fast facts from the chapter</div>
+            <div class="stat-grid">
+              <div class="stat"><span>Inherited syndromes in AA</span><strong>~20-30%</strong></div>
+              <div class="stat"><span>FA: BMF by age 40</span><strong>~90%</strong></div>
+              <div class="stat"><span>DC: BM abnormalities by age 30</span><strong>80-90%</strong></div>
+              <div class="stat"><span>DBA incidence</span><strong>~5 per million births</strong></div>
+            </div>
+          </div>
         </div>
-    </header>
+      </header>
 
-    <!-- Hero Section -->
-    <section class="hero">
-        <div class="container">
-            <div class="hero-content">
-                <span class="hero-badge">Chapter 30 | Hoffbrand's Postgraduate Haematology</span>
-                <h1>Inherited Aplastic Anaemia & Bone Marrow Failure Syndromes</h1>
-                <p class="hero-subtitle">A comprehensive learning guide for haematologists, physicians, and trainees</p>
-                <div class="hero-stats">
-                    <div class="stat">
-                        <span class="stat-number">20-30%</span>
-                        <span class="stat-label">of AA patients have inherited BMF</span>
-                    </div>
-                    <div class="stat">
-                        <span class="stat-number">22+</span>
-                        <span class="stat-label">FA genes identified</span>
-                    </div>
-                    <div class="stat">
-                        <span class="stat-number">20+</span>
-                        <span class="stat-label">DC genes identified</span>
-                    </div>
-                </div>
-                <a href="#overview" class="btn btn-primary">Start Learning</a>
-            </div>
+      <section class="section" id="app">
+        <div class="control-bar">
+          <strong>Learning controls</strong>
+          <button class="toggle" id="simplifyToggle" aria-pressed="false">Simplify view</button>
+          <input class="search" id="searchInput" placeholder="Search by syndrome, gene, or feature" />
+          <span class="cta-secondary">Tip: simplify view hides deep-dive panels.</span>
         </div>
-    </section>
 
-    <!-- Quick Navigation Cards -->
-    <section class="quick-nav">
-        <div class="container">
-            <div class="nav-cards">
-                <a href="#fanconi" class="nav-card">
-                    <div class="nav-card-icon">🧬</div>
-                    <h3>Fanconi Anaemia</h3>
-                    <p>DNA repair defects, 22 genes, malignancy risk</p>
-                </a>
-                <a href="#dc" class="nav-card">
-                    <div class="nav-card-icon">🔬</div>
-                    <h3>Dyskeratosis Congenita</h3>
-                    <p>Telomere biology disorders, mucocutaneous triad</p>
-                </a>
-                <a href="#sds" class="nav-card">
-                    <div class="nav-card-icon">🦴</div>
-                    <h3>Shwachman-Diamond</h3>
-                    <p>Ribosome biogenesis, pancreatic insufficiency</p>
-                </a>
-                <a href="#dba" class="nav-card">
-                    <div class="nav-card-icon">🔴</div>
-                    <h3>Diamond-Blackfan</h3>
-                    <p>Pure red cell aplasia, ribosomal proteins</p>
-                </a>
-                <a href="#cda" class="nav-card">
-                    <div class="nav-card-icon">💉</div>
-                    <h3>CDA</h3>
-                    <p>Congenital dyserythropoietic anaemias</p>
-                </a>
-                <a href="#neutropenia" class="nav-card">
-                    <div class="nav-card-icon">⚪</div>
-                    <h3>Congenital Neutropenia</h3>
-                    <p>SCN, Kostmann syndrome, cyclic neutropenia</p>
-                </a>
-            </div>
+        <div class="section-title">Learning map</div>
+        <div class="section-sub">
+          Navigate the entire chapter in structured modules. Each module contains core guidance, deep dive tables,
+          and high-yield callouts.
         </div>
-    </section>
 
-    <!-- Overview Section -->
-    <section id="overview" class="section">
-        <div class="container">
-            <h2 class="section-title">Overview of Inherited BMF Syndromes</h2>
+        <div class="map">
+          <div class="map-card">
+            <strong>Module 1</strong>
+            <div>Foundations & phenotypes</div>
+            <button data-target="#module-1">Open module</button>
+          </div>
+          <div class="map-card">
+            <strong>Module 2</strong>
+            <div>Diagnostic framework & tests</div>
+            <button data-target="#module-2">Open module</button>
+          </div>
+          <div class="map-card">
+            <strong>Module 3</strong>
+            <div>Fanconi anaemia (FA)</div>
+            <button data-target="#module-3">Open module</button>
+          </div>
+          <div class="map-card">
+            <strong>Module 4</strong>
+            <div>Dyskeratosis congenita (DC)</div>
+            <button data-target="#module-4">Open module</button>
+          </div>
+          <div class="map-card">
+            <strong>Module 5</strong>
+            <div>Shwachman-Diamond syndrome</div>
+            <button data-target="#module-5">Open module</button>
+          </div>
+          <div class="map-card">
+            <strong>Module 6</strong>
+            <div>Diamond-Blackfan anaemia</div>
+            <button data-target="#module-6">Open module</button>
+          </div>
+          <div class="map-card">
+            <strong>Module 7</strong>
+            <div>Congenital dyserythropoietic anaemia</div>
+            <button data-target="#module-7">Open module</button>
+          </div>
+          <div class="map-card">
+            <strong>Module 8</strong>
+            <div>Congenital & cyclic neutropenias</div>
+            <button data-target="#module-8">Open module</button>
+          </div>
+          <div class="map-card">
+            <strong>Module 9</strong>
+            <div>TAR & CAMT thrombocytopenias</div>
+            <button data-target="#module-9">Open module</button>
+          </div>
+          <div class="map-card">
+            <strong>Module 10</strong>
+            <div>New/overlapping BMF syndromes</div>
+            <button data-target="#module-10">Open module</button>
+          </div>
+          <div class="map-card">
+            <strong>Module 11</strong>
+            <div>High-yield consolidation</div>
+            <button data-target="#module-11">Open module</button>
+          </div>
+        </div>
 
-            <div class="callout callout-key">
-                <div class="callout-icon">🎯</div>
-                <div class="callout-content">
-                    <h4>Key Concept</h4>
-                    <p>Inherited BMF syndromes are constitutional/genetic disorders characterized by aplastic anaemia/bone marrow failure, usually associated with somatic abnormalities. They represent <strong>20-30% of patients presenting with AA</strong>.</p>
-                </div>
+        <section class="module" id="module-1">
+          <div class="module-head">
+            <h3>Module 1: Foundations & phenotypes</h3>
+            <span class="module-tag">Orientation</span>
+          </div>
+          <div class="module-grid">
+            <div class="card">
+              <h4>Why inherited BMF matters</h4>
+              <ul>
+                <li>Inherited syndromes account for roughly 20-30% of patients presenting with aplastic anaemia.</li>
+                <li>Phenotypes vary from single-lineage cytopenias to pan-lineage bone marrow failure.</li>
+                <li>Clinical anomalies are common, but up to one-third of FA patients have no obvious physical signs.</li>
+                <li>Accurate classification drives safer conditioning for HSCT and tailored surveillance for malignancy.</li>
+              </ul>
             </div>
-
-            <div class="content-grid">
-                <div class="content-card">
-                    <h3>Clinical Presentation Patterns</h3>
-                    <ul class="feature-list">
-                        <li>May present at birth or at variable time thereafter</li>
-                        <li>Can present in adulthood</li>
-                        <li>May involve all lineages or single lineage initially</li>
-                        <li>Single cytopenia may progress to pancytopenia</li>
-                        <li>~1/3 of patients have NO physical abnormalities</li>
-                    </ul>
-                </div>
-                <div class="content-card">
-                    <h3>Why Recognition Matters</h3>
-                    <ul class="feature-list">
-                        <li>Impacts understanding of "idiopathic" AA pathophysiology</li>
-                        <li>Guides appropriate HSCT conditioning protocols</li>
-                        <li>Determines surveillance for malignancy</li>
-                        <li>Enables genetic counselling for families</li>
-                        <li>May present with AA/BMF as initial manifestation</li>
-                    </ul>
-                </div>
-            </div>
-
-            <!-- Inherited BMF Table -->
-            <h3 class="subsection-title">Table 30.1: The Inherited BMF Syndromes</h3>
-            <div class="table-responsive">
-                <table class="data-table">
-                    <thead>
-                        <tr>
-                            <th>Category</th>
-                            <th>Syndromes</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td><strong>Pancytopenia</strong><br>(global haemopoietic defect)</td>
-                            <td>
-                                <ul>
-                                    <li>Fanconi anaemia</li>
-                                    <li>Dyskeratosis congenita</li>
-                                    <li>Shwachman-Diamond syndrome</li>
-                                    <li>Reticular dysgenesis</li>
-                                    <li>Pearson syndrome</li>
-                                    <li>Familial aplastic anaemia (autosomal and X-linked)</li>
-                                    <li>Myelodysplasia</li>
-                                    <li>Non-haematological syndromes (Down, Dubowitz)</li>
-                                </ul>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td><strong>Single Cytopenia - Anaemia</strong></td>
-                            <td>
-                                <ul>
-                                    <li>Diamond-Blackfan anaemia</li>
-                                    <li>Congenital dyserythropoietic anaemia</li>
-                                </ul>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td><strong>Single Cytopenia - Neutropenia</strong></td>
-                            <td>
-                                <ul>
-                                    <li>Severe congenital neutropenia (Kostmann syndrome)</li>
-                                </ul>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td><strong>Single Cytopenia - Thrombocytopenia</strong></td>
-                            <td>
-                                <ul>
-                                    <li>Congenital amegakaryocytic thrombocytopenia (CAMT)</li>
-                                    <li>Amegakaryocytic thrombocytopenia with absent radii (TAR)</li>
-                                </ul>
-                            </td>
-                        </tr>
-                    </tbody>
+            <div class="card deep">
+              <h4>Inherited BMF syndromes (Table 30.1)</h4>
+              <div class="table-wrap">
+                <table>
+                  <thead>
+                    <tr>
+                      <th>Category</th>
+                      <th>Typical syndromes</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>Pancytopenia / global BMF</td>
+                      <td>Fanconi anaemia, dyskeratosis congenita, Shwachman-Diamond syndrome, reticular dysgenesis, Pearson syndrome, familial aplastic anaemia, myelodysplasia, non-haematologic syndromes (Down, Dubowitz)</td>
+                    </tr>
+                    <tr>
+                      <td>Single cytopenia: anaemia</td>
+                      <td>Diamond-Blackfan anaemia, congenital dyserythropoietic anaemia</td>
+                    </tr>
+                    <tr>
+                      <td>Single cytopenia: neutropenia</td>
+                      <td>Severe congenital neutropenia (including Kostmann), cyclic neutropenia</td>
+                    </tr>
+                    <tr>
+                      <td>Single cytopenia: thrombocytopenia</td>
+                      <td>Congenital amegakaryocytic thrombocytopenia, thrombocytopenia with absent radii</td>
+                    </tr>
+                  </tbody>
                 </table>
+              </div>
             </div>
+          </div>
+          <div class="callout">
+            <strong>Clinical anchor</strong>
+            <div>Presence of somatic or extra-haematopoietic abnormalities alongside AA strongly suggests constitutional or inherited AA.</div>
+          </div>
+          <div class="card deep" style="margin-top: 18px;">
+            <h4>Common somatic abnormalities in FA (Table 30.2)</h4>
+            <div class="table-wrap">
+              <table>
+                <thead>
+                  <tr>
+                    <th>Abnormality</th>
+                    <th>Approx. frequency (%)</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr><td>Skeletal (radial ray, vertebral, scoliosis, ribs)</td><td>71</td></tr>
+                  <tr><td>Skin pigmentation (cafe-au-lait, hyper/hypopigmentation)</td><td>64</td></tr>
+                  <tr><td>Short stature</td><td>63</td></tr>
+                  <tr><td>Eyes (microphthalmia)</td><td>38</td></tr>
+                  <tr><td>Renal and urinary tract</td><td>34</td></tr>
+                  <tr><td>Male genital anomalies</td><td>20</td></tr>
+                  <tr><td>Mental retardation</td><td>16</td></tr>
+                  <tr><td>GI anomalies (anorectal/duodenal atresia)</td><td>14</td></tr>
+                  <tr><td>Cardiac anomalies</td><td>13</td></tr>
+                  <tr><td>Hearing loss</td><td>9</td></tr>
+                  <tr><td>CNS anomalies (hydrocephalus/septum pellucidum)</td><td>8</td></tr>
+                  <tr><td>No abnormalities</td><td>30</td></tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </section>
 
-            <!-- Comparison Table -->
-            <h3 class="subsection-title">Table 30.2: Characteristics Comparison of BMF Syndromes</h3>
-            <div class="table-responsive">
-                <table class="data-table comparison-table">
-                    <thead>
-                        <tr>
-                            <th>Feature</th>
-                            <th>FA</th>
-                            <th>DC</th>
-                            <th>SDS</th>
-                            <th>DBA</th>
-                            <th>CDA</th>
-                            <th>TAR+CAMT</th>
-                            <th>SCN</th>
-                            <th>IAA</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td><strong>Inheritance</strong></td>
-                            <td>AR, XLR</td>
-                            <td>XLR, AR, AD</td>
-                            <td>AR</td>
-                            <td>AD, XLR</td>
-                            <td>AR, AD</td>
-                            <td>AR</td>
-                            <td>AD, AR</td>
-                            <td>?None</td>
-                        </tr>
-                        <tr>
-                            <td><strong>Somatic abnormalities</strong></td>
-                            <td>Yes</td>
-                            <td>Yes</td>
-                            <td>Yes</td>
-                            <td>Yes</td>
-                            <td>Rare</td>
-                            <td>Yes</td>
-                            <td>Rare</td>
-                            <td>?None</td>
-                        </tr>
-                        <tr>
-                            <td><strong>Bone marrow failure</strong></td>
-                            <td>AA (>90%)</td>
-                            <td>AA (~80%)</td>
-                            <td>AA (20%)</td>
-                            <td>RCA</td>
-                            <td>Eryth</td>
-                            <td>Megs</td>
-                            <td>Neutropenia</td>
-                            <td>Yes (100%)</td>
-                        </tr>
-                        <tr>
-                            <td><strong>Short telomeres</strong></td>
-                            <td>Yes*</td>
-                            <td>Yes</td>
-                            <td>Yes</td>
-                            <td>?No</td>
-                            <td>?No</td>
-                            <td>?</td>
-                            <td>Yes</td>
-                            <td>No</td>
-                        </tr>
-                        <tr>
-                            <td><strong>Malignancy risk</strong></td>
-                            <td>Yes</td>
-                            <td>Yes</td>
-                            <td>Yes</td>
-                            <td>?No</td>
-                            <td>?</td>
-                            <td>?</td>
-                            <td>Yes</td>
-                            <td>?</td>
-                        </tr>
-                        <tr>
-                            <td><strong>Chromosome instability</strong></td>
-                            <td>Yes</td>
-                            <td>Yes</td>
-                            <td>?</td>
-                            <td>?</td>
-                            <td>?</td>
-                            <td>?</td>
-                            <td>Yes</td>
-                            <td>?</td>
-                        </tr>
-                        <tr>
-                            <td><strong>Genes identified</strong></td>
-                            <td>22</td>
-                            <td>20</td>
-                            <td>4</td>
-                            <td>21</td>
-                            <td>5</td>
-                            <td>4</td>
-                            <td>7+</td>
-                            <td>25+</td>
-                        </tr>
-                    </tbody>
+        <section class="module" id="module-2">
+          <div class="module-head">
+            <h3>Module 2: Diagnostic framework & tests</h3>
+            <span class="module-tag">Workup</span>
+          </div>
+          <div class="module-grid">
+            <div class="card">
+              <h4>Actionable diagnostic algorithm</h4>
+              <div class="flow">
+                <div class="flow-step"><span>1</span>Identify AA/BMF or single-lineage cytopenia + family history or congenital features.</div>
+                <div class="flow-step"><span>2</span>Baseline labs: CBC with indices, reticulocytes, fetal Hb, erythrocyte ADA, marrow cellularity.</div>
+                <div class="flow-step"><span>3</span>Phenotype-driven screening: DEB/MMC breakage (FA), telomere length (DC), pancreatic function (SDS), marrow morphology (CDA), neutrophil studies (SCN).</div>
+                <div class="flow-step"><span>4</span>Targeted NGS panel (syndrome-specific) + constitutional karyotype.</div>
+                <div class="flow-step"><span>5</span>Confirm diagnosis, counsel family, and plan HSCT conditioning safely.</div>
+              </div>
+            </div>
+            <div class="card deep">
+              <h4>Core diagnostic tests (Table 30.13)</h4>
+              <div class="table-wrap">
+                <table>
+                  <thead>
+                    <tr>
+                      <th>Test</th>
+                      <th>Diagnostic value</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr><td>Fetal haemoglobin</td><td>High level suggests generalized BMF.</td></tr>
+                    <tr><td>DEB/MMC-induced chromosomal breakage</td><td>Elevated in FA.</td></tr>
+                    <tr><td>Telomere length</td><td>Short in AA, very short in DC.</td></tr>
+                    <tr><td>Ham test / CD59 analysis</td><td>Abnormal in paroxysmal nocturnal haemoglobinuria.</td></tr>
+                    <tr><td>Mitochondrial DNA analysis</td><td>Deletions seen in Pearson syndrome.</td></tr>
+                    <tr><td>X-chromosome inactivation patterns</td><td>Skewed in carriers of X-linked DC.</td></tr>
+                    <tr><td>Constitutional karyotype</td><td>Suggests inherited AA if abnormal.</td></tr>
+                  </tbody>
                 </table>
+              </div>
+              <details>
+                <summary>Show gene panel checklist by syndrome</summary>
+                <div style="margin-top: 12px; display: grid; gap: 10px;">
+                  <div><strong>FA panel:</strong> FANCA to FANCW.</div>
+                  <div><strong>DC/telomere disorders:</strong> DKC1, TERC, TERT, NOP10, NHP2, TINF2, TCAB1/WRAP53, USB1, CTC1, RTEL1, ACD/TPP1, PARN, NAF1, ZCCHC8, NPM1, MDM4, POT1, RPA1, DCLRE1B, TYMS-ENOSF1.</div>
+                  <div><strong>SDS/SDS-like:</strong> SBDS, DNAJC21, EFL1, SRP54.</div>
+                  <div><strong>DBA/DBA-like:</strong> RPS19, RPS7, RPS10, RPS15, RPS17, RPS24, RPS26, RPS27, RPS28, RPS29, RPL5, RPL9, RPL11, RPL15, RPL18, RPL26, RPL27, RPL31, RPL35A, GATA1, TSR2, EPO.</div>
+                  <div><strong>CDA/CDA-like:</strong> CDAN1, CDIN1, SEC23B, KIF23, KLF1.</div>
+                  <div><strong>Congenital/cyclic neutropenia:</strong> ELANE, HAX1, GFI1, G6PC3, VPS45, JAG1.</div>
+                  <div><strong>CAMT/TAR syndromic thrombocytopenia:</strong> MPL, RBM8A, HOXA11, MECOM.</div>
+                  <div><strong>New BMF syndromes:</strong> TPO/THPO, ERCC6L2, MYSM1, DUT, EXOC3L2, TP53, SPI1.</div>
+                  <div><strong>Familial MDS/AML overlap:</strong> RUNX1, CEBPA, GATA2, SAMD9, SAMD9L, TERC, TERT, SRP72, ANKRD26, ETV6, DDX41, RTEL1, PAX5, TP53, ACD, MECOM, HLTF, XPC, DHX34.</div>
+                </div>
+              </details>
             </div>
-            <p class="table-note">*Telomeres are usually very short in DC, short in FA and SDS. AR=autosomal recessive; AD=autosomal dominant; XLR=X-linked recessive; AA=aplastic anaemia; RCA=red cell aplasia; Eryth=ineffective erythropoiesis; Megs=low megakaryocytes</p>
+          </div>
+          <div class="card deep" style="margin-top: 18px;">
+            <h4>Other investigations in suspected inherited BMF</h4>
+            <div class="table-wrap">
+              <table>
+                <thead>
+                  <tr>
+                    <th>Investigation</th>
+                    <th>Why it matters</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr><td>Skeletal survey</td><td>Identify skeletal anomalies (FA, TAR, SDS).</td></tr>
+                  <tr><td>Abdominal ultrasound</td><td>Assess renal, hepatic or splenic anomalies.</td></tr>
+                  <tr><td>Pulmonary function tests</td><td>Evaluate pulmonary complications (DC).</td></tr>
+                  <tr><td>Echocardiogram</td><td>Screen cardiac defects (FA, DBA).</td></tr>
+                  <tr><td>Exocrine pancreatic function</td><td>Abnormal in SDS and Pearson syndrome.</td></tr>
+                  <tr><td>Neutrophil chemotaxis</td><td>Abnormal in SDS.</td></tr>
+                  <tr><td>Fibroblast cultures</td><td>Abnormalities seen in DC.</td></tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </section>
+
+        <section class="module" id="module-3">
+          <div class="module-head">
+            <h3>Module 3: Fanconi anaemia (FA)</h3>
+            <span class="module-tag">Global BMF</span>
+          </div>
+          <div class="module-grid">
+            <div class="card">
+              <h4>Clinical features</h4>
+              <ul>
+                <li>Autosomal recessive disorder (X-linked rare) with progressive BMF.</li>
+                <li>Somatic anomalies: cafe-au-lait, radial ray defects, skeletal, GU, GI, cardiac, neuro anomalies.</li>
+                <li>Up to one-third have no obvious physical abnormalities.</li>
+                <li>Blood counts often normal at birth; pancytopenia develops insidiously, median age 7 years.</li>
+                <li>Cumulative BMF by age 40 is ~90%.</li>
+                <li>Median survival in IFAR cohort was 24 years (improving with modern care).</li>
+              </ul>
+            </div>
+            <div class="card deep">
+              <h4>Malignancy risk</h4>
+              <ul>
+                <li>AML common, often FAB M4/M5.</li>
+                <li>Hematologic malignancy incidence ~33% by age 40.</li>
+                <li>Solid tumors ~28% by age 40 (hepatic tumors, SCC of vulva, esophagus, head/neck).</li>
+                <li>Median age: leukemia 13 years, solid tumors 25 years.</li>
+              </ul>
+            </div>
+          </div>
+          <div class="module-grid" style="margin-top: 18px;">
+            <div class="card deep">
+              <h4>FA/BRCA pathway (Figma-style diagram)</h4>
+              <svg class="diagram" viewBox="0 0 820 360" role="img" aria-label="FA-BRCA pathway">
+                <rect x="20" y="30" width="240" height="70" rx="16" fill="#f4d8dd" stroke="#8b0e1c" />
+                <text x="40" y="70" font-size="16" font-weight="600" fill="#2b2f3a">FA Core Complex</text>
+                <text x="40" y="92" font-size="12" fill="#2b2f3a">FANCA/B/C/E/F/G/L/M</text>
+
+                <rect x="300" y="30" width="210" height="70" rx="16" fill="#cde8e4" stroke="#0f766e" />
+                <text x="320" y="70" font-size="16" font-weight="600" fill="#0f766e">I-D2 Complex</text>
+                <text x="320" y="92" font-size="12" fill="#0f766e">FANCI-FANCD2</text>
+
+                <rect x="560" y="30" width="230" height="70" rx="16" fill="#fef1e4" stroke="#d7a35d" />
+                <text x="580" y="70" font-size="16" font-weight="600" fill="#8b0e1c">DNA Repair</text>
+                <text x="580" y="92" font-size="12" fill="#8b0e1c">BRCA1/2, RAD51, SLX4</text>
+
+                <rect x="120" y="160" width="240" height="70" rx="16" fill="#f5f6fb" stroke="#5c6170" />
+                <text x="140" y="200" font-size="15" font-weight="600" fill="#2b2f3a">ATR/ATM Signaling</text>
+                <text x="140" y="222" font-size="12" fill="#5c6170">Replication stress response</text>
+
+                <rect x="420" y="160" width="320" height="70" rx="16" fill="#f5f6fb" stroke="#5c6170" />
+                <text x="440" y="200" font-size="15" font-weight="600" fill="#2b2f3a">Genome Stability Outcomes</text>
+                <text x="440" y="222" font-size="12" fill="#5c6170">Chromosomal breakage, p53 activation, apoptosis</text>
+
+                <line x1="260" y1="65" x2="300" y2="65" stroke="#8b0e1c" stroke-width="2" />
+                <line x1="510" y1="65" x2="560" y2="65" stroke="#8b0e1c" stroke-width="2" />
+                <line x1="240" y1="100" x2="240" y2="160" stroke="#8b0e1c" stroke-width="2" />
+                <line x1="520" y1="100" x2="520" y2="160" stroke="#8b0e1c" stroke-width="2" />
+                <line x1="360" y1="195" x2="420" y2="195" stroke="#5c6170" stroke-width="2" />
+              </svg>
+            </div>
+            <div class="card">
+              <h4>Diagnostics & genetics</h4>
+              <ul>
+                <li>Chromosomal breakage after DEB/MMC remains a useful screening test.</li>
+                <li>22 complementation groups; FA-A, -C, -G are most common.</li>
+                <li>FA-D1 (BRCA2) and FA-N (PALB2) carry high risk of childhood solid tumors.</li>
+                <li>Somatic mosaicism can lead to improved counts (natural gene therapy).</li>
+              </ul>
+            </div>
+          </div>
+          <details style="margin-top: 18px;">
+            <summary>FA complementation groups (Table 30.4)</summary>
+            <div class="table-wrap" style="margin-top: 12px;">
+              <table>
+                <thead>
+                  <tr>
+                    <th>Group / Gene</th>
+                    <th>Approx %</th>
+                    <th>Chromosome</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr><td>FANCA</td><td>65</td><td>16q24.3</td></tr>
+                  <tr><td>FANCB</td><td>&lt;1</td><td>Xp22.2</td></tr>
+                  <tr><td>FANCC</td><td>12</td><td>9q22.3</td></tr>
+                  <tr><td>FANCD1 (BRCA2)</td><td>&lt;1</td><td>13q13.1</td></tr>
+                  <tr><td>FANCD2</td><td>&lt;1</td><td>3p25.3</td></tr>
+                  <tr><td>FANCE</td><td>4</td><td>6p21.31</td></tr>
+                  <tr><td>FANCF</td><td>4</td><td>1p14.3</td></tr>
+                  <tr><td>FANCG</td><td>2</td><td>9p13.3</td></tr>
+                  <tr><td>FANCI</td><td>&lt;1</td><td>15q26.1</td></tr>
+                  <tr><td>FANCJ (BRIP1)</td><td>&lt;5</td><td>17q23.2</td></tr>
+                  <tr><td>FANCL</td><td>&lt;1</td><td>2p16.1</td></tr>
+                  <tr><td>FANCM</td><td>&lt;1</td><td>14q21.2</td></tr>
+                  <tr><td>FANCN (PALB2)</td><td>&lt;1</td><td>16p12.2</td></tr>
+                  <tr><td>FANCO (RAD51C)</td><td>&lt;1</td><td>17q22</td></tr>
+                  <tr><td>FANCP (SLX4)</td><td>2</td><td>16p13.3</td></tr>
+                  <tr><td>FANCQ (ERCC4)</td><td>&lt;1</td><td>16p13.12</td></tr>
+                  <tr><td>FANCR (RAD51)</td><td>&lt;1</td><td>15q15.1</td></tr>
+                  <tr><td>FANCS (BRCA1)</td><td>&lt;1</td><td>17q21.31</td></tr>
+                  <tr><td>FANCT (UBE2T)</td><td>&lt;1</td><td>1q32.1</td></tr>
+                  <tr><td>FANCU (XRCC2)</td><td>&lt;1</td><td>7q36.1</td></tr>
+                  <tr><td>FANCV (REV7)</td><td>&lt;1</td><td>1p36.22</td></tr>
+                  <tr><td>FANCW (RFWD3)</td><td>&lt;1</td><td>16p23.1</td></tr>
+                </tbody>
+              </table>
+            </div>
+          </details>
+          <div class="callout high-yield">
+            <strong>High yield</strong>
+            <div>FA patients are hypersensitive to cyclophosphamide and radiation. HSCT conditioning must be reduced-intensity to avoid toxicity.</div>
+          </div>
+        </section>
+
+        <section class="module" id="module-4">
+          <div class="module-head">
+            <h3>Module 4: Dyskeratosis congenita (DC)</h3>
+            <span class="module-tag">Telomere disorder</span>
+          </div>
+          <div class="module-grid">
+            <div class="card">
+              <h4>Clinical core</h4>
+              <ul>
+                <li>Mucocutaneous triad: abnormal skin pigmentation, nail dystrophy, mucosal leukoplakia.</li>
+                <li>Multi-system involvement: dental, GI, GU, neuro, pulmonary, skeletal.</li>
+                <li>Skin/nail changes often by age 10; BMF typically before 20.</li>
+                <li>80-90% develop BM abnormalities by age 30.</li>
+              </ul>
+            </div>
+            <div class="card deep">
+              <h4>Diagnostic anchors</h4>
+              <ul>
+                <li>Minimal criteria: at least two major features (skin pigmentation, nail dystrophy, leukoplakia, BMF) plus two other features.</li>
+                <li>Main causes of death: BMF/immunodeficiency (~60-70%), pulmonary complications (~10-15%), malignancy (~10%).</li>
+                <li>X-linked, AD, and AR inheritance patterns.</li>
+              </ul>
+            </div>
+          </div>
+          <div class="module-grid" style="margin-top: 18px;">
+            <div class="card deep">
+              <h4>Telomere biology (Figma-style diagram)</h4>
+              <svg class="diagram" viewBox="0 0 820 360" role="img" aria-label="Telomere biology in DC">
+                <rect x="30" y="30" width="230" height="80" rx="18" fill="#f4d8dd" stroke="#8b0e1c" />
+                <text x="50" y="70" font-size="16" font-weight="600" fill="#2b2f3a">Telomerase Core</text>
+                <text x="50" y="92" font-size="12" fill="#2b2f3a">TERT + TERC + DKC1</text>
+
+                <rect x="300" y="30" width="230" height="80" rx="18" fill="#cde8e4" stroke="#0f766e" />
+                <text x="320" y="70" font-size="16" font-weight="600" fill="#0f766e">Shelterin/Partners</text>
+                <text x="320" y="92" font-size="12" fill="#0f766e">TINF2, POT1, ACD, RTEL1</text>
+
+                <rect x="570" y="30" width="220" height="80" rx="18" fill="#fef1e4" stroke="#d7a35d" />
+                <text x="590" y="70" font-size="16" font-weight="600" fill="#8b0e1c">Telomere Length</text>
+                <text x="590" y="92" font-size="12" fill="#8b0e1c">Very short in DC</text>
+
+                <rect x="170" y="170" width="480" height="90" rx="18" fill="#f5f6fb" stroke="#5c6170" />
+                <text x="200" y="210" font-size="16" font-weight="600" fill="#2b2f3a">Phenotype</text>
+                <text x="200" y="232" font-size="12" fill="#5c6170">BMF, pulmonary fibrosis, mucocutaneous triad, malignancy risk</text>
+
+                <line x1="260" y1="70" x2="300" y2="70" stroke="#8b0e1c" stroke-width="2" />
+                <line x1="530" y1="70" x2="570" y2="70" stroke="#8b0e1c" stroke-width="2" />
+                <line x1="410" y1="110" x2="410" y2="170" stroke="#5c6170" stroke-width="2" />
+              </svg>
+            </div>
+            <div class="card">
+              <h4>Genetic subtypes (Table 30.6)</h4>
+              <p>DC genes cluster into telomerase and shelterin pathways. XLR DKC1 is classic; AD and AR forms involve TERT/TERC and multiple telomere regulators.</p>
+              <details>
+                <summary>Show key DC genes by inheritance</summary>
+                <div style="margin-top: 10px; display: grid; gap: 8px;">
+                  <div><strong>X-linked:</strong> DKC1 (dyskerin).</div>
+                  <div><strong>Autosomal dominant:</strong> TINF2, TERC, TERT, NAF1, ZCCHC8, NPM1, ACD/TPP1, RTEL1, RPA1, MDM4, POT1.</div>
+                  <div><strong>Autosomal recessive:</strong> USB1, TYMS-ENOSF1, RTEL1, PARN, NOP10, TERT, NHP2, WRAP53/TCAB1, CTC1.</div>
+                </div>
+              </details>
+            </div>
+          </div>
+          <div class="callout">
+            <strong>Treatment essentials</strong>
+            <div>Oxymetholone responds in ~two-thirds (0.25 mg/kg/day up to 2-5 mg/kg/day). Danazol is increasingly first-line. HSCT is curative but high risk due to pulmonary/vascular complications; fludarabine-based non-myeloablative protocols show lower toxicity.</div>
+          </div>
+        </section>
+
+        <section class="module" id="module-5">
+          <div class="module-head">
+            <h3>Module 5: Shwachman-Diamond syndrome (SDS)</h3>
+            <span class="module-tag">Ribosomopathy</span>
+          </div>
+          <div class="module-grid">
+            <div class="card">
+              <h4>Clinical triad</h4>
+              <ul>
+                <li>Exocrine pancreatic insufficiency (100%) with early malabsorption and failure to thrive.</li>
+                <li>Bone marrow failure (100%), often neutropenia.</li>
+                <li>Skeletal abnormalities: metaphyseal dysostosis (~75%).</li>
+              </ul>
+            </div>
+            <div class="card deep">
+              <h4>Key features</h4>
+              <ul>
+                <li>Short stature (~70%), protuberant abdomen, ichthyotic rash (~60%).</li>
+                <li>Neutropenia (~60%), pancytopenia (~20%).</li>
+                <li>MDS/AML risk ~25%, AML common (age 1-43 years).</li>
+                <li>Differential: Pearson syndrome (ringed sideroblasts, mitochondrial DNA defects).</li>
+                <li>Non-haematological malignancies have not been observed in SDS.</li>
+              </ul>
+            </div>
+          </div>
+          <div class="module-grid" style="margin-top: 18px;">
+            <div class="card deep">
+              <h4>Ribosome biogenesis diagram</h4>
+              <svg class="diagram" viewBox="0 0 820 360" role="img" aria-label="Ribosome biogenesis">
+                <rect x="40" y="40" width="260" height="90" rx="18" fill="#f5f6fb" stroke="#5c6170" />
+                <text x="65" y="80" font-size="16" font-weight="600" fill="#2b2f3a">45S rRNA</text>
+                <text x="65" y="102" font-size="12" fill="#5c6170">Processed into 18S, 5.8S, 28S</text>
+
+                <rect x="360" y="40" width="180" height="90" rx="18" fill="#cde8e4" stroke="#0f766e" />
+                <text x="385" y="80" font-size="16" font-weight="600" fill="#0f766e">40S</text>
+                <text x="385" y="102" font-size="12" fill="#0f766e">RPS genes (DBA)</text>
+
+                <rect x="580" y="40" width="180" height="90" rx="18" fill="#f4d8dd" stroke="#8b0e1c" />
+                <text x="605" y="80" font-size="16" font-weight="600" fill="#8b0e1c">60S</text>
+                <text x="605" y="102" font-size="12" fill="#8b0e1c">SBDS, EFL1, DNAJC21</text>
+
+                <rect x="260" y="200" width="300" height="90" rx="18" fill="#fef1e4" stroke="#d7a35d" />
+                <text x="290" y="240" font-size="16" font-weight="600" fill="#8b0e1c">80S Ribosome</text>
+                <text x="290" y="262" font-size="12" fill="#8b0e1c">Final translation complex</text>
+
+                <line x1="300" y1="85" x2="360" y2="85" stroke="#5c6170" stroke-width="2" />
+                <line x1="540" y1="85" x2="580" y2="85" stroke="#5c6170" stroke-width="2" />
+                <line x1="450" y1="130" x2="410" y2="200" stroke="#5c6170" stroke-width="2" />
+                <line x1="670" y1="130" x2="480" y2="200" stroke="#5c6170" stroke-width="2" />
+              </svg>
+            </div>
+            <div class="card">
+              <h4>Genetics & management</h4>
+              <ul>
+                <li>SBDS variants in &gt;90% of cases; DNAJC21, EFL1 (AR) and SRP54 (AD) cause SDS-like disease.</li>
+                <li>Pancreatic enzymes for malabsorption; G-CSF for neutropenia.</li>
+                <li>Oxymetholone can improve anemia/thrombocytopenia.</li>
+                <li>Leukemia often poor prognosis; HSCT with fludarabine conditioning preferred.</li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+        <section class="module" id="module-6">
+          <div class="module-head">
+            <h3>Module 6: Diamond-Blackfan anaemia (DBA)</h3>
+            <span class="module-tag">Pure red cell aplasia</span>
+          </div>
+          <div class="module-grid">
+            <div class="card">
+              <h4>Diagnostic criteria</h4>
+              <ul>
+                <li>Macrocytic (or normocytic) anemia in early childhood.</li>
+                <li>Reticulocytopenia.</li>
+                <li>Normocellular marrow with erythroblasts &lt;5%.</li>
+                <li>Normal or slightly low WBC; platelets normal or high.</li>
+                <li>Supportive: elevated eADA, macrocytosis, raised fetal Hb.</li>
+              </ul>
+            </div>
+            <div class="card deep">
+              <h4>DBA Registry highlights</h4>
+              <ul>
+                <li>Incidence ~5 per million live births; median presentation 8 weeks.</li>
+                <li>93% present in first year; 79% initially steroid responsive.</li>
+                <li>Actuarial survival &gt;40 years: 100% sustained remission, 87% steroid-maintained, 57% transfusion-dependent.</li>
+                <li>Somatic anomalies in 47% (craniofacial, limb/hand, GU, cardiac).</li>
+              </ul>
+            </div>
+          </div>
+          <details style="margin-top: 18px;">
+            <summary>DBA genetic subtypes (Table 30.8)</summary>
+            <div class="table-wrap" style="margin-top: 12px;">
+              <table>
+                <thead>
+                  <tr>
+                    <th>Subtype / Gene</th>
+                    <th>Approx %</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr><td>RPS19 (AD)</td><td>25</td></tr>
+                  <tr><td>Large deletions (various)</td><td>10-20</td></tr>
+                  <tr><td>RPL5</td><td>7</td></tr>
+                  <tr><td>RPS26</td><td>7</td></tr>
+                  <tr><td>RPL11</td><td>5</td></tr>
+                  <tr><td>RPL35A</td><td>3</td></tr>
+                  <tr><td>RPS10</td><td>3</td></tr>
+                  <tr><td>RPS24</td><td>2-4</td></tr>
+                  <tr><td>RPS17</td><td>1</td></tr>
+                  <tr><td>Other RPS/RPL genes</td><td>&lt;1 each</td></tr>
+                  <tr><td>GATA1 (X-linked)</td><td>&lt;1</td></tr>
+                  <tr><td>TSR2 (X-linked)</td><td>&lt;1</td></tr>
+                  <tr><td>Uncharacterised</td><td>~25</td></tr>
+                </tbody>
+              </table>
+            </div>
+          </details>
+          <div class="callout">
+            <strong>Treatment pathway</strong>
+            <div>Corticosteroids first-line; taper to lowest alternate-day dose. If refractory, transfusion support with early iron chelation (avoid deferiprone). Splenectomy for hypersplenism. HSCT for transfusion-dependent patients with HLA-matched donor.</div>
+          </div>
+        </section>
+
+        <section class="module" id="module-7">
+          <div class="module-head">
+            <h3>Module 7: Congenital dyserythropoietic anaemia (CDA)</h3>
+            <span class="module-tag">Dyserythropoiesis</span>
+          </div>
+          <div class="module-grid">
+            <div class="card">
+              <h4>CDA overview</h4>
+              <ul>
+                <li>Heterogeneous group with anemia and ineffective erythropoiesis.</li>
+                <li>Classical types I, II, III; additional types IV-VII described.</li>
+                <li>Characteristic marrow morphology and EM findings guide diagnosis.</li>
+              </ul>
+            </div>
+            <div class="card deep">
+              <h4>CDA type I (CDAN1/CDIN1)</h4>
+              <ul>
+                <li>Mild-moderate anemia (Hb ~66-116 g/L) with macrocytosis in ~70%.</li>
+                <li>Marrow: megaloblastic precursors, internuclear chromatin bridges, 3-7% binuclearity.</li>
+                <li>EM: spongy “Swiss cheese” heterochromatin.</li>
+              </ul>
+            </div>
+          </div>
+          <div class="module-grid" style="margin-top: 18px;">
+            <div class="card deep">
+              <h4>CDA type II (HEMPAS, SEC23B)</h4>
+              <ul>
+                <li>Most common subtype; anemia typically Hb 80-110 g/L.</li>
+                <li>Jaundice, hepatomegaly, splenomegaly; ~10% need regular transfusions.</li>
+                <li>BM: &gt;10% binucleate erythroblasts; EM shows peripheral double membranes.</li>
+                <li>Acidified serum lysis (Ham test) usually positive.</li>
+              </ul>
+            </div>
+            <div class="card">
+              <h4>CDA type III (KIF23)</h4>
+              <ul>
+                <li>Rare, autosomal dominant; giant multinucleated erythroblasts.</li>
+                <li>Increased prevalence of lymphoproliferative disorders reported.</li>
+                <li>KIF23 encodes a mitotic kinesin important in cytokinesis.</li>
+              </ul>
+            </div>
+          </div>
+          <details style="margin-top: 18px;">
+            <summary>CDA subtype comparison (Table 30.9)</summary>
+            <div class="table-wrap" style="margin-top: 12px;">
+              <table>
+                <thead>
+                  <tr>
+                    <th>Feature</th>
+                    <th>Type I</th>
+                    <th>Type II</th>
+                    <th>Type III</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr><td>Inheritance</td><td>AR</td><td>AR</td><td>AD</td></tr>
+                  <tr><td>RBC indices</td><td>Macrocytic</td><td>Normocytic</td><td>Macrocytic</td></tr>
+                  <tr><td>Light microscopy</td><td>Megaloblastic, chromatin bridges</td><td>Normoblastic, binuclearity</td><td>Megaloblastic, giant multinucleated</td></tr>
+                  <tr><td>Electron microscopy</td><td>Swiss cheese heterochromatin</td><td>Peripheral double membranes</td><td>Non-specific</td></tr>
+                  <tr><td>Ham test</td><td>Negative</td><td>Usually positive</td><td>Negative</td></tr>
+                  <tr><td>Genes</td><td>CDAN1, CDIN1</td><td>SEC23B</td><td>KIF23</td></tr>
+                </tbody>
+              </table>
+            </div>
+          </details>
+          <div class="callout">
+            <strong>Treatment pearls</strong>
+            <div>Folate for mild anemia. Transfusion and iron chelation if needed. Splenectomy can help CDA II. Interferon-alpha may improve CDA I. HSCT is rare but reported.</div>
+          </div>
+        </section>
+
+        <section class="module" id="module-8">
+          <div class="module-head">
+            <h3>Module 8: Congenital & cyclic neutropenias</h3>
+            <span class="module-tag">Neutropenia</span>
+          </div>
+          <div class="module-grid">
+            <div class="card">
+              <h4>Severe congenital neutropenia (SCN)</h4>
+              <ul>
+                <li>Neutrophils &lt;0.2 x 10^9/L at birth; Hb and platelets usually normal.</li>
+                <li>Marrow maturation arrest at promyelocyte/myelocyte stage.</li>
+                <li>Severe infections; MDS/AML risk ~25% by age 25.</li>
+                <li>G-CSF dramatically improves outcome; HSCT if refractory or leukemia.</li>
+              </ul>
+            </div>
+            <div class="card deep">
+              <h4>Cyclic neutropenia</h4>
+              <ul>
+                <li>Neutrophil nadir every ~21 days.</li>
+                <li>Fever and mouth ulcers around nadir.</li>
+                <li>Usually autosomal dominant; ELANE variants common.</li>
+                <li>ELANE mutations differ in location compared to SCN.</li>
+              </ul>
+            </div>
+          </div>
+          <details style="margin-top: 18px;">
+            <summary>Genetic subtypes (Table 30.10)</summary>
+            <div class="table-wrap" style="margin-top: 12px;">
+              <table>
+                <thead>
+                  <tr>
+                    <th>Inheritance</th>
+                    <th>Approx %</th>
+                    <th>Gene</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr><td>AD</td><td>50-60</td><td>ELANE</td></tr>
+                  <tr><td>AD</td><td>2</td><td>GFI1</td></tr>
+                  <tr><td>AR</td><td>10-15</td><td>HAX1</td></tr>
+                  <tr><td>AR</td><td>5</td><td>G6PC3</td></tr>
+                  <tr><td>Rare</td><td>Rare</td><td>VPS45</td></tr>
+                  <tr><td>Rare</td><td>Rare</td><td>CSF3R</td></tr>
+                  <tr><td>Rare</td><td>Rare</td><td>JAG1</td></tr>
+                </tbody>
+              </table>
+            </div>
+          </details>
+          <div class="callout high-yield">
+            <strong>High yield</strong>
+            <div>No patient with SCN has developed aplastic anaemia, but risk of MDS/AML is substantial.</div>
+          </div>
+        </section>
+
+        <section class="module" id="module-9">
+          <div class="module-head">
+            <h3>Module 9: TAR & CAMT thrombocytopenias</h3>
+            <span class="module-tag">Thrombocytopenia</span>
+          </div>
+          <div class="module-grid">
+            <div class="card">
+              <h4>Thrombocytopenia with absent radii (TAR)</h4>
+              <ul>
+                <li>AR disorder: hypomegakaryocytic thrombocytopenia + bilateral radial aplasia.</li>
+                <li>Bleeding at birth; platelet count often &lt;50 x 10^9/L.</li>
+                <li>Leukocytes normal or high (leukaemoid reaction).</li>
+                <li>Improves after infancy; prognosis excellent, no AA or leukemia reported.</li>
+              </ul>
+            </div>
+            <div class="card deep">
+              <h4>Congenital amegakaryocytic thrombocytopenia (CAMT)</h4>
+              <ul>
+                <li>Isolated thrombocytopenia with absent megakaryocytes.</li>
+                <li>AR or X-linked; ~50% develop AA by age 5.</li>
+                <li>MPL variants in a subgroup; HSCT is treatment of choice for severe cases.</li>
+              </ul>
+            </div>
+          </div>
+          <details style="margin-top: 18px;">
+            <summary>Syndromic thrombocytopenia genes (Table 30.11)</summary>
+            <div class="table-wrap" style="margin-top: 12px;">
+              <table>
+                <thead>
+                  <tr>
+                    <th>Subtype</th>
+                    <th>Inheritance</th>
+                    <th>Gene</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr><td>CAMT</td><td>AR</td><td>MPL</td></tr>
+                  <tr><td>TAR</td><td>AR</td><td>RBM8A</td></tr>
+                  <tr><td>Radio-ulnar synostosis</td><td>AD</td><td>HOXA11</td></tr>
+                  <tr><td>Thrombocytopenia with MECOM</td><td>AD</td><td>MECOM</td></tr>
+                </tbody>
+              </table>
+            </div>
+          </details>
+        </section>
+
+        <section class="module" id="module-10">
+          <div class="module-head">
+            <h3>Module 10: New & overlapping BMF syndromes</h3>
+            <span class="module-tag">Genomic era</span>
+          </div>
+          <div class="module-grid">
+            <div class="card">
+              <h4>Recently recognized BMF genes (Table 30.12)</h4>
+              <ul>
+                <li>AR: ERCC6L2, TPO/THPO, MYSM1, DUT, EXOC3L2, TP53.</li>
+                <li>AD: SAMD9, SAMD9L, SPI1.</li>
+                <li>Phenotypes overlap BMF, MDS, AML with extra-haematopoietic anomalies.</li>
+              </ul>
+            </div>
+            <div class="card deep">
+              <h4>Familial MDS/AML genes</h4>
+              <p>Common AD genes include RUNX1, CEBPA, TERC, TERT, GATA2, SRP72, ANKRD26, ACD/TPP1, ETV6, DDX41, RTEL1, PAX5, SAMD9, SAMD9L, MECOM, TP53, ERBB3, DHX34.</p>
+              <p>AR genes include MBD4, HLTF, XPC.</p>
+            </div>
+          </div>
+          <div class="callout">
+            <strong>Overlap reminder</strong>
+            <div>GATA2 and SAMD9/SAMD9L variants are common in pediatric MDS with monosomy 7 and can present as isolated cytopenias.</div>
+          </div>
+        </section>
+
+        <section class="module" id="module-11">
+          <div class="module-head">
+            <h3>Module 11: High-yield consolidation</h3>
+            <span class="module-tag">Exam-ready</span>
+          </div>
+          <div class="module-grid">
+            <div class="card">
+              <h4>Rapid-fire contrasts</h4>
+              <ul>
+                <li>FA: DNA repair defect + chromosomal breakage; DEB/MMC positive.</li>
+                <li>DC: telomere biology disorder; very short telomeres.</li>
+                <li>SDS/DBA: ribosome biogenesis defects (ribosomopathies).</li>
+                <li>SCN: promyelocyte arrest, G-CSF responsive, MDS/AML risk.</li>
+                <li>TAR: thrombocytopenia + absent radii; improves after infancy.</li>
+              </ul>
+            </div>
+            <div class="card deep">
+              <h4>High-yield checklist</h4>
+              <ul>
+                <li>Look for congenital anomalies even in “idiopathic” AA.</li>
+                <li>Choose HSCT conditioning based on syndrome (FA/DC are highly sensitive).</li>
+                <li>Use syndrome-targeted panels; avoid assuming single-gene disorders.</li>
+                <li>Monitor malignancy risks long-term (FA, SDS, DBA).</li>
+              </ul>
+            </div>
+          </div>
+          <div class="quiz">
+            <strong>Quick check</strong>
+            <div>Which syndrome is characterized by the mucocutaneous triad of pigmentation, nail dystrophy, and leukoplakia?</div>
+            <button class="reveal" data-reveal>Show answer</button>
+            <div class="answer">Dyskeratosis congenita.</div>
+          </div>
+        </section>
+
+        <div class="cta-band">
+          <div>
+            <h3>Teach, round, and revise with Blood🩸Doctor</h3>
+            <p>Built from Chapter 30 for quick bedside recall and deeper learning.</p>
+          </div>
+          <button data-target="#top">Back to top</button>
         </div>
-    </section>
 
-    <!-- Fanconi Anaemia Section -->
-    <section id="fanconi" class="section section-alt">
-        <div class="container">
-            <h2 class="section-title">Fanconi Anaemia (FA)</h2>
-
-            <div class="callout callout-history">
-                <div class="callout-icon">📜</div>
-                <div class="callout-content">
-                    <h4>Historical Note</h4>
-                    <p>First described by Guido Fanconi in 1927. FA is an autosomal recessive disorder (X-linked in rare subset) with progressive BMF and increased predisposition to malignancy, especially AML.</p>
-                </div>
-            </div>
-
-            <div class="two-column">
-                <div class="column">
-                    <div class="info-box">
-                        <h3>Clinical Features</h3>
-                        <ul class="check-list">
-                            <li>Progressive bone marrow failure</li>
-                            <li>Increased malignancy risk (AML, solid tumours)</li>
-                            <li>Somatic abnormalities (~70% of patients)</li>
-                            <li>~1/3 have NO physical abnormalities</li>
-                            <li>Median survival: 24 years (improving with clinical care)</li>
-                        </ul>
-                    </div>
-
-                    <div class="info-box">
-                        <h3>Natural History</h3>
-                        <ul class="timeline">
-                            <li><span class="time">Birth</span> Blood count usually normal</li>
-                            <li><span class="time">5-10 years</span> Pancytopenia develops (median age 7)</li>
-                            <li><span class="time">~40 years</span> ~90% develop BMF</li>
-                            <li><span class="time">~40 years</span> 33% cumulative haematological malignancy</li>
-                            <li><span class="time">~40 years</span> 28% cumulative solid tumours</li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="column">
-                    <div class="high-yield">
-                        <h3>🎯 High-Yield: Somatic Abnormalities in FA</h3>
-                        <div class="percentage-bar">
-                            <div class="bar-item">
-                                <span class="bar-label">Skeletal (radial ray, vertebral, scoliosis)</span>
-                                <div class="bar"><div class="bar-fill" style="width: 71%"></div></div>
-                                <span class="bar-value">71%</span>
-                            </div>
-                            <div class="bar-item">
-                                <span class="bar-label">Skin pigmentation (cafe-au-lait, hypo/hyper)</span>
-                                <div class="bar"><div class="bar-fill" style="width: 64%"></div></div>
-                                <span class="bar-value">64%</span>
-                            </div>
-                            <div class="bar-item">
-                                <span class="bar-label">Short stature</span>
-                                <div class="bar"><div class="bar-fill" style="width: 63%"></div></div>
-                                <span class="bar-value">63%</span>
-                            </div>
-                            <div class="bar-item">
-                                <span class="bar-label">Eyes (microphthalmia)</span>
-                                <div class="bar"><div class="bar-fill" style="width: 38%"></div></div>
-                                <span class="bar-value">38%</span>
-                            </div>
-                            <div class="bar-item">
-                                <span class="bar-label">Renal/urinary tract</span>
-                                <div class="bar"><div class="bar-fill" style="width: 34%"></div></div>
-                                <span class="bar-value">34%</span>
-                            </div>
-                            <div class="bar-item">
-                                <span class="bar-label">No abnormalities</span>
-                                <div class="bar"><div class="bar-fill bar-warning" style="width: 30%"></div></div>
-                                <span class="bar-value">30%</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- FA Genetics Table -->
-            <h3 class="subsection-title">Table 30.4: FA Complementation Groups/Genetic Subtypes</h3>
-            <div class="callout callout-info">
-                <div class="callout-icon">💡</div>
-                <div class="callout-content">
-                    <h4>Key Point</h4>
-                    <p>FA subtypes A, C, and G account for the majority of FA patients. Many FA genes encode proteins with important roles in DNA repair.</p>
-                </div>
-            </div>
-
-            <div class="table-responsive">
-                <table class="data-table genetics-table">
-                    <thead>
-                        <tr>
-                            <th>Group/Gene</th>
-                            <th>% of Patients</th>
-                            <th>Chromosome</th>
-                            <th>Exons</th>
-                            <th>Clinical Notes</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr class="highlight-row">
-                            <td><strong>A (FANCA)</strong></td>
-                            <td>65%</td>
-                            <td>16q24.3</td>
-                            <td>44</td>
-                            <td>Most common subtype</td>
-                        </tr>
-                        <tr>
-                            <td>B (FANCB)</td>
-                            <td>&lt;1%</td>
-                            <td>Xp22.2</td>
-                            <td>17</td>
-                            <td>X-linked</td>
-                        </tr>
-                        <tr class="highlight-row">
-                            <td><strong>C (FANCC)</strong></td>
-                            <td>12%</td>
-                            <td>9q22.3</td>
-                            <td>22</td>
-                            <td>Second most common</td>
-                        </tr>
-                        <tr>
-                            <td>D1 (FANCD1/BRCA2)</td>
-                            <td>&lt;1%</td>
-                            <td>13q13.1</td>
-                            <td>27</td>
-                            <td>High childhood cancer risk (Wilm's, medulloblastoma)</td>
-                        </tr>
-                        <tr>
-                            <td>D2 (FANCD2)</td>
-                            <td>&lt;1%</td>
-                            <td>3p25.3</td>
-                            <td>45</td>
-                            <td>Core complex target</td>
-                        </tr>
-                        <tr>
-                            <td>E (FANCE)</td>
-                            <td>4%</td>
-                            <td>6p21.31</td>
-                            <td>10</td>
-                            <td></td>
-                        </tr>
-                        <tr>
-                            <td>F (FANCF)</td>
-                            <td>4%</td>
-                            <td>11p14.3</td>
-                            <td>1</td>
-                            <td></td>
-                        </tr>
-                        <tr class="highlight-row">
-                            <td><strong>G (FANCG)</strong></td>
-                            <td>12%</td>
-                            <td>9p13.3</td>
-                            <td>14</td>
-                            <td>Third most common</td>
-                        </tr>
-                        <tr>
-                            <td>I (FANCI)</td>
-                            <td>&lt;1%</td>
-                            <td>15q26.1</td>
-                            <td>38</td>
-                            <td></td>
-                        </tr>
-                        <tr>
-                            <td>J (FANCJ/BRIP1)</td>
-                            <td>&lt;5%</td>
-                            <td>17q23.2</td>
-                            <td>25</td>
-                            <td>Breast cancer risk gene</td>
-                        </tr>
-                        <tr>
-                            <td>L (FANCL)</td>
-                            <td>&lt;1%</td>
-                            <td>2p16.1</td>
-                            <td>14</td>
-                            <td></td>
-                        </tr>
-                        <tr>
-                            <td>N (FANCN/PALB2)</td>
-                            <td>&lt;1%</td>
-                            <td>16p12.2</td>
-                            <td>14</td>
-                            <td>High childhood cancer risk, breast cancer</td>
-                        </tr>
-                        <tr>
-                            <td>Q (FANCQ/ERCC4)</td>
-                            <td>&lt;1%</td>
-                            <td>16p13.12</td>
-                            <td>13</td>
-                            <td></td>
-                        </tr>
-                        <tr>
-                            <td>R (FANCR/RAD51)</td>
-                            <td>&lt;1%</td>
-                            <td>15q15.1</td>
-                            <td>13</td>
-                            <td>Heterozygous variants</td>
-                        </tr>
-                        <tr>
-                            <td>S (FANCS/BRCA1)</td>
-                            <td>&lt;1%</td>
-                            <td>17q21.31</td>
-                            <td>24</td>
-                            <td>Breast/ovarian cancer gene</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-
-            <!-- FA-BRCA Pathway Diagram -->
-            <h3 class="subsection-title">The FA-BRCA DNA Repair Pathway</h3>
-            <div class="pathway-diagram">
-                <div class="pathway-container">
-                    <div class="pathway-box pathway-trigger">
-                        <h4>Triggers</h4>
-                        <ul>
-                            <li>DNA crosslinks</li>
-                            <li>Replication fork arrest</li>
-                            <li>Oxidative stress</li>
-                            <li>Environmental factors</li>
-                        </ul>
-                    </div>
-                    <div class="pathway-arrow">→</div>
-                    <div class="pathway-box pathway-core">
-                        <h4>FA Core Complex</h4>
-                        <p class="pathway-subtitle">8 FA proteins</p>
-                        <div class="gene-tags">
-                            <span class="gene-tag">FANCA</span>
-                            <span class="gene-tag">FANCB</span>
-                            <span class="gene-tag">FANCC</span>
-                            <span class="gene-tag">FANCE</span>
-                            <span class="gene-tag">FANCF</span>
-                            <span class="gene-tag">FANCG</span>
-                            <span class="gene-tag">FANCL</span>
-                            <span class="gene-tag">FANCM</span>
-                        </div>
-                    </div>
-                    <div class="pathway-arrow">→</div>
-                    <div class="pathway-box pathway-id">
-                        <h4>I-D2 Complex</h4>
-                        <p>Monoubiquitination</p>
-                        <div class="gene-tags">
-                            <span class="gene-tag highlight">FANCI</span>
-                            <span class="gene-tag highlight">FANCD2-Ub</span>
-                        </div>
-                    </div>
-                    <div class="pathway-arrow">→</div>
-                    <div class="pathway-box pathway-repair">
-                        <h4>DNA Repair Foci</h4>
-                        <div class="gene-tags">
-                            <span class="gene-tag danger">BRCA2</span>
-                            <span class="gene-tag danger">BRCA1</span>
-                            <span class="gene-tag danger">RAD51</span>
-                            <span class="gene-tag danger">PALB2</span>
-                            <span class="gene-tag danger">SLX4</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="pathway-regulator">
-                    <span class="regulator-label">ATR Kinase</span>
-                    <span class="regulator-arrow">↓</span>
-                    <span class="regulator-target">Activates pathway via FANCD2/FANCI phosphorylation</span>
-                </div>
-            </div>
-
-            <div class="callout callout-exam">
-                <div class="callout-icon">📝</div>
-                <div class="callout-content">
-                    <h4>Exam Pearl: FA Cell Phenotype</h4>
-                    <p>FA cells show <strong>increased chromosomal breakage</strong> after exposure to DNA cross-linking agents (DEB/MMC). This is the basis of the diagnostic test - the DEB/MMC-induced chromosomal breakage test.</p>
-                </div>
-            </div>
-
-            <!-- FA Diagnosis and Treatment -->
-            <div class="two-column">
-                <div class="column">
-                    <div class="algorithm-box">
-                        <h3>Diagnostic Approach</h3>
-                        <div class="algorithm-steps">
-                            <div class="step">
-                                <span class="step-number">1</span>
-                                <div class="step-content">
-                                    <strong>Clinical Suspicion</strong>
-                                    <p>BMF + somatic abnormalities OR early-onset AA</p>
-                                </div>
-                            </div>
-                            <div class="step">
-                                <span class="step-number">2</span>
-                                <div class="step-content">
-                                    <strong>DEB/MMC Chromosome Breakage Test</strong>
-                                    <p>Gold standard screening test</p>
-                                </div>
-                            </div>
-                            <div class="step">
-                                <span class="step-number">3</span>
-                                <div class="step-content">
-                                    <strong>Genetic Testing</strong>
-                                    <p>NGS panel for FA genes (FANCA-FANCW)</p>
-                                </div>
-                            </div>
-                            <div class="step">
-                                <span class="step-number">4</span>
-                                <div class="step-content">
-                                    <strong>Family Screening</strong>
-                                    <p>Siblings for potential HSCT donors</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="column">
-                    <div class="treatment-box">
-                        <h3>Treatment Principles</h3>
-                        <div class="treatment-section">
-                            <h4>🎯 Curative: HSCT</h4>
-                            <ul>
-                                <li>Only curative treatment for BMF</li>
-                                <li><strong>Modified conditioning required</strong> - FA patients hypersensitive to cyclophosphamide and radiation</li>
-                                <li>Low-dose cyclophosphamide (20-40 mg/kg)</li>
-                                <li>4.5-6 Gy thoracoabdominal irradiation</li>
-                                <li>HLA-identical sibling: ~70% 2-year survival</li>
-                                <li>Unrelated donor: 20-40% survival</li>
-                            </ul>
-                        </div>
-                        <div class="treatment-section">
-                            <h4>📋 Supportive Care</h4>
-                            <ul>
-                                <li>Androgens (oxymetholone, danazol) - 50-70% response</li>
-                                <li>Blood product support</li>
-                                <li>Surveillance for malignancy</li>
-                                <li>Gene therapy trials (FA-A patients)</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="callout callout-warning">
-                <div class="callout-icon">⚠️</div>
-                <div class="callout-content">
-                    <h4>Critical Warning: Post-HSCT Malignancy</h4>
-                    <p>FA patients who undergo HSCT have a <strong>higher incidence of non-haematological malignancies</strong> (particularly head and neck SCC), usually 8-10 years post-transplant. Lifelong surveillance is essential.</p>
-                </div>
-            </div>
+        <div class="disclaimer">
+          Educational summary based on Hoffbrand Postgraduate Haematology (Chapter 30). Not medical advice. Follow institutional protocols.
         </div>
-    </section>
+      </section>
 
-    <!-- Dyskeratosis Congenita Section -->
-    <section id="dc" class="section">
-        <div class="container">
-            <h2 class="section-title">Dyskeratosis Congenita (DC)</h2>
+      <footer class="footer">
+        <div>Blood🩸Doctor · Dr Abdul Mannan FRCPath FCPS</div>
+        <div>blooddoctor.co@gmail.com</div>
+      </footer>
+    </div>
 
-            <div class="callout callout-key">
-                <div class="callout-icon">🔑</div>
-                <div class="callout-content">
-                    <h4>Core Concept: Telomere Biology Disorder</h4>
-                    <p>DC is characterized by the <strong>mucocutaneous triad</strong> of abnormal skin pigmentation, nail dystrophy, and mucosal leucoplakia. The underlying cause is <strong>defective telomere maintenance</strong>.</p>
-                </div>
-            </div>
+    <script>
+      const simplifyToggle = document.getElementById("simplifyToggle");
+      const searchInput = document.getElementById("searchInput");
+      const startButton = document.getElementById("startLearning");
 
-            <div class="triad-display">
-                <h3>The Classical Mucocutaneous Triad</h3>
-                <div class="triad-cards">
-                    <div class="triad-card">
-                        <div class="triad-icon">🎨</div>
-                        <h4>Abnormal Skin Pigmentation</h4>
-                        <p class="percentage">89%</p>
-                        <p>Reticulated hyper/hypopigmentation, typically on neck and upper trunk</p>
-                    </div>
-                    <div class="triad-card">
-                        <div class="triad-icon">💅</div>
-                        <h4>Nail Dystrophy</h4>
-                        <p class="percentage">88%</p>
-                        <p>Ridging, splitting, poor growth; may progress to complete loss</p>
-                    </div>
-                    <div class="triad-card">
-                        <div class="triad-icon">👅</div>
-                        <h4>Oral Leucoplakia</h4>
-                        <p class="percentage">78%</p>
-                        <p>White patches on tongue and buccal mucosa; premalignant</p>
-                    </div>
-                </div>
-            </div>
+      startButton.addEventListener("click", () => {
+        document.getElementById("app").scrollIntoView({ behavior: "smooth", block: "start" });
+      });
 
-            <!-- DC Somatic Abnormalities -->
-            <h3 class="subsection-title">Table 30.5: Somatic Abnormalities in DC</h3>
-            <div class="table-responsive">
-                <table class="data-table">
-                    <thead>
-                        <tr>
-                            <th>Abnormality</th>
-                            <th>% of Patients</th>
-                            <th>Clinical Significance</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr><td>Abnormal skin pigmentation</td><td>89%</td><td>Often first sign</td></tr>
-                        <tr><td>Nail dystrophy</td><td>88%</td><td>Progressive</td></tr>
-                        <tr class="highlight-row"><td><strong>BMF</strong></td><td><strong>85.5%</strong></td><td><strong>Main cause of mortality</strong></td></tr>
-                        <tr><td>Leucoplakia</td><td>78%</td><td>Premalignant</td></tr>
-                        <tr><td>Epiphora (excessive tearing)</td><td>30.5%</td><td>Lacrimal duct stenosis</td></tr>
-                        <tr><td>Learning difficulties</td><td>25.4%</td><td>Variable severity</td></tr>
-                        <tr><td>Pulmonary disease</td><td>20.3%</td><td>Fibrosis - major cause of death</td></tr>
-                        <tr><td>Short stature</td><td>19.5%</td><td></td></tr>
-                        <tr><td>Malignancy</td><td>15.5%</td><td>~10-15% mortality</td></tr>
-                        <tr><td>Liver disease</td><td>7.3%</td><td>Cirrhosis, fibrosis</td></tr>
-                    </tbody>
-                </table>
-            </div>
+      simplifyToggle.addEventListener("click", () => {
+        const enabled = document.body.classList.toggle("simplify");
+        simplifyToggle.setAttribute("aria-pressed", enabled);
+        simplifyToggle.textContent = enabled ? "Show deep dive" : "Simplify view";
+      });
 
-            <div class="callout callout-clinical">
-                <div class="callout-icon">🏥</div>
-                <div class="callout-content">
-                    <h4>Clinical Diagnostic Criteria</h4>
-                    <p>Minimal criteria: <strong>At least 2 of 4 major features</strong> (abnormal skin pigmentation, nail dystrophy, leucoplakia, BMF) <strong>PLUS 2 or more</strong> of other somatic features known to occur in DC.</p>
-                </div>
-            </div>
+      searchInput.addEventListener("input", () => {
+        const query = searchInput.value.trim().toLowerCase();
+        document.querySelectorAll(".module").forEach((module) => {
+          const match = module.textContent.toLowerCase().includes(query);
+          module.style.display = match ? "" : "none";
+        });
+      });
 
-            <!-- Causes of Death in DC -->
-            <div class="mortality-box">
-                <h3>Causes of Mortality in DC</h3>
-                <div class="mortality-chart">
-                    <div class="mortality-item">
-                        <div class="mortality-bar" style="width: 70%"></div>
-                        <span class="mortality-label">BMF/Immunodeficiency</span>
-                        <span class="mortality-value">~60-70%</span>
-                    </div>
-                    <div class="mortality-item">
-                        <div class="mortality-bar" style="width: 15%"></div>
-                        <span class="mortality-label">Pulmonary Complications</span>
-                        <span class="mortality-value">~10-15%</span>
-                    </div>
-                    <div class="mortality-item">
-                        <div class="mortality-bar" style="width: 15%"></div>
-                        <span class="mortality-label">Malignancy</span>
-                        <span class="mortality-value">~10%</span>
-                    </div>
-                </div>
-            </div>
+      document.querySelectorAll("[data-reveal]").forEach((button) => {
+        button.addEventListener("click", () => {
+          const answer = button.nextElementSibling;
+          if (!answer) return;
+          answer.classList.toggle("active");
+          button.textContent = answer.classList.contains("active") ? "Hide answer" : "Show answer";
+        });
+      });
 
-            <!-- DC Genetics -->
-            <h3 class="subsection-title">Table 30.6: Genetic Subtypes of DC</h3>
-            <div class="table-responsive">
-                <table class="data-table genetics-table">
-                    <thead>
-                        <tr>
-                            <th>DC Subtype</th>
-                            <th>% of Patients</th>
-                            <th>Chromosome</th>
-                            <th>Gene/Protein</th>
-                            <th>Function</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr class="subtype-header">
-                            <td colspan="5"><strong>X-linked Recessive</strong></td>
-                        </tr>
-                        <tr class="highlight-row">
-                            <td>Classical X-linked DC</td>
-                            <td>25%</td>
-                            <td>Xq28</td>
-                            <td>DKC1/Dyskerin</td>
-                            <td>Telomerase complex stability</td>
-                        </tr>
-                        <tr class="subtype-header">
-                            <td colspan="5"><strong>Autosomal Dominant</strong></td>
-                        </tr>
-                        <tr>
-                            <td>AD-DC</td>
-                            <td>12%</td>
-                            <td>14q11</td>
-                            <td>TIN2</td>
-                            <td>Shelterin complex</td>
-                        </tr>
-                        <tr class="highlight-row">
-                            <td>AD-DC</td>
-                            <td>5%</td>
-                            <td>3q26.2</td>
-                            <td>TERC</td>
-                            <td>Telomerase RNA component</td>
-                        </tr>
-                        <tr class="highlight-row">
-                            <td>AD-DC</td>
-                            <td>3%</td>
-                            <td>5p15.33</td>
-                            <td>TERT</td>
-                            <td>Telomerase reverse transcriptase</td>
-                        </tr>
-                        <tr>
-                            <td>AD-DC</td>
-                            <td>&lt;1%</td>
-                            <td>17p13.3</td>
-                            <td>RPA1</td>
-                            <td>DNA replication</td>
-                        </tr>
-                        <tr class="subtype-header">
-                            <td colspan="5"><strong>Autosomal Recessive</strong></td>
-                        </tr>
-                        <tr>
-                            <td>AR-DC</td>
-                            <td>2%</td>
-                            <td>16q21</td>
-                            <td>USB1</td>
-                            <td>RNA processing</td>
-                        </tr>
-                        <tr>
-                            <td>AR-DC</td>
-                            <td>2%</td>
-                            <td>20q13.3</td>
-                            <td>RTEL1</td>
-                            <td>Telomere maintenance</td>
-                        </tr>
-                        <tr>
-                            <td>AR-DC</td>
-                            <td>2%</td>
-                            <td>16p13.12</td>
-                            <td>PARN</td>
-                            <td>Telomerase maturation</td></tr>
-                        <tr>
-                            <td>AR-DC</td>
-                            <td>&lt;1%</td>
-                            <td>15q14</td>
-                            <td>NOP10</td>
-                            <td>H/ACA RNP complex</td>
-                        </tr>
-                        <tr>
-                            <td>AR-DC</td>
-                            <td>&lt;1%</td>
-                            <td>5p15.33</td>
-                            <td>TERT</td>
-                            <td>Biallelic variants</td>
-                        </tr>
-                        <tr>
-                            <td>AR-DC</td>
-                            <td>&lt;1%</td>
-                            <td>5q35.3</td>
-                            <td>NHP2</td>
-                            <td>H/ACA RNP complex</td>
-                        </tr>
-                        <tr>
-                            <td>AR-DC</td>
-                            <td>&lt;1%</td>
-                            <td>17p13.1</td>
-                            <td>WRAP53/TCAB1</td>
-                            <td>Telomerase trafficking</td>
-                        </tr>
-                        <tr>
-                            <td>AR-DC</td>
-                            <td>&lt;1%</td>
-                            <td>17p13.1</td>
-                            <td>CTC1</td>
-                            <td>Telomere capping</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-
-            <!-- Telomere Biology Diagram -->
-            <h3 class="subsection-title">Telomere Maintenance & Ribosome Biogenesis Pathways</h3>
-            <div class="diagram-container">
-                <div class="telomere-diagram">
-                    <div class="diagram-section">
-                        <h4>Telomere Maintenance</h4>
-                        <div class="diagram-box telomere-box">
-                            <div class="telomere-component">
-                                <span class="component-name">Shelterin Complex</span>
-                                <div class="gene-tags small">
-                                    <span class="gene-tag">TIN2</span>
-                                    <span class="gene-tag">ACD</span>
-                                    <span class="gene-tag">POT1</span>
-                                    <span class="gene-tag">RTEL1</span>
-                                </div>
-                            </div>
-                            <div class="telomere-component">
-                                <span class="component-name">Telomerase Complex</span>
-                                <div class="gene-tags small">
-                                    <span class="gene-tag highlight">TERT</span>
-                                    <span class="gene-tag highlight">TERC</span>
-                                    <span class="gene-tag">DKC1</span>
-                                    <span class="gene-tag">NOP10</span>
-                                    <span class="gene-tag">NHP2</span>
-                                </div>
-                            </div>
-                            <div class="telomere-component">
-                                <span class="component-name">Telomere Capping</span>
-                                <div class="gene-tags small">
-                                    <span class="gene-tag">CTC1</span>
-                                    <span class="gene-tag">TCAB1</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="diagram-section">
-                        <h4>Ribosome Biogenesis</h4>
-                        <div class="diagram-box ribosome-box">
-                            <div class="ribosome-component">
-                                <span class="component-name">rRNA Processing</span>
-                                <div class="gene-tags small">
-                                    <span class="gene-tag">NAF1</span>
-                                    <span class="gene-tag">PARN</span>
-                                </div>
-                            </div>
-                            <div class="ribosome-component">
-                                <span class="component-name">rRNA Modification</span>
-                                <div class="gene-tags small">
-                                    <span class="gene-tag">DKC1</span>
-                                    <span class="gene-tag">NPM1</span>
-                                </div>
-                            </div>
-                            <div class="ribosome-component">
-                                <span class="component-name">mRNA Splicing</span>
-                                <div class="gene-tags small">
-                                    <span class="gene-tag">USB1</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="callout callout-exam">
-                <div class="callout-icon">📝</div>
-                <div class="callout-content">
-                    <h4>Exam Pearl: Hoyeraal-Hreidarsson Syndrome</h4>
-                    <p>HH syndrome is a <strong>severe variant of DC</strong> characterized by intrauterine growth restriction, microcephaly, cerebellar hypoplasia, AA, and immunodeficiency. Often caused by <em>DKC1</em> variants but also other genes.</p>
-                </div>
-            </div>
-
-            <!-- DC Treatment -->
-            <div class="treatment-box full-width">
-                <h3>Treatment of DC</h3>
-                <div class="treatment-grid">
-                    <div class="treatment-item">
-                        <h4>🩸 Supportive Care</h4>
-                        <ul>
-                            <li>Oxymetholone - ~2/3 respond</li>
-                            <li>Dose: 0.25 mg to 2-5 mg/kg/day</li>
-                            <li>Monitor for liver toxicity</li>
-                            <li>Danazol - alternative option</li>
-                            <li>Response can last years across all lineages</li>
-                        </ul>
-                    </div>
-                    <div class="treatment-item">
-                        <h4>🏥 HSCT</h4>
-                        <ul>
-                            <li>Only long-term cure for haemopoietic abnormalities</li>
-                            <li>Significant mortality (pulmonary complications)</li>
-                            <li>Non-myeloablative fludarabine-based protocols preferred</li>
-                            <li>Lower toxicity, fewer complications</li>
-                            <li>Does NOT prevent pulmonary/hepatic complications</li>
-                        </ul>
-                    </div>
-                    <div class="treatment-item">
-                        <h4>🔬 Emerging Therapies</h4>
-                        <ul>
-                            <li>PAPD5 inhibitors - correct telomere defect in vitro</li>
-                            <li>Potential future treatment option</li>
-                            <li>Gene therapy under investigation</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-
-            <div class="callout callout-warning">
-                <div class="callout-icon">⚠️</div>
-                <div class="callout-content">
-                    <h4>Important: TERC/TERT Variants Beyond DC</h4>
-                    <p>Heterozygous <em>TERC</em> and <em>TERT</em> variants are risk factors for some cases of <strong>"idiopathic" AA</strong> and have been identified in patients with <strong>MDS</strong>. This highlights the overlap between inherited and acquired BMF.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Shwachman-Diamond Syndrome Section -->
-    <section id="sds" class="section section-alt">
-        <div class="container">
-            <h2 class="section-title">Shwachman-Diamond Syndrome (SDS)</h2>
-
-            <div class="callout callout-key">
-                <div class="callout-icon">🔑</div>
-                <div class="callout-content">
-                    <h4>Key Features</h4>
-                    <p>SDS is characterized by <strong>exocrine pancreatic insufficiency (100%)</strong>, <strong>BMF (100%)</strong>, and <strong>skeletal abnormalities</strong>. It's a disorder of <strong>ribosome biogenesis</strong>.</p>
-                </div>
-            </div>
-
-            <div class="two-column">
-                <div class="column">
-                    <div class="info-box">
-                        <h3>Clinical Features</h3>
-                        <ul class="check-list">
-                            <li><strong>Pancreatic insufficiency</strong> - malabsorption, failure to thrive (may improve with age)</li>
-                            <li><strong>BMF</strong> - neutropenia most common (~60%), other cytopenias (~20% pancytopenia)</li>
-                            <li><strong>Short stature</strong> (~70%)</li>
-                            <li>Skeletal abnormalities</li>
-                            <li>Metaphyseal dysostosis on X-ray (~60%)</li>
-                            <li>Hepatomegaly, rib/thoracic cage abnormalities</li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="column">
-                    <div class="info-box warning-box">
-                        <h3>Haematological Abnormalities</h3>
-                        <ul class="check-list">
-                            <li><strong>Neutropenia</strong> - ~60% (intermittent or persistent)</li>
-                            <li><strong>Pancytopenia</strong> - ~20%</li>
-                            <li><strong>MDS/AML</strong> - ~25% by 40 years</li>
-                            <li>Often with complex karyotypes</li>
-                            <li>Poor response to conventional chemotherapy</li>
-                            <li>Only HSCT is curative for leukaemia</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-
-            <!-- SDS Genetics -->
-            <h3 class="subsection-title">Table 30.7: Genetic Subtypes of SDS</h3>
-            <div class="table-responsive">
-                <table class="data-table">
-                    <thead>
-                        <tr>
-                            <th>SDS Subtype</th>
-                            <th>% of Patients</th>
-                            <th>Chromosome</th>
-                            <th>Gene</th>
-                            <th>Exons</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr class="highlight-row">
-                            <td><strong>Classical AR</strong></td>
-                            <td>>90%</td>
-                            <td>7q11.21</td>
-                            <td>SBDS</td>
-                            <td>5</td>
-                        </tr>
-                        <tr>
-                            <td>SDS-like AR</td>
-                            <td>&lt;2%</td>
-                            <td>5p13.2</td>
-                            <td>DNAJC21</td>
-                            <td>14</td>
-                        </tr>
-                        <tr>
-                            <td>AR</td>
-                            <td>&lt;2%</td>
-                            <td>15q25.2</td>
-                            <td>EFL1</td>
-                            <td>22</td>
-                        </tr>
-                        <tr>
-                            <td>AD</td>
-                            <td>&lt;2%</td>
-                            <td>14q13.2</td>
-                            <td>SRP54</td>
-                            <td>17</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-
-            <div class="callout callout-info">
-                <div class="callout-icon">💡</div>
-                <div class="callout-content">
-                    <h4>Molecular Biology</h4>
-                    <p>The <em>SBDS</em> gene on 7q11.21 encodes a protein important in the <strong>maturation of the 60S ribosomal subunit</strong>. SDS is principally a disorder of <strong>ribosome biogenesis</strong>, linking it mechanistically to DBA.</p>
-                </div>
-            </div>
-
-            <!-- SDS vs Pearson Syndrome -->
-            <div class="comparison-box">
-                <h3>Differential Diagnosis: SDS vs Pearson Syndrome</h3>
-                <div class="comparison-grid">
-                    <div class="comparison-item">
-                        <h4>Shwachman-Diamond</h4>
-                        <ul>
-                            <li>Neutropenia > anaemia</li>
-                            <li>No ringed sideroblasts</li>
-                            <li>Normal mitochondrial DNA</li>
-                            <li>Metaphyseal dysostosis</li>
-                            <li>Better prognosis</li>
-                        </ul>
-                    </div>
-                    <div class="comparison-item">
-                        <h4>Pearson Syndrome</h4>
-                        <ul>
-                            <li>Anaemia > neutropenia</li>
-                            <li>Ringed sideroblasts present</li>
-                            <li>Mitochondrial DNA deletions</li>
-                            <li>Liver dysfunction, acidosis</li>
-                            <li>Worse prognosis (death by age 5)</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-
-            <!-- SDS Treatment -->
-            <div class="treatment-box">
-                <h3>Treatment of SDS</h3>
-                <div class="treatment-grid">
-                    <div class="treatment-item">
-                        <h4>🍽️ Pancreatic Insufficiency</h4>
-                        <p>Oral pancreatic enzyme replacement</p>
-                    </div>
-                    <div class="treatment-item">
-                        <h4>💉 Neutropenia</h4>
-                        <p>G-CSF may improve neutrophil counts</p>
-                    </div>
-                    <div class="treatment-item">
-                        <h4>🏥 Leukaemia</h4>
-                        <p>Allogeneic HSCT with fludarabine-based conditioning</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Diamond-Blackfan Anaemia Section -->
-    <section id="dba" class="section">
-        <div class="container">
-            <h2 class="section-title">Diamond-Blackfan Anaemia (DBA)</h2>
-
-            <div class="callout callout-history">
-                <div class="callout-icon">📜</div>
-                <div class="callout-content">
-                    <h4>Historical Note</h4>
-                    <p>Red cell aplasia was first reported by Josephs in 1936. Diamond reported on four children with hypoplastic anaemia in 1938. This is now recognized as DBA or congenital pure red cell aplasia.</p>
-                </div>
-            </div>
-
-            <div class="info-box highlight-box">
-                <h3>Diagnostic Criteria for DBA</h3>
-                <ol class="numbered-list">
-                    <li>Normochromic, usually macrocytic anaemia (occasionally normocytic)</li>
-                    <li>Developing in early childhood</li>
-                    <li>Reticulocytopenia</li>
-                    <li>Normocellular BM with <strong>selective deficiency of erythroid precursors (&lt;5%)</strong></li>
-                    <li>Normal or slightly decreased leukocyte counts</li>
-                </ol>
-            </div>
-
-            <div class="two-column">
-                <div class="column">
-                    <div class="info-box">
-                        <h3>Clinical Features</h3>
-                        <ul class="check-list">
-                            <li>Presents in early infancy (median 8 weeks)</li>
-                            <li>93% present in first year of life</li>
-                            <li>Pallor, failure to thrive</li>
-                            <li>47% have somatic abnormalities</li>
-                            <li>Craniofacial (50%), thumb malformations (38%)</li>
-                            <li>Cardiac (30%), genitourinary (39%)</li>
-                        </ul>
-                    </div>
-                    <div class="stats-box">
-                        <h4>DBA Registry Data (DBAR)</h4>
-                        <div class="stat-grid">
-                            <div class="stat-item">
-                                <span class="stat-value">5</span>
-                                <span class="stat-label">per million live births</span>
-                            </div>
-                            <div class="stat-item">
-                                <span class="stat-value">79%</span>
-                                <span class="stat-label">Initially steroid responsive</span>
-                            </div>
-                            <div class="stat-item">
-                                <span class="stat-value">17%</span>
-                                <span class="stat-label">Non-responsive</span>
-                            </div>
-                            <div class="stat-item">
-                                <span class="stat-value">4%</span>
-                                <span class="stat-label">Never treated with steroids</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="column">
-                    <div class="high-yield">
-                        <h3>🎯 High-Yield: Supportive Features of DBA</h3>
-                        <ul class="feature-list">
-                            <li>Elevated erythrocyte deaminase activity</li>
-                            <li>Macrocytosis</li>
-                            <li>Elevated fetal haemoglobin (HbF)</li>
-                            <li>Elevated erythropoietin</li>
-                            <li>Family history (8.8% have >1 affected member)</li>
-                            <li>Most AD inheritance pattern</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-
-            <!-- DBA Genetics Table -->
-            <h3 class="subsection-title">Table 30.8: Genetic Subtypes of DBA</h3>
-            <div class="callout callout-info">
-                <div class="callout-icon">💡</div>
-                <div class="callout-content">
-                    <h4>Key Insight</h4>
-                    <p>DBA is caused by variants in genes encoding <strong>ribosomal proteins</strong> of both small (RPS) and large (RPL) subunits. This establishes DBA as a <strong>ribosomopathy</strong>, linking it to SDS and 5q- syndrome.</p>
-                </div>
-            </div>
-
-            <div class="table-responsive">
-                <table class="data-table genetics-table">
-                    <thead>
-                        <tr>
-                            <th>DBA Subtype</th>
-                            <th>% of Patients</th>
-                            <th>Chromosome</th>
-                            <th>Protein</th>
-                            <th>Notes</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr class="highlight-row">
-                            <td><strong>AD (RPS19)</strong></td>
-                            <td>25%</td>
-                            <td>19q13.2</td>
-                            <td>RPS19</td>
-                            <td>First gene identified (1999), most common</td>
-                        </tr>
-                        <tr>
-                            <td>AD (Various)</td>
-                            <td>10-20%</td>
-                            <td>Various</td>
-                            <td>Various</td>
-                            <td>Large deletions in different DBA genes</td>
-                        </tr>
-                        <tr>
-                            <td>AD</td>
-                            <td>7%</td>
-                            <td>1p22.1</td>
-                            <td>RPL5</td>
-                            <td>Associated with cleft palate</td>
-                        </tr>
-                        <tr>
-                            <td>AD</td>
-                            <td>7%</td>
-                            <td>12q13.2</td>
-                            <td>RPS26</td>
-                            <td></td>
-                        </tr>
-                        <tr>
-                            <td>AD</td>
-                            <td>5%</td>
-                            <td>1p36.11</td>
-                            <td>RPL11</td>
-                            <td>Associated with thumb malformations</td>
-                        </tr>
-                        <tr>
-                            <td>AD</td>
-                            <td>3%</td>
-                            <td>3q29</td>
-                            <td>RPL35A</td>
-                            <td></td>
-                        </tr>
-                        <tr>
-                            <td>AD</td>
-                            <td>3%</td>
-                            <td>6q21.31</td>
-                            <td>RPS10</td>
-                            <td></td>
-                        </tr>
-                        <tr>
-                            <td>X-linked recessive</td>
-                            <td>&lt;1%</td>
-                            <td>Xp11.23</td>
-                            <td>GATA1</td>
-                            <td></td>
-                        </tr>
-                        <tr>
-                            <td>X-linked recessive</td>
-                            <td>&lt;1%</td>
-                            <td>Xp11.22</td>
-                            <td>TSR2</td>
-                            <td></td>
-                        </tr>
-                        <tr>
-                            <td>Uncharacterised</td>
-                            <td>~25%</td>
-                            <td>?</td>
-                            <td>?</td>
-                            <td>Gene not yet identified</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-
-            <!-- Ribosome Biogenesis Diagram -->
-            <h3 class="subsection-title">Ribosome Biogenesis and BMF Syndromes</h3>
-            <div class="ribosome-diagram">
-                <div class="ribosome-pathway">
-                    <div class="pathway-stage">
-                        <div class="stage-box dna-box">
-                            <h4>Ribosomal DNA</h4>
-                            <p>45S rRNA transcription</p>
-                        </div>
-                    </div>
-                    <div class="pathway-arrow-down">↓</div>
-                    <div class="pathway-stage split-stage">
-                        <div class="stage-box small-subunit">
-                            <h4>40S Subunit</h4>
-                            <p>18S rRNA</p>
-                            <div class="affected-genes">
-                                <span class="gene-label">DBA genes:</span>
-                                <span class="gene-tag small">RPS19</span>
-                                <span class="gene-tag small">RPS24</span>
-                                <span class="gene-tag small">RPS17</span>
-                                <span class="gene-tag small">RPS10</span>
-                                <span class="gene-tag small">RPS26</span>
-                            </div>
-                        </div>
-                        <div class="stage-box large-subunit">
-                            <h4>60S Subunit</h4>
-                            <p>5.8S + 28S + 5S rRNA</p>
-                            <div class="affected-genes">
-                                <span class="gene-label">DBA genes:</span>
-                                <span class="gene-tag small">RPL5</span>
-                                <span class="gene-tag small">RPL11</span>
-                                <span class="gene-tag small">RPL35A</span>
-                                <span class="gene-tag small">RPL26</span>
-                            </div>
-                            <div class="affected-genes">
-                                <span class="gene-label">SDS:</span>
-                                <span class="gene-tag small warning">SBDS</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="pathway-arrow-down">↓</div>
-                    <div class="pathway-stage">
-                        <div class="stage-box ribosome-final">
-                            <h4>80S Ribosome</h4>
-                            <p>Functional ribosome for protein synthesis</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="ribosome-note">
-                    <p><strong>5q- Syndrome Connection:</strong> Haploinsufficiency of <em>RPS14</em> is associated with 5q- syndrome (acquired MDS), demonstrating the link between rare syndromes and common diseases.</p>
-                </div>
-            </div>
-
-            <!-- DBA Treatment -->
-            <div class="treatment-box full-width">
-                <h3>Treatment Algorithm for DBA</h3>
-                <div class="algorithm-flow">
-                    <div class="flow-step">
-                        <div class="flow-box primary">
-                            <h4>First Line: Corticosteroids</h4>
-                            <ul>
-                                <li>Prednisolone - standard treatment</li>
-                                <li>Once maximal Hb achieved, taper to lowest dose on alternate days</li>
-                                <li>79% initially responsive</li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="flow-arrow">↓</div>
-                    <div class="flow-branch">
-                        <div class="flow-box success">
-                            <h4>Steroid Responsive</h4>
-                            <p>Maintain on lowest effective dose</p>
-                            <p>Some achieve spontaneous remission</p>
-                        </div>
-                        <div class="flow-box warning">
-                            <h4>Steroid Refractory/Dependent</h4>
-                            <ul>
-                                <li>Regular transfusions</li>
-                                <li>Iron chelation (deferiprone preferred)</li>
-                                <li>Consider HSCT if HLA-matched donor</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="callout callout-warning">
-                <div class="callout-icon">⚠️</div>
-                <div class="callout-content">
-                    <h4>Important: Evolution of DBA</h4>
-                    <p>Although DBA classically presents as pure red cell aplasia, there is evidence for a <strong>trilineage haemopoietic defect</strong> in patients with refractory DBA. Neutropenia and thrombocytopenia are relatively common after the first decade. MDS and AML have been reported in a few patients.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- CDA Section -->
-    <section id="cda" class="section section-alt">
-        <div class="container">
-            <h2 class="section-title">Congenital Dyserythropoietic Anaemia (CDA)</h2>
-
-            <div class="callout callout-key">
-                <div class="callout-icon">🔑</div>
-                <div class="callout-content">
-                    <h4>Definition</h4>
-                    <p>CDA comprises a heterogeneous group of disorders of erythropoiesis characterized by <strong>anaemia</strong>, <strong>ineffective erythropoiesis</strong>, and frequently <strong>morphological evidence of dyserythropoiesis</strong>.</p>
-                </div>
-            </div>
-
-            <!-- CDA Types Comparison -->
-            <h3 class="subsection-title">Table 30.9: Characteristics of CDA Types</h3>
-            <div class="table-responsive">
-                <table class="data-table">
-                    <thead>
-                        <tr>
-                            <th>Feature</th>
-                            <th>Type I</th>
-                            <th>Type II (HEMPAS)</th>
-                            <th>Type III</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td><strong>Inheritance</strong></td>
-                            <td>AR</td>
-                            <td>AR</td>
-                            <td>AD</td>
-                        </tr>
-                        <tr>
-                            <td><strong>Erythrocytes</strong></td>
-                            <td>Macrocytic</td>
-                            <td>Normocytic</td>
-                            <td>Macrocytic</td>
-                        </tr>
-                        <tr>
-                            <td><strong>Erythroblasts - Light microscopy</strong></td>
-                            <td>Megaloblastic, internuclear chromatin bridges</td>
-                            <td>Normoblastic, binuclearity</td>
-                            <td>Megaloblastic, up to 12 nuclei/cell</td>
-                        </tr>
-                        <tr>
-                            <td><strong>Electron microscopy</strong></td>
-                            <td>'Swiss-cheese' appearance of heterochromatin</td>
-                            <td>Peripheral double membranes</td>
-                            <td>Non-specific</td>
-                        </tr>
-                        <tr>
-                            <td><strong>Ham test</strong></td>
-                            <td>Negative</td>
-                            <td>Usually positive</td>
-                            <td>Negative</td>
-                        </tr>
-                        <tr>
-                            <td><strong>Anti-i agglutinability</strong></td>
-                            <td>Normal/strong</td>
-                            <td>Strong</td>
-                            <td>Normal/strong</td>
-                        </tr>
-                        <tr>
-                            <td><strong>SDS-PAGE</strong></td>
-                            <td>Normal</td>
-                            <td>Band 3 thinner, migrates faster than normal</td>
-                            <td>Band 3 migrates faster than normal</td>
-                        </tr>
-                        <tr class="highlight-row">
-                            <td><strong>Genes identified</strong></td>
-                            <td>CDAN1 (15q15.2), CDIN1 (15q14)</td>
-                            <td>SEC23B (20p11.23)</td>
-                            <td>KIF23 (15q23)</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-
-            <div class="cda-cards">
-                <div class="cda-card type-1">
-                    <h3>CDA Type I</h3>
-                    <div class="cda-features">
-                        <p><strong>Presentation:</strong> Splenomegaly, mild-moderate anaemia (~66-116 g/L), ~70% macrocytosis</p>
-                        <p><strong>BM:</strong> Megaloblastic erythroid hyperplasia with internuclear chromatin bridging</p>
-                        <p><strong>EM:</strong> 'Swiss cheese' appearance of heterochromatin</p>
-                        <p><strong>Treatment:</strong> Interferon-α may improve Hb in some cases</p>
-                    </div>
-                </div>
-                <div class="cda-card type-2">
-                    <h3>CDA Type II (HEMPAS)</h3>
-                    <div class="cda-features">
-                        <p><strong>Most common subtype</strong></p>
-                        <p><strong>Presentation:</strong> Variable anaemia (80-110 g/L), ~10% require regular transfusions</p>
-                        <p><strong>BM:</strong> Normoblastic hyperplasia with binucleate/multinucleate erythroblasts</p>
-                        <p><strong>EM:</strong> Peripheral double membrane arrangement</p>
-                        <p><strong>Treatment:</strong> Iron chelation essential; splenectomy may help; HSCT for severe cases</p>
-                    </div>
-                </div>
-                <div class="cda-card type-3">
-                    <h3>CDA Type III</h3>
-                    <div class="cda-features">
-                        <p><strong>Rarest subtype</strong></p>
-                        <p><strong>Presentation:</strong> Giant multinucleated erythroblasts in marrow (up to 12 nuclei)</p>
-                        <p><strong>Caused by:</strong> Variants in <em>KIF23</em> - encodes mitotic kinesin-like protein 1 (cytokinesis)</p>
-                        <p><strong>Treatment:</strong> Mild anaemia - usually no major intervention needed; folate supplementation</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="callout callout-exam">
-                <div class="callout-icon">📝</div>
-                <div class="callout-content">
-                    <h4>Exam Pearl: HEMPAS</h4>
-                    <p>CDA Type II is also called <strong>HEMPAS</strong> (Hereditary Erythroblastic Multinuclearity with Positive Acidified Serum test). The positive Ham test (acidified serum lysis) distinguishes it from PNH - in CDA II, red cells are lysed by some acidified sera but NOT by the patient's own serum.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Congenital Neutropenia Section -->
-    <section id="neutropenia" class="section">
-        <div class="container">
-            <h2 class="section-title">Congenital and Cyclical Neutropenias</h2>
-
-            <div class="callout callout-key">
-                <div class="callout-icon">🔑</div>
-                <div class="callout-content">
-                    <h4>Overview</h4>
-                    <p>Congenital neutropenia is a heterogeneous disorder including <strong>Kostmann syndrome</strong> (first described 1954). The neutropenia is usually recognized at birth with <strong>ANC often below 0.2 × 10⁹/L</strong>. Associated with severe infections and early death without treatment.</p>
-                </div>
-            </div>
-
-            <div class="two-column">
-                <div class="column">
-                    <div class="info-box">
-                        <h3>Severe Congenital Neutropenia (SCN)</h3>
-                        <ul class="check-list">
-                            <li>ANC usually &lt;0.2 × 10⁹/L</li>
-                            <li>Hb and platelets usually normal</li>
-                            <li>BM: Maturation arrest at promyelocyte/myelocyte stage</li>
-                            <li>Abundant promyelocytes, reduced neutrophils</li>
-                            <li>Severe infections without treatment</li>
-                            <li>~25% develop myeloid leukaemia by 25 years</li>
-                            <li>No patients have developed AA</li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="column">
-                    <div class="info-box">
-                        <h3>Cyclical Neutropenia</h3>
-                        <ul class="check-list">
-                            <li>Neutrophil count cycles with ~21-day periodicity</li>
-                            <li>ANC reaches nadir (may be zero)</li>
-                            <li>Fever and mouth ulcers at nadir</li>
-                            <li>Usually AD inheritance</li>
-                            <li>Also caused by <em>ELANE</em> mutations</li>
-                            <li>Variants cluster at different site than SCN</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Neutropenia Genetics -->
-            <h3 class="subsection-title">Table 30.10: Genetic Subtypes of Neutropenia</h3>
-            <div class="table-responsive">
-                <table class="data-table genetics-table">
-                    <thead>
-                        <tr>
-                            <th>Subtype</th>
-                            <th>% of Patients</th>
-                            <th>Chromosome</th>
-                            <th>Gene/Protein</th>
-                            <th>Key Features</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr class="subtype-header">
-                            <td colspan="5"><strong>Autosomal Dominant</strong></td>
-                        </tr>
-                        <tr class="highlight-row">
-                            <td>SCN/Cyclical</td>
-                            <td>50-60%</td>
-                            <td>19p13.3</td>
-                            <td>ELANE (neutrophil elastase)</td>
-                            <td>Most common cause; UPR activation</td>
-                        </tr>
-                        <tr>
-                            <td>SCN</td>
-                            <td>&lt;2%</td>
-                            <td>1p22.1</td>
-                            <td>GFI1</td>
-                            <td>Transcription factor</td>
-                        </tr>
-                        <tr class="subtype-header">
-                            <td colspan="5"><strong>Autosomal Recessive</strong></td>
-                        </tr>
-                        <tr>
-                            <td>SCN (Kostmann)</td>
-                            <td>10-15%</td>
-                            <td>1q21.3</td>
-                            <td>HAX1</td>
-                            <td>Original Kostmann families; mitochondrial apoptosis</td>
-                        </tr>
-                        <tr>
-                            <td>SCN</td>
-                            <td>~5%</td>
-                            <td>17q21.31</td>
-                            <td>G6PC3</td>
-                            <td>Associated with cardiac/urogenital defects</td>
-                        </tr>
-                        <tr>
-                            <td>SCN</td>
-                            <td>Rare</td>
-                            <td>1q21.2</td>
-                            <td>VPS45</td>
-                            <td></td>
-                        </tr>
-                        <tr>
-                            <td>SCN</td>
-                            <td>Rare</td>
-                            <td>1p34.3</td>
-                            <td>CSF3R</td>
-                            <td>G-CSF receptor</td>
-                        </tr>
-                        <tr>
-                            <td>SCN</td>
-                            <td>Rare</td>
-                            <td>3p25.3</td>
-                            <td>JAGN1</td>
-                            <td></td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-
-            <div class="callout callout-info">
-                <div class="callout-icon">💡</div>
-                <div class="callout-content">
-                    <h4>Molecular Insight: ELANE Mutations</h4>
-                    <p><em>ELANE</em> encodes neutrophil elastase, a serine protease synthesized predominantly at the promyelocytic stage. Variants lead to accumulation of <strong>non-functional protein</strong> which triggers the <strong>unfolded protein response (UPR)</strong> leading to maturational arrest and apoptosis.</p>
-                </div>
-            </div>
-
-            <!-- Treatment -->
-            <div class="treatment-box">
-                <h3>Treatment of Congenital Neutropenia</h3>
-                <div class="treatment-grid">
-                    <div class="treatment-item">
-                        <h4>💉 G-CSF</h4>
-                        <ul>
-                            <li>Revolutionized outcomes for these patients</li>
-                            <li>Improves neutrophil counts</li>
-                            <li>Reduces infections</li>
-                            <li>Monitor for G-CSF receptor mutations</li>
-                        </ul>
-                    </div>
-                    <div class="treatment-item">
-                        <h4>🏥 HSCT</h4>
-                        <ul>
-                            <li>For G-CSF refractory patients</li>
-                            <li>For those who develop leukaemia</li>
-                            <li>Curative option</li>
-                        </ul>
-                    </div>
-                    <div class="treatment-item">
-                        <h4>⚠️ Leukaemia Risk</h4>
-                        <ul>
-                            <li>~25% develop myeloid leukaemia by 25 years</li>
-                            <li>G-CSF receptor mutations may contribute</li>
-                            <li>Regular BM surveillance</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Thrombocytopenia Syndromes -->
-    <section id="thrombocytopenia" class="section section-alt">
-        <div class="container">
-            <h2 class="section-title">Congenital Thrombocytopenias: CAMT & TAR</h2>
-
-            <div class="two-column">
-                <div class="column">
-                    <div class="syndrome-card">
-                        <h3>CAMT (Congenital Amegakaryocytic Thrombocytopenia)</h3>
-                        <div class="syndrome-content">
-                            <p><strong>Presentation:</strong> Infancy with isolated thrombocytopenia, reduction/absence of megakaryocytes in BM, no somatic abnormalities</p>
-                            <p><strong>Evolution:</strong> ~50% develop AA usually by age 5 years</p>
-                            <p><strong>Genetics:</strong> Biallelic variants in <em>MPL</em> (thrombopoietin receptor) - 1p34</p>
-                            <p><strong>Lab:</strong> Elevated TPO levels, normal leucocyte and Hb</p>
-                            <p><strong>Treatment:</strong> HSCT if compatible donor; platelet transfusions for severe bleeding</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="column">
-                    <div class="syndrome-card">
-                        <h3>TAR (Thrombocytopenia with Absent Radii)</h3>
-                        <div class="syndrome-content">
-                            <p><strong>Presentation:</strong> Hypomegakaryocytic thrombocytopenia + bilateral radial aplasia at birth</p>
-                            <p><strong>Key Feature:</strong> <em>Thumbs are present</em> (distinguishes from FA)</p>
-                            <p><strong>Other features:</strong> Absent ulnae, absent humeri, clinodactyly, microcephaly</p>
-                            <p><strong>Genetics:</strong> Compound heterozygosity - deletion + regulatory SNP in <em>RBM8A</em></p>
-                            <p><strong>Prognosis:</strong> Platelet count usually improves after first year; good prognosis with supportive care</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- CAMT vs TAR Comparison -->
-            <h3 class="subsection-title">Table 30.11: Genetic Subtypes of Syndromic Thrombocytopenias</h3>
-            <div class="table-responsive">
-                <table class="data-table">
-                    <thead>
-                        <tr>
-                            <th>Subtype</th>
-                            <th>% of Patients</th>
-                            <th>Chromosome</th>
-                            <th>Gene</th>
-                            <th>Key Features</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr class="highlight-row">
-                            <td>CAMT AR</td>
-                            <td>Majority</td>
-                            <td>1p34</td>
-                            <td>MPL</td>
-                            <td>TPO receptor; progresses to AA</td>
-                        </tr>
-                        <tr class="highlight-row">
-                            <td>TAR AR</td>
-                            <td>Majority</td>
-                            <td>1q21.1</td>
-                            <td>RBM8A</td>
-                            <td>Radial aplasia + thumbs present</td>
-                        </tr>
-                        <tr>
-                            <td>Radio-ulnar synostosis AD</td>
-                            <td>Major subset</td>
-                            <td>7p15.2</td>
-                            <td>HOXA11</td>
-                            <td></td>
-                        </tr>
-                        <tr>
-                            <td>AD</td>
-                            <td>Major subset</td>
-                            <td>3q26.2</td>
-                            <td>MECOM*</td>
-                            <td>Variable features from thrombocytopenia to global BMF</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-
-            <div class="callout callout-exam">
-                <div class="callout-icon">📝</div>
-                <div class="callout-content">
-                    <h4>Exam Pearl: TAR vs Fanconi Anaemia</h4>
-                    <p>Both TAR and FA can present with radial abnormalities. The key distinguishing feature: in <strong>TAR, thumbs are PRESENT</strong> despite absent radii. In <strong>FA, thumbs may be absent or hypoplastic</strong>. Also, TAR patients have normal chromosome breakage studies.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Diagnostic Algorithm Section -->
-    <section id="diagnosis" class="section">
-        <div class="container">
-            <h2 class="section-title">Diagnostic Approach to Inherited BMF</h2>
-
-            <div class="callout callout-clinical">
-                <div class="callout-icon">🏥</div>
-                <div class="callout-content">
-                    <h4>Clinical Clues Suggesting Inherited BMF</h4>
-                    <ul class="inline-list">
-                        <li>Young age at presentation</li>
-                        <li>Family history of cytopenias/MDS/AML</li>
-                        <li>Somatic abnormalities</li>
-                        <li>Single cytopenia progressing to pancytopenia</li>
-                        <li>Poor response to immunosuppressive therapy</li>
-                        <li>Unexpected toxicity from chemotherapy/radiation</li>
-                    </ul>
-                </div>
-            </div>
-
-            <!-- Diagnostic Algorithm -->
-            <h3 class="subsection-title">Diagnostic Algorithm</h3>
-            <div class="algorithm-container">
-                <div class="algorithm-flowchart">
-                    <div class="flow-node start">
-                        <span>Suspected Inherited BMF</span>
-                    </div>
-                    <div class="flow-arrow-down">↓</div>
-                    <div class="flow-node">
-                        <h4>Initial Evaluation</h4>
-                        <ul>
-                            <li>Complete history including family</li>
-                            <li>Physical exam for somatic abnormalities</li>
-                            <li>CBC, reticulocytes, blood film</li>
-                            <li>BM aspirate and biopsy</li>
-                        </ul>
-                    </div>
-                    <div class="flow-arrow-down">↓</div>
-                    <div class="flow-node">
-                        <h4>Specialized Testing</h4>
-                        <ul>
-                            <li>DEB/MMC chromosome breakage test (FA)</li>
-                            <li>Telomere length (DC)</li>
-                            <li>Fetal haemoglobin (DBA)</li>
-                            <li>Erythrocyte adenosine deaminase (DBA)</li>
-                        </ul>
-                    </div>
-                    <div class="flow-arrow-down">↓</div>
-                    <div class="flow-node">
-                        <h4>Genetic Testing</h4>
-                        <ul>
-                            <li>NGS gene panels (FA, DC, DBA, SDS, etc.)</li>
-                            <li>Whole exome/genome if panel negative</li>
-                            <li>Confirm with Sanger sequencing</li>
-                        </ul>
-                    </div>
-                    <div class="flow-arrow-down">↓</div>
-                    <div class="flow-node end">
-                        <span>Diagnosis → Management → Family Counseling</span>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Laboratory Tests Table -->
-            <h3 class="subsection-title">Table 30.13: Laboratory Tests in BMF Investigation</h3>
-            <div class="table-responsive">
-                <table class="data-table">
-                    <thead>
-                        <tr>
-                            <th>Test</th>
-                            <th>Diagnostic Value</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr class="category-header">
-                            <td colspan="2"><strong>Peripheral Blood</strong></td>
-                        </tr>
-                        <tr>
-                            <td>Fetal haemoglobin</td>
-                            <td>High level suggestive of generalised BMF</td>
-                        </tr>
-                        <tr class="highlight-row">
-                            <td>DEB/MMC-induced chromosomal breakage</td>
-                            <td><strong>Increased in FA</strong></td>
-                        </tr>
-                        <tr class="category-header">
-                            <td colspan="2"><strong>Genetic Analysis (NGS)</strong></td>
-                        </tr>
-                        <tr>
-                            <td>FANCA-FANCW</td>
-                            <td>Mutated in FA</td>
-                        </tr>
-                        <tr>
-                            <td>DKC1, TERC, TERT, NOP10, NHP2, TIN2, etc.</td>
-                            <td>Mutated in DC and related disorders</td>
-                        </tr>
-                        <tr>
-                            <td>SBDS, DNAJC21, EFL1, SRP54</td>
-                            <td>Mutated in SDS and SDS-like disease</td>
-                        </tr>
-                        <tr>
-                            <td>RPS/RPL genes</td>
-                            <td>Mutated in DBA and DBA-like disease</td>
-                        </tr>
-                        <tr>
-                            <td>ELANE, HAX1, GFI1, G6PC3, etc.</td>
-                            <td>Mutated in congenital and cyclic neutropenia</td>
-                        </tr>
-                        <tr>
-                            <td>MPL, RBM8A, HOXA11, MECOM</td>
-                            <td>Mutated in CAMT and other syndromic thrombocytopenias</td>
-                        </tr>
-                        <tr class="category-header">
-                            <td colspan="2"><strong>Other Investigations</strong></td>
-                        </tr>
-                        <tr>
-                            <td>Mitochondrial DNA analysis</td>
-                            <td>Deletions seen in Pearson syndrome</td>
-                        </tr>
-                        <tr>
-                            <td>X-chromosome inactivation patterns</td>
-                            <td>Skewed in carriers of X-linked DC</td>
-                        </tr>
-                        <tr>
-                            <td>Ham test (CD59 analysis now preferred)</td>
-                            <td>Positive in PNH (distinguish from CDA II)</td>
-                        </tr>
-                        <tr class="highlight-row">
-                            <td>Telomere length</td>
-                            <td><strong>Short in AA, very short in DC</strong></td>
-                        </tr>
-                        <tr>
-                            <td>Constitutional karyotype</td>
-                            <td>Abnormality suggestive of constitutional AA</td>
-                        </tr>
-                        <tr class="category-header">
-                            <td colspan="2"><strong>Somatic Abnormality Assessment</strong></td>
-                        </tr>
-                        <tr>
-                            <td>Skeletal survey, renal US, PFTs, Echo</td>
-                            <td>Presence with AA suggestive of inherited BMF</td>
-                        </tr>
-                        <tr>
-                            <td>Exocrine pancreatic function</td>
-                            <td>Abnormal in SDS and Pearson syndrome</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-        </div>
-    </section>
-
-    <!-- New BMF Subtypes Section -->
-    <section id="new-subtypes" class="section section-alt">
-        <div class="container">
-            <h2 class="section-title">New BMF Subtypes & Overlapping Syndromes</h2>
-
-            <div class="callout callout-info">
-                <div class="callout-icon">🔬</div>
-                <div class="callout-content">
-                    <h4>Emerging Understanding</h4>
-                    <p>NGS has enabled identification of cases with germline variants that don't fit traditional categories. These include genes associated with familial MDS/AML (RUNX1, CEBPA, GATA2, DDX41) and others producing variable extra-haematopoietic abnormalities.</p>
-                </div>
-            </div>
-
-            <h3 class="subsection-title">Table 30.12: New BMF and Overlapping Syndromes</h3>
-            <div class="table-responsive">
-                <table class="data-table">
-                    <thead>
-                        <tr>
-                            <th>Category</th>
-                            <th>Gene</th>
-                            <th>Chromosome</th>
-                            <th>Key Features</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr class="subtype-header">
-                            <td colspan="4"><strong>Recently Recognised BMF Subtypes (AR)</strong></td>
-                        </tr>
-                        <tr>
-                            <td>AR</td>
-                            <td>ERCC6L2</td>
-                            <td>9q22.32</td>
-                            <td>DNA repair</td>
-                        </tr>
-                        <tr>
-                            <td>AR</td>
-                            <td>TPO/THPO</td>
-                            <td>3q27.1</td>
-                            <td>Thrombopoietin deficiency</td>
-                        </tr>
-                        <tr>
-                            <td>AR</td>
-                            <td>MYSM1</td>
-                            <td>1p32.1</td>
-                            <td>Histone deubiquitinase</td>
-                        </tr>
-                        <tr class="subtype-header">
-                            <td colspan="4"><strong>Familial MDS/Leukaemia (AD)</strong></td>
-                        </tr>
-                        <tr class="highlight-row">
-                            <td>AD</td>
-                            <td>RUNX1</td>
-                            <td>21q22.12</td>
-                            <td>Familial platelet disorder → AML</td>
-                        </tr>
-                        <tr>
-                            <td>AD</td>
-                            <td>CEBPA</td>
-                            <td>19q13.11</td>
-                            <td>Familial AML</td>
-                        </tr>
-                        <tr class="highlight-row">
-                            <td>AD</td>
-                            <td>GATA2</td>
-                            <td>3q21.3</td>
-                            <td>MonoMAC syndrome; immunodeficiency + MDS</td>
-                        </tr>
-                        <tr>
-                            <td>AD</td>
-                            <td>SRP72</td>
-                            <td>4q12</td>
-                            <td></td>
-                        </tr>
-                        <tr>
-                            <td>AD</td>
-                            <td>ANKRD26</td>
-                            <td>10p12.1</td>
-                            <td>Thrombocytopenia → MDS/AML</td>
-                        </tr>
-                        <tr class="highlight-row">
-                            <td>AD</td>
-                            <td>DDX41</td>
-                            <td>5q35.3</td>
-                            <td>Late-onset familial MDS/AML</td>
-                        </tr>
-                        <tr>
-                            <td>AD</td>
-                            <td>ETV6</td>
-                            <td>12p13.2</td>
-                            <td>Thrombocytopenia + leukaemia predisposition</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-
-            <div class="callout callout-warning">
-                <div class="callout-icon">⚠️</div>
-                <div class="callout-content">
-                    <h4>Clinical Importance of GATA2 Deficiency</h4>
-                    <p><strong>GATA2</strong> deficiency can be associated with: pulmonary alveolar proteinosis, primary lymphoedema, SAMD9 disease with adrenal insufficiency, intrauterine growth restriction and genital abnormalities, SAMD9L disease with neurologic/cerebellar/ophthalmic abnormalities.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Summary Section -->
-    <section id="summary" class="section">
-        <div class="container">
-            <h2 class="section-title">Key Takeaways</h2>
-
-            <div class="summary-grid">
-                <div class="summary-card">
-                    <div class="summary-icon">🧬</div>
-                    <h3>Fanconi Anaemia</h3>
-                    <ul>
-                        <li>DNA repair defect (FA-BRCA pathway)</li>
-                        <li>22 genes; A, C, G most common</li>
-                        <li>DEB/MMC test diagnostic</li>
-                        <li>High malignancy risk</li>
-                        <li>Modified HSCT conditioning essential</li>
-                    </ul>
-                </div>
-                <div class="summary-card">
-                    <div class="summary-icon">🔬</div>
-                    <h3>Dyskeratosis Congenita</h3>
-                    <ul>
-                        <li>Telomere biology disorder</li>
-                        <li>Mucocutaneous triad</li>
-                        <li>20 genes; DKC1, TERC, TERT key</li>
-                        <li>Very short telomeres diagnostic</li>
-                        <li>Pulmonary disease major cause of death</li>
-                    </ul>
-                </div>
-                <div class="summary-card">
-                    <div class="summary-icon">🦴</div>
-                    <h3>Shwachman-Diamond</h3>
-                    <ul>
-                        <li>Ribosome biogenesis defect</li>
-                        <li>SBDS gene (>90%)</li>
-                        <li>Pancreatic insufficiency + BMF</li>
-                        <li>Pancreatic enzymes + G-CSF</li>
-                        <li>~25% develop MDS/AML</li>
-                    </ul>
-                </div>
-                <div class="summary-card">
-                    <div class="summary-icon">🔴</div>
-                    <h3>Diamond-Blackfan Anaemia</h3>
-                    <ul>
-                        <li>Ribosomopathy</li>
-                        <li>RPS19 most common (25%)</li>
-                        <li>Pure red cell aplasia</li>
-                        <li>Corticosteroids first line</li>
-                        <li>Elevated HbF and eADA supportive</li>
-                    </ul>
-                </div>
-                <div class="summary-card">
-                    <div class="summary-icon">⚪</div>
-                    <h3>Congenital Neutropenia</h3>
-                    <ul>
-                        <li>ELANE most common (50-60%)</li>
-                        <li>Maturational arrest at promyelocyte</li>
-                        <li>G-CSF revolutionized outcomes</li>
-                        <li>~25% leukaemia risk by 25 years</li>
-                        <li>HSCT for refractory cases</li>
-                    </ul>
-                </div>
-                <div class="summary-card">
-                    <div class="summary-icon">🩸</div>
-                    <h3>Syndromic Thrombocytopenias</h3>
-                    <ul>
-                        <li>CAMT: MPL mutations → AA</li>
-                        <li>TAR: RBM8A; thumbs present</li>
-                        <li>Distinguish TAR from FA</li>
-                        <li>HSCT for severe CAMT</li>
-                        <li>TAR often improves with age</li>
-                    </ul>
-                </div>
-            </div>
-
-            <div class="conclusion-box">
-                <h3>Conclusion</h3>
-                <p>Since identification of the first FA gene (FANCC) in 1992, there have been significant advances in understanding FA, DC, and other BMF syndromes. This has facilitated diagnosis and highlighted the importance of studying rare syndromes for insights into common diseases. The connection between:</p>
-                <ul>
-                    <li><strong>DC and AA</strong> - via defective telomere maintenance</li>
-                    <li><strong>DBA, SDS, and MDS</strong> - via defective ribosome biogenesis</li>
-                </ul>
-                <p>These advances suggest that new treatment strategies targeting primary defects in each syndrome are likely to emerge.</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-brand">
-                    <span class="logo">Blood<span class="blood-drop">🩸</span>Doctor</span>
-                    <p>Making haematology education accessible</p>
-                </div>
-                <div class="footer-info">
-                    <p><strong>Dr Abdul Mannan</strong><br>FRCPath, FCPS</p>
-                    <p><a href="mailto:blooddoctor.co@gmail.com">blooddoctor.co@gmail.com</a></p>
-                </div>
-                <div class="footer-source">
-                    <p>Based on: <strong>Hoffbrand's Postgraduate Haematology, 8th Edition</strong></p>
-                    <p>Chapter 30: Inherited Aplastic Anaemia/Bone Marrow Failure Syndromes</p>
-                    <p>Author: Inderjeet S Dokal</p>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p>&copy; 2025 Blood🩸Doctor. Educational purposes only.</p>
-                <p>#BloodDoctor</p>
-            </div>
-        </div>
-    </footer>
-
-    <!-- Back to Top -->
-    <button class="back-to-top" aria-label="Back to top">↑</button>
-
-    <script src="script.js"></script>
-</body>
+      document.querySelectorAll("[data-target]").forEach((button) => {
+        button.addEventListener("click", () => {
+          const target = document.querySelector(button.dataset.target);
+          if (target) target.scrollIntoView({ behavior: "smooth", block: "start" });
+        });
+      });
+    </script>
+  </body>
 </html>
